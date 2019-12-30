@@ -12,10 +12,8 @@ FROM alpine:3.10
 ARG repo="@testing http://dl-3.alpinelinux.org/alpine/edge/testing"
 
 RUN echo $repo >> /etc/apk/repositories && \
-    apk add --no-cache --update hyperfine@testing \
-    python3
+    apk add --no-cache --update hyperfine@testing
 
 COPY corpus /corpus
-COPY main.py /main.py
 
 ENTRYPOINT ["hyperfine"]
