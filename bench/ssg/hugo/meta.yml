@@ -1,0 +1,16 @@
+formats:
+  - md
+  - adoc
+  - rst
+
+commands:
+  new: 'hugo new site {dir} && hugo new post/test.{dir}'
+  build: 'hugo --config={dir}/config.toml --contentDir={dir}/content'
+
+layout: |
+  ---
+  title: Benchmark
+  date: 2019-12-29T18:09:15-08:00
+  draft: false
+  ---
+  {content}

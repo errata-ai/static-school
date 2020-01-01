@@ -1,0 +1,13 @@
+source "https://rubygems.org"
+ruby RUBY_VERSION
+
+gem "json"
+gem "bigdecimal"
+
+gem "jekyll"
+gem "minima"
+
+group :jekyll_plugins do
+  gem "jekyll-asciidoc"
+  gem "jekyll-commonmark-ghpages"
+end

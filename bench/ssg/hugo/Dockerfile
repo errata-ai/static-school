@@ -9,9 +9,8 @@ FROM jdkato/hyperfine
 RUN apk add --no-cache --update \
     hugo \
     asciidoctor \
-    python3 \
     && pip3 install docutils pygments
 
-COPY bench.py /bench.py
+COPY meta.yml /meta.yml
 
 ENTRYPOINT ["python3", "/bench.py"]

@@ -12,8 +12,10 @@ FROM alpine:3.10
 ARG repo="@testing http://dl-3.alpinelinux.org/alpine/edge/testing"
 
 RUN echo $repo >> /etc/apk/repositories && \
-    apk add --no-cache --update hyperfine@testing
+    apk add --no-cache --update hyperfine@testing python3 && \
+    pip3 install pyyaml
 
 COPY corpus /corpus
+COPY bench.py /bench.py
 
 ENTRYPOINT ["hyperfine"]

@@ -1,0 +1,17 @@
+formats:
+  - md
+  - adoc
+
+commands:
+  new: 'jekyll new {dir}'
+  build: 'jekyll build --config base.yml --source {dir}'
+
+layout: |
+  ---
+  layout: post
+  title:  "Bench"
+  date:   2019-12-31 10:33:02 -0800
+  categories: benchmarking
+  ---
+
+  {content}
