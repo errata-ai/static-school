@@ -1,1 +1,2 @@
-# static-school
+# Initial page
+
