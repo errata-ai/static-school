@@ -15,3 +15,5 @@ layout: |
   ---
 
   {content}
+
+content: _posts

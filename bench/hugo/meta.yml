@@ -4,7 +4,7 @@ formats:
   - rst
 
 commands:
-  new: 'hugo new site {dir} && hugo new post/test.{dir}'
+  new: 'hugo new site {dir} && mkdir {dir}/content/post'
   build: 'hugo --config={dir}/config.toml --contentDir={dir}/content'
 
 layout: |
@@ -14,3 +14,5 @@ layout: |
   draft: false
   ---
   {content}
+
+content: content/post

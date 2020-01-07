@@ -1,3 +1,4 @@
+import os
 import pathlib
 import subprocess
 import sys
@@ -6,7 +7,7 @@ import yaml
 
 
 def parse_meta():
-    """
+    """Parse and return the SSG's meta data.
     """
     with open("meta.yml") as f:
         return yaml.load(f, Loader=yaml.FullLoader)
@@ -15,23 +16,30 @@ def parse_meta():
 if __name__ == "__main__":
     size = int(sys.argv[1])
     data = pathlib.Path("corpus")
+
     meta = parse_meta()
+    path = meta["content"]
 
     for ext in meta["formats"]:
-        # Create a Hugo site for each format:
+        # Create a site for each format:
         subprocess.check_output(
-            meta["commands"]["new"].format(dir=ext).split()
+            meta["commands"]["new"].format(dir=ext),
+            shell=True
         ).decode("utf-8")
 
-        # Populate the 'post' category with benchmark data:
+        # Populate with benchmark data:
         benchmark = (data / ("test." + ext)).read_text()
         for i in range(size):
             name = "test{0}.{1}".format(i, ext)
-            with open("{0}/content/post/{1}".format(ext, name), "w+") as f:
+            with open(os.path.join(ext, path, name), "w+") as f:
                 f.write(meta["layout"].format(content=benchmark))
 
     args = [
         "hyperfine",
+        "--export-json",
+        "bench.json",
+        "--style",
+        "none",
         "--warmup",
         "3",
         "--max-runs",
@@ -41,4 +49,6 @@ if __name__ == "__main__":
     for ext in meta["formats"]:
         args.append(meta["commands"]["build"].format(dir=ext))
 
-    print(subprocess.check_output(args).decode("utf-8"))
+    subprocess.check_output(args)
+
+    print(subprocess.check_output(["cat", "bench.json"]).decode("utf-8"))
