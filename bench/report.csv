@@ -1,4 +1,0 @@
-generator,format,corpus,time,range
-Hugo,AsciiDoc,25,2.860 s ±  0.106 s,2.770 s …  3.040 s
-Hugo,Markdown,25,60.2 ms ±   2.6 ms,57.0 ms …  63.5 ms
-Hugo,reStructuredText,25,5.531 s ±  0.165 s,5.372 s …  5.776 s

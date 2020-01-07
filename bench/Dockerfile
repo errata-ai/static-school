@@ -16,6 +16,6 @@ RUN echo $repo >> /etc/apk/repositories && \
     pip3 install pyyaml
 
 COPY corpus /corpus
-COPY bench.py /bench.py
+COPY scripts/bench.py /bench.py
 
 ENTRYPOINT ["hyperfine"]

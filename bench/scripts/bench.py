@@ -51,4 +51,5 @@ if __name__ == "__main__":
 
     subprocess.check_output(args)
 
-    print(subprocess.check_output(["cat", "bench.json"]).decode("utf-8"))
+    benchmark = subprocess.check_output(["cat", "bench.json"])
+    print(benchmark.decode("utf-8"))
