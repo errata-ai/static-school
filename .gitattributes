@@ -1,0 +1,4 @@
+*.min.js linguist-generated=true
+*.min.css linguist-generated=true
+
+bench/generators/* linguist-vendored

@@ -4,8 +4,8 @@ formats:
   - rst
 
 commands:
-  new: 'hugo new site {dir} && mkdir {dir}/content/post'
-  build: 'hugo --config={dir}/config.toml --contentDir={dir}/content'
+  build: 'cd {dir} && hugo && cd ..'
+  version: hugo version
 
 layout: |
   ---
@@ -14,5 +14,7 @@ layout: |
   draft: false
   ---
   {content}
+
+filename: test{0}
 
 content: content/post

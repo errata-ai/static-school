@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{ partial "head" . }}
+  <body>
+    {{ partial "header" . }}
+
+    <div class="main-container">
+      {{ block "main" . }}{{ end }}
+      {{ partial "footer" . }}
+    </div>
+
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/popper.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.smartWizard.min.js"></script>
+    <script type="text/javascript" src="/js/flickity.pkgd.min.js"></script>
+    <script type="text/javascript" src="/js/scrollMonitor.js"></script>
+    <script type="text/javascript" src="/js/smooth-scroll.polyfills.js"></script>
+    <script type="text/javascript" src="/js/prism.js"></script>
+    <script type="text/javascript" src="/js/zoom.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/theme.min.js"></script>
+
+    <script type="text/javascript" src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+
+    <script>
+      // init Isotope
+      var $grid = $('.grid').isotope({
+        itemSelector: '.grid-item',
+        layoutMode: 'fitRows',
+        getSortData: {
+          stars: function(item){
+            return parseInt($(item).find(".stars").text());
+          },
+          name: function(item){
+            return $(item).find(".card-title").text();
+          }
+        }
+      });
+
+      // bind filter on select change
+      $('.filter-select').on( 'change', function() {
+        $('#noResultsContainer').addClass('d-none');
+
+        var all = $('.filter-select').map(function() {
+          return $(this).val() || null;
+        }).get();
+
+        var filterValue = "." + all.join(".");
+        if (filterValue === ".") {
+          filterValue = "*";
+        }
+
+        $grid.isotope({ filter: filterValue });
+        if (!$grid.data('isotope').filteredItems.length) {
+          $('#noResultsContainer').removeClass('d-none');
+        }
+      });
+
+      // Sorting
+      $('.sort-select').on( 'change', function() {
+        var sortValue = this.value;
+        var sortAscending = false;
+        if (sortValue === "name") {
+          sortAscending = true;
+        }
+        $grid.isotope({ sortBy: sortValue, sortAscending: sortAscending });
+      });
+
+      $(window).on('load', function() {
+        equalheight('.card');
+        $grid.isotope({ sortBy: 'stars', sortAscending: false });
+      });
+
+      equalheight = function(container){
+          var currentTallest = 0,
+          currentRowStart = 0,
+          rowDivs = new Array(),
+          $el,
+          topPosition = 0;
+          $(container).each(function() {
+
+              $el = $(this);
+              $($el).height('auto')
+              topPostion = $el.position().top;
+
+              if (currentRowStart != topPostion) {
+                  for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+                      rowDivs[currentDiv].height(currentTallest);
+                  }
+              rowDivs.length = 0; // empty the array
+              currentRowStart = topPostion;
+              currentTallest = $el.height();
+              rowDivs.push($el);
+              } else {
+                  rowDivs.push($el);
+                  currentTallest = (currentTallest < $el.height()) ? ($el.height()) : (currentTallest);
+              }
+              for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+                  rowDivs[currentDiv].height(currentTallest);
+              }
+          });
+      }
+
+      $(window).on('resize', function() {
+          equalheight('.card');
+      });
+    </script>
+
+    {{- range .Params.js }}
+      <script src="/js/{{ . }}"></script>
+    {{- end }}
+
+    {{ block "script" . }}{{ end }}
+  </body>
+</html>

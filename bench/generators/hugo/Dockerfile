@@ -12,5 +12,6 @@ RUN apk add --no-cache --update \
     && pip3 install docutils pygments
 
 COPY meta.yml /meta.yml
+COPY example_site /example_site
 
 ENTRYPOINT ["python3", "/bench.py"]

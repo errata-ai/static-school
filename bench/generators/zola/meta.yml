@@ -1,0 +1,17 @@
+formats:
+  - md
+
+commands:
+  build: 'cd {dir} && zola build && cd ..'
+  version: zola --version
+
+layout: |
+  +++
+  title = "Benchmark"
+  +++
+
+  {content}
+
+filename: test{0}
+
+content: content

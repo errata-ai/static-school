@@ -1,0 +1,35 @@
+formats:
+  - md
+  - adoc
+  - rst
+
+commands:
+  build: 'cd {dir} && pelican content && cd ..'
+  version: pelican --version
+
+layout:
+  md: |
+    Title: {title}
+    Date: 2010-12-03 10:20
+
+    {content}
+
+  rst: |
+    {title}
+    ##############
+
+    :date: 2010-10-03 10:20
+    :modified: 2010-10-04 18:40
+
+    {content}
+
+  adoc: |
+    = {title}
+
+    :date: 2010-10-03 10:20
+
+    {content}
+
+filename: test{0}
+
+content: content

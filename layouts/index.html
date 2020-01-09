@@ -1,0 +1,142 @@
+{{ define "main" }}
+<section class="space-xs text-center bg-gradient text-light">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                💫
+                <span class="mr-2">
+                 Static School is 100% open source&mdash;check out the <a href="https://github.com/errata-ai/static-school" class="text-white">GitHub repository</a> to learn more!
+                </span>
+            </div>
+            <!--end of col-->
+        </div>
+        <!--end of row-->
+    </div>
+    <!--end of container-->
+</section>
+
+<section class="space-lg">
+    <div class="container">
+        <div class="row align-items-center justify-content-around">
+            <div class="text-center text-md-left section-intro mt-4">
+                <h1 class="display-3">Static School 🎓</h1>
+                <span class="lead">
+                    Discover, explore, and compare static site generators.
+                </span>
+            </div>
+        </div>
+        <!--end of row-->
+    </div>
+    <!--end of container-->
+</section>
+
+<section class="bg-white">
+    <div class="container">
+        <div class="row mb-4">
+        {{ with .Site.GetPage "section" "ssg" }}
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <select class="form-control form-control-sm filter-select">
+                        <option value="">Any Language</option>
+                        {{ $seen := slice "" }}
+                        {{ range .Pages }}
+                            {{ $name := .Params.language.name }}
+                            {{ if not (in $seen $name) }}
+                                <option value="{{ $name }}">{{ $name }}</option>
+                                {{ $seen = $seen | append $name }}
+                            {{ end }}
+                        {{ end }}
+                    </select>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <select class="form-control form-control-sm filter-select">
+                        <option value="">Any Format</option>
+                        <option value="adoc">AsciiDoc</option>
+                        <option value="md">Markdown</option>
+                        <option value="rst">reStructuredText</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <select class="form-control form-control-sm filter-select">
+                        <option value="">Any License</option>
+                        {{ $seen := slice "" }}
+                        {{ range .Pages }}
+                            {{ $license := .Params.license }}
+                            {{ if not (in $seen $license.name) }}
+                                <option value="{{ $license.slug }}">{{ $license.name }}</option>
+                                {{ $seen = $seen | append $license.name }}
+                            {{ end }}
+                        {{ end }}
+                    </select>
+                </div>
+            </div>
+            <div class="col-sm-2 ml-auto">
+                <div class="form-group">
+                    <select class="form-control form-control-sm sort-select">
+                        <option value="stars">Stars</option>
+                        <option value="name">Name</option>
+                    </select>
+                </div>
+            </div>
+        {{ end }}
+        </div>
+        <!--end of row-->
+        {{ with .Site.GetPage "section" "ssg" }}
+        <div id="noResultsContainer" class="row justify-content-center d-none">
+            <div class="col-12 col-md-6 col-lg-5">
+                <div class="card card-lg text-center">
+                    <div class="card-body">
+                        <i class="icon-cog display-4 opacity-20"></i>
+                        <h1 class="h5">No results found.</h1>
+                        <p>Try changing your filtering criteria.</p>
+                        <a href="#" class="btn btn-lg btn-primary">Learn more</a>
+                    </div>
+                </div>
+            </div>
+            <!--end of col-->
+        </div>
+        <ul class="row feature-list feature-list-sm grid">
+            {{ range .Pages }}
+            {{ $id := lower .Params.title }}
+            {{ $preview := .Resources.GetMatch "preview.png" }}
+            {{ $ssg := index .Site.Data.report $id }}
+            <li class="col-12 col-md-6 col-lg-4 grid-item {{if eq .Params.rst true}}rst{{ end }} {{if eq .Params.md true}}md{{ end }} {{if eq .Params.adoc true}}adoc{{ end }} {{ .Params.language.name }} {{ .Params.license.slug }}">
+                <div class="card">
+                    <a href="/ssg/{{ $id }}">
+                        <img class="card-img-top" src="{{ $preview.RelPermalink }}" alt="Card image cap">
+                    </a>
+                    <div class="card-body">
+                        <h4 class="card-title">{{ .Params.title }} <i title="{{ .Params.language.name }}" class="{{ .Params.language.icon }}"></i></h4>
+                        <p class="card-text text-body">{{ .Params.description }}</p>
+                    </div>
+                    <div class="card-footer card-footer-borderless d-flex justify-content-between">
+                        <div class="text-small">
+                            <ul class="list-inline">
+                                <li class="list-inline-item"><i class="icon-star"></i> <span data-value="{{ $ssg.stats.s }}" class="stars">{{ lang.NumFmt 0 $ssg.stats.s "- . ," }}</span></li>
+                            </ul>
+                        </div>
+                        <div class="dropup">
+                            <button class="btn btn-sm btn-outline-primary dropdown-toggle dropdown-toggle-no-arrow" type="button" id="SidekickButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="icon-dots-three-horizontal"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-sm" aria-labelledby="SidekickButton">
+                                <a class="dropdown-item" href="{{ .Params.homepage }}"><i class="icon-home"></i> Website</a>
+                                <a class="dropdown-item" href="https://github.com/{{ .Params.repo }}"><i class="socicon-github"></i> Repository</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <!--end of col-->
+            {{ end }}
+        </ul>
+        {{ end }}
+        <!--end of row-->
+    </div>
+    <!--end of container-->
+</section>
+{{ end }}

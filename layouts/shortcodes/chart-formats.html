@@ -1,0 +1,24 @@
+
+{{ $md := .Get "md" }}
+{{ $adoc := .Get "adoc" }}
+{{ $rst := .Get "rst" }}
+
+<form class="bs-example bs-example-form" data-example-id="input-group-with-button">
+    <div class="container">
+        <div class="row">
+            <div class="btn-group">
+                <div class="dropdown">
+                    <button class="btn btn-md btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Format
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item format-item {{ if eq $adoc "false" }}d-none{{ end }}" href="#">AsciiDoc</a>
+                        <a class="dropdown-item format-item {{ if eq $md "false" }}d-none{{ end }}" href="#">Markdown</a>
+                        <a class="dropdown-item format-item {{ if eq $rst "false" }}d-none{{ end }}" href="#">reStructuredText</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="{{ .Get "id" }}" class="plot"></div>
+    </div>
+</form>

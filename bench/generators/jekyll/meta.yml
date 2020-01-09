@@ -3,8 +3,8 @@ formats:
   - adoc
 
 commands:
-  new: 'jekyll new {dir}'
-  build: 'jekyll build --config base.yml --source {dir}'
+  build: 'cd {dir} && bundle exec jekyll build && cd ..'
+  version: jekyll -v
 
 layout: |
   ---
@@ -15,5 +15,7 @@ layout: |
   ---
 
   {content}
+
+filename: 2012-09-12-test{0}
 
 content: _posts

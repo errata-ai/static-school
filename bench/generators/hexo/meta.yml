@@ -1,0 +1,17 @@
+formats:
+  - md
+
+commands:
+  build: 'cd {dir} && hexo generate && cd ..'
+  version: hexo version
+
+layout: |
+  ---
+  title: Bench
+  ---
+
+  {content}
+
+filename: test{0}
+
+content: source/_posts

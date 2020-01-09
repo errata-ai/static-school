@@ -1,0 +1,19 @@
+formats:
+  - md
+
+commands:
+  build: 'cd {dir} && gatsby build && cd ..'
+  version: gatsby -v
+
+layout: |
+  ---
+  title: Bench
+  date: "2015-05-28T22:40:32.169Z"
+  description: This is a custom description
+  ---
+
+  {content}
+
+filename: test{0}
+
+content: content/blog

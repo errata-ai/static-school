@@ -1,0 +1,238 @@
+{{ define "main" }}
+
+<link rel="stylesheet" href="{{ "/css/vendor/highslide.min.css" | relURL }}">
+
+{{ $logo := .Resources.GetMatch "logo.png" }}
+{{ $id := lower .Params.title }}
+{{ $ssg := index .Site.Data.report $id }}
+
+<section class="space-sm">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col">
+                <div class="media align-items-center">
+                    <img alt="Image" src="{{ $logo.RelPermalink }}" class="avatar avatar-lg avatar-square rounded" />
+                    <div class="media-body">
+                        <h1 class="mb-0">{{ .Params.title }}</h1>
+                        <h2 class="lead mb-2">{{ .Params.description }}</h2>
+                        <div class="d-flex align-items-center">
+                            <ul class="list-inline text-small d-inline-block">
+                                <li class="list-inline-item"><i class="icon-star mr-1"></i> {{ lang.NumFmt 0 $ssg.stats.s "- . ," }}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end of col-->
+            <div class="col-auto">
+                <a href="https://github.com/{{ .Params.repo }}" class="btn btn-outline-secondary"><i class="socicon-github mr-1"></i> Repository</a>
+                <a href="{{ .Params.homepage }}" class="btn btn-outline-secondary"><i class="icon-home mr-1"></i> Homepage</a>
+            </div>
+            <!--end of col-->
+        </div>
+        <!--end of row-->
+    </div>
+    <!--end of container-->
+</section>
+
+<section class="space-sm flush-with-above">
+    <div class="container">
+        <div class="row mb-3">
+            <div class="col">
+                <div class="progress">
+                    {{ if or (in $ssg.metrics.commit "day") (in $ssg.metrics.commit "hour")}}
+                      <div class="progress-bar bg-success opacity-70" role="progressbar" style="width: 25%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                    {{ else if in $ssg.metrics.commit "week" }}
+                      <div class="progress-bar bg-warning opacity-70" role="progressbar" style="width: 25%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                    {{ else }}
+                      <div class="progress-bar bg-danger opacity-70" role="progressbar" style="width: 25%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                    {{ end }}
+
+                    {{ if or (in $ssg.metrics.resolution "day") (in $ssg.metrics.resolution "hour") }}
+                      <div class="progress-bar bg-success opacity-70" role="progressbar" style="width: 25%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                    {{ else if in $ssg.metrics.resolution "week" }}
+                      <div class="progress-bar bg-warning opacity-70" role="progressbar" style="width: 25%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                    {{ else }}
+                      <div class="progress-bar bg-danger opacity-70" role="progressbar" style="width: 25%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                    {{ end }}
+
+                    {{ if or (in $ssg.metrics.release "day") (in $ssg.metrics.release "week")}}
+                      <div class="progress-bar bg-success opacity-70" role="progressbar" style="width: 25%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                    {{ else if in $ssg.metrics.release "month" }}
+                      <div class="progress-bar bg-warning opacity-70" role="progressbar" style="width: 25%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                    {{ else }}
+                      <div class="progress-bar bg-danger opacity-70" role="progressbar" style="width: 25%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                    {{ end }}
+
+                    <div class="progress-bar bg-success opacity-70" role="progressbar" style="width: 25%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+            <!--end of col-->
+        </div>
+        <!--end of row-->
+        <div class="row text-center">
+            <div class="col">
+                <span>Latest commit</span>
+                <br>
+                <small class="text-muted">{{ $ssg.metrics.commit }}</small>
+            </div>
+            <!--end of col-->
+            <div class="col">
+                <span>Issue resolution</span>
+                <br>
+                <small class="text-muted">{{ $ssg.metrics.resolution }}</small>
+            </div>
+            <!--end of col-->
+            <div class="col">
+                <span>Latest release</span>
+                <br>
+                <small class="text-muted">{{ $ssg.metrics.release }}</small>
+            </div>
+            <!--end of col-->
+            <div class="col">
+                <span>License</span>
+                <br>
+                <small class="text-muted">{{ .Params.license.name }}</small>
+            </div>
+            <!--end of col-->
+        </div>
+        <!--end of row-->
+    </div>
+    <!--end of container-->
+</section>
+
+<section class="bg-white">
+  <div class="container">
+    <div class="row">
+      <div class="col-auto">
+      </div>
+      <div class="col">
+        <div class="row justify-content-center">
+          <div class="col-10">
+            <article class="article">
+              <h1>Overview</h1>
+              <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th><b>Topic</b></th>
+                        <th><b>{{ .Params.title }}</b></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Language</td>
+                        <td>
+                          <a href="{{ .Params.language.link }}">{{ .Params.language.name }}</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Markup</td>
+                        <td>
+                            {{ if eq .Params.adoc true }}
+                              <a href="https://asciidoctor.org/">AsciiDoc</a>{{if or (eq .Params.md true) (eq .Params.rst true)}},{{ end }}
+                            {{ end }}
+                            {{ if eq .Params.md true }}
+                              <a href="https://commonmark.org/">Markdown</a>{{if eq .Params.rst true}},{{ end }}
+                            {{ end }}
+                            {{ if eq .Params.rst true }}
+                              <a href="https://docutils.sourceforge.io/rst.html">reStructuredText</a>
+                            {{ end }}
+                        </td>
+                    </tr>
+                    <tr class="odd">
+                        <td>Templating</td>
+                        <td>
+                          <a href="{{ .Params.templating.link }}">{{ .Params.templating.name }}</a>
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>Localization (i18n)</td>
+                        <td>
+                          {{ if eq .Params.localization true }}
+                              <i class="icon-check text-green"></i>
+                          {{ else }}
+                              <i class="icon-circle-with-cross text-red"></i>
+                          {{ end }}
+                        </td>
+                    </tr>
+                    <tr class="odd">
+                        <td>Versioning</td>
+                        <td>
+                          {{ if eq .Params.versioning true }}
+                              <i class="icon-check text-green"></i>
+                          {{ else }}
+                              <i class="icon-circle-with-cross text-red"></i>
+                          {{ end }}
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>Theming</td>
+                        <td>
+                          {{ if eq .Params.theming true }}
+                              <i class="icon-check text-green"></i>
+                          {{ else }}
+                              <i class="icon-circle-with-cross text-red"></i>
+                          {{ end }}
+                        </td>
+                    </tr>
+                </tbody>
+              </table>
+
+              {{ .Content }}
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}
+
+{{ define "script" }}
+{{ $id := lower .Params.title }}
+{{ $ssg := index .Site.Data.report $id }}
+
+<script type="text/javascript" src="/js/vendor/highcharts/highcharts.min.js"></script>
+<script type="text/javascript" src="/js/vendor/highcharts/highcharts-more.min.js"></script>
+<script type="text/javascript" src="/js/vendor/highcharts/data.min.js"></script>
+
+<script type="text/javascript">
+  var seriesData1 = [];
+  var seriesData2 = [];
+
+  {{ range $key, $value := $ssg.data }}
+    seriesData1.push({'name': {{ $key }}, 'data': {{ $value }} })
+  {{ end }}
+
+  var md = [];
+  var adoc = [];
+  var rst = [];
+
+  {{ with .Site.GetPage "section" "ssg" }}
+    {{ range .Pages }}
+      {{ $id := lower .Params.title }}
+      {{ $ssg := index .Site.Data.report $id }}
+        {{ if isset $ssg.data "Markdown" }}
+          md.push({'name': {{ .Params.title }}, 'data': {{ $ssg.data.Markdown }} })
+        {{ end }}
+        {{ if isset $ssg.data "AsciiDoc" }}
+          adoc.push({'name': {{ .Params.title }}, 'data': {{ $ssg.data.AsciiDoc }} })
+        {{ end }}
+        {{ if isset $ssg.data "reStructuredText" }}
+          rst.push({'name': {{ .Params.title }}, 'data': {{ $ssg.data.reStructuredText }} })
+        {{ end }}
+    {{ end }}
+  {{ end }}
+
+  var formatData = {
+    "Markdown": md,
+    "AsciiDoc": adoc,
+    "reStructuredText": rst
+  }
+
+  var versionInfo = {{ $ssg.version }};
+</script>
+
+<script type="text/javascript" src="/js/features/bench.js"></script>
+{{ end }}

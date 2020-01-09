@@ -1,0 +1,181 @@
+{
+    "pelican": {
+        "version": "4.2.0",
+        "metrics": {
+            "resolution": "22 day(s)",
+            "commit": "1 week ago",
+            "release": "2 months ago"
+        },
+        "stats": {
+            "id": "pelican",
+            "f": 1643,
+            "s": 9354,
+            "fk": 1618,
+            "i": 100
+        },
+        "performace": {
+            "Markdown": 5,
+            "AsciiDoc": 3,
+            "reStructuredText": 1
+        },
+        "data": {
+            "Markdown": [
+                1.8115415153333334,
+                8.684622692166668,
+                79.6778834025
+            ],
+            "AsciiDoc": [
+                2.260541782,
+                19.234823792166665,
+                187.06704416916668
+            ],
+            "reStructuredText": [
+                1.1217483153333334,
+                5.408388958833334,
+                48.084883069166665
+            ]
+        }
+    },
+    "hexo": {
+        "version": "hexo-cli: 3.1.0",
+        "metrics": {
+            "resolution": "23 day(s)",
+            "commit": "19 hours ago",
+            "release": "2 weeks ago"
+        },
+        "data": {
+            "Markdown": [
+                1.8074965818333333,
+                3.3076281375,
+                16.018242678333333
+            ]
+        },
+        "performace": {
+            "Markdown": 3
+        },
+        "stats": {
+            "id": "hexo",
+            "f": 2224,
+            "s": 29247,
+            "fk": 3818,
+            "i": 232
+        }
+    },
+    "zola": {
+        "version": "zola 0.9.0",
+        "data": {
+            "Markdown": [
+                0.09351370266666668,
+                0.18224019600000005,
+                1.0129902629999998
+            ]
+        },
+        "stats": {
+            "id": "zola",
+            "s": 2902,
+            "fk": 263,
+            "i": 96
+        },
+        "metrics": {
+            "resolution": "7 day(s)",
+            "commit": "19 hours ago",
+            "release": "3 months ago"
+        },
+        "performace": {
+            "Markdown": 1
+        }
+    },
+    "hugo": {
+        "version": "Hugo Static Site Generator v0.62.2/extended darwin/amd64 BuildDate: unknown",
+        "metrics": {
+            "resolution": "8 hour(s)",
+            "commit": "3 days ago",
+            "release": "5 days ago"
+        },
+        "data": {
+            "Markdown": [
+                0.09378963783333334,
+                0.17916702966666667,
+                1.4666176296666666
+            ],
+            "AsciiDoc": [
+                0.6981157711666667,
+                5.033169463000001,
+                53.818712329666674
+            ],
+            "reStructuredText": [
+                1.3478116045000001,
+                10.234247329666667,
+                105.90348799633334
+            ]
+        },
+        "performace": {
+            "Markdown": 2,
+            "AsciiDoc": 2,
+            "reStructuredText": 2
+        },
+        "stats": {
+            "id": "hugo",
+            "f": 8955,
+            "s": 40812,
+            "fk": 4609,
+            "i": 439
+        }
+    },
+    "jekyll": {
+        "version": "jekyll 3.8.6",
+        "metrics": {
+            "resolution": "1 day(s)",
+            "commit": "1 week ago",
+            "release": "4 months ago"
+        },
+        "stats": {
+            "id": "jekyll",
+            "f": 7029,
+            "s": 39486,
+            "fk": 8625,
+            "i": 161
+        },
+        "performace": {
+            "Markdown": 4,
+            "AsciiDoc": 1
+        },
+        "data": {
+            "Markdown": [
+                1.2258507713333333,
+                2.761032365166667,
+                18.088846647666667
+            ],
+            "AsciiDoc": [
+                1.3289999046666667,
+                3.5409300985,
+                25.819882381
+            ]
+        }
+    },
+    "gatsby": {
+        "version": "Gatsby CLI version: 2.8.26",
+        "metrics": {
+            "resolution": "9 day(s)",
+            "commit": "19 hours ago",
+            "release": "2 years ago"
+        },
+        "stats": {
+            "id": "gatsby",
+            "f": 44480,
+            "s": 41340,
+            "fk": 6982,
+            "i": 603
+        },
+        "performace": {
+            "Markdown": 6
+        },
+        "data": {
+            "Markdown": [
+                18.796366178333333,
+                24.561514025333334,
+                88.63661024833334
+            ]
+        }
+    }
+}
