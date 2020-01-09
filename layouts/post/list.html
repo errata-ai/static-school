@@ -1,0 +1,53 @@
+{{ define "main" }}
+<section class="space-lg bg-white">
+  <img alt="Image" src="/img/graphic-bg-clouds-5.png" class="bg-image" />
+  <div class="container">
+    <div class="row justify-content-center text-center">
+      <div class="col-12 col-md-10 col-lg-9">
+        <h2 class="display-4">Updates, ideas, and tutorials from errata.ai.</h2>
+      </div>
+      <!--end of col-->
+    </div>
+    <!--end of row-->
+  </div>
+  <!--end of container-->
+</section>
+<section class="flush-with-above bg-white">
+  <div class="container">
+    <ul class="row mb-3 feature-list feature-list-sm">
+      {{ $posts := where .Site.RegularPages "Type" "in" (slice "post") }}
+      {{ range $posts }}
+      <li class="col-12 col-md-6 col-lg-4">
+        <div class="card card-lg">
+          <a href="{{ .Permalink }}">
+            <img class="card-img-top" src="{{ .Params.header }}" alt="Starting Up - A Candid Documentary">
+          </a>
+          <div class="card-body">
+            <a href="{{ .Permalink }}">
+              <h4 class="card-title mb-3">{{ .Title | markdownify }}</h4>
+            </a>
+            <p class="card-text">
+              {{ with .Params.excerpt }}
+              {{ . | markdownify }}
+              {{ else }}
+              {{ .Summary }}
+              {{ end }}
+            </p>
+          </div>
+          <div class="card-footer card-footer-borderless">
+            <div class="media blog-post-author">
+              <div class="media-body">
+                <small>Joseph Kato</small>
+                <small>{{ .Date.Format "January 2, 2006" }}</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      {{ end }}
+    </ul>
+    <!--end of row-->
+  </div>
+  <!--end of container-->
+</section>
+{{ end }}

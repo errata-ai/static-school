@@ -1,0 +1,26 @@
+{{ define "main" }}
+<section class="bg-white">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-7">
+        <h3 class="display-4">{{ .Title | markdownify }}</h3>
+        <span class="text-small">{{ .Date.Format "January 2, 2006" }} by Joseph Kato &bull; {{ .ReadingTime }} min read</span>
+      </div>
+      <!--end of col-->
+    </div>
+    <!--end of row-->
+  </div>
+  <!--end of container-->
+</section>
+<!--end of section-->
+<section class="flush-with-above bg-white">
+  <article class="container">
+    <div class="post-body">
+      {{ .Content }}
+    </div>
+    <!--end of col-->
+    <!--end of row-->
+  </article>
+  <!--end of container-->
+</section>
+{{ end }}

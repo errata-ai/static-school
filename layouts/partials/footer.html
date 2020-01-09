@@ -1,0 +1,76 @@
+<footer class="pb-4 bg-primary-3 text-light" id="footer">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-6 col-lg-3 col-xl-2">
+        <h5>Navigate</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a href="#" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Guides</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Tools</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Contribute</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg">
+        <h5>Contact</h5>
+        <ul class="list-unstyled">
+          <li class="mb-3 d-flex">
+            <img class="icon" src="/img/icons/theme/social/twitter.svg" alt="call-1 icon" data-inject-svg />
+            <div class="ml-3">
+              <a href="https://github.com/errata-ai/static-school">@jdkato</a>
+            </div>
+          </li>
+          <li class="mb-3 d-flex">
+            <img class="icon" src="/img/icons/theme/social/github.svg" alt="call-1 icon" data-inject-svg />
+            <div class="ml-3">
+              <a href="https://github.com/errata-ai/static-school">errata-ai/static-school</a>
+            </div>
+          </li>
+          <li class="mb-3 d-flex">
+            <img class="icon" src="/img/icons/theme/communication/mail.svg" alt="mail icon" data-inject-svg />
+            <div class="ml-3">
+              <a href="mailto:support@errata.ai">support@errata.ai</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-5 col-xl-4 mt-3 mt-lg-0">
+        <h5>Subscribe</h5>
+        <p>The latest static site generator news, articles, and resources, sent straight to your inbox every month.</p>
+        <form action="/forms/mailchimp.php" data-form-email novalidate>
+          <div class="form-row">
+            <div class="col-12">
+              <input type="email" class="form-control mb-2" placeholder="Email Address" name="email" required>
+            </div>
+            <div class="col-12">
+              <div class="d-none alert alert-success" role="alert" data-success-message>
+                Thanks, a member of our team will be in touch shortly.
+              </div>
+              <div class="d-none alert alert-danger" role="alert" data-error-message>
+                Please fill all fields correctly.
+              </div>
+              <div data-recaptcha data-sitekey="INSERT_YOUR_RECAPTCHA_V2_SITEKEY_HERE" data-size="invisible" data-badge="bottomleft">
+              </div>
+              <button type="submit" class="btn btn-primary btn-loading btn-block" data-loading-text="Sending">
+                <img class="icon" src="/img/icons/theme/code/loading.svg" alt="loading icon" data-inject-svg />
+                <span>Subscribe</span>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col col-md-auto text-center">
+        <small class="text-muted">&copy;{{ now.Format "2006"}} errata.ai</small>
+      </div>
+    </div>
+  </div>
+</footer>

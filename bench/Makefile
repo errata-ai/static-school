@@ -10,4 +10,4 @@ build:
 	python scripts/build.py
 
 bench:
-	python scripts/main.py 25
+	python scripts/main.py $(ssg)

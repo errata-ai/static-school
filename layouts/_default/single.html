@@ -1,0 +1,116 @@
+{{ define "main" }}
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-auto">
+      </div>
+      <div class="col">
+        <div class="row justify-content-center">
+          <div class="col-10">
+            <span class="text-muted">Last updated: {{ now.Format "January 2, 2006"}}</span>
+            <h1 class="my-2">{{ .Params.title }}</h1>
+            <div>
+              <a href="{{ .Params.homepage }}" class="inline-link">
+                <img class="icon" src="/img/icons/theme/home/home.svg" alt="Home icon" data-inject-svg />
+                 {{ .Params.homepage }}
+              </a>
+              <a href="https://twitter.com/{{ .Params.twitter }}" class="inline-link">
+                <img class="icon" src="/img/icons/theme/social/twitter.svg" alt="Home icon" data-inject-svg />
+                 @{{ .Params.twitter }}
+              </a>
+
+            <hr>
+
+            <article class="article">
+              <p>{{ .Params.intro | markdownify }}</p>
+
+              <table class="table table-bordered">
+                <caption>At a glance: {{ .Params.title }}</caption>
+                <thead>
+                    <tr class="header">
+                        <th>Feature</th>
+                        <th>Implementation / Availability</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Language</td>
+                        <td>
+                          <a href="{{ .Params.language.link }}">{{ .Params.language.name }}</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Markup</td>
+                        <td>
+                            {{ if eq .Params.adoc true }}
+                              <img title="AsciiDoc" class="icon" src="/img/adoc.png" />
+                            {{ end }}
+                            {{ if eq .Params.md true }}
+                              <img title="Markdown" class="icon" src="/img/md.png" />
+                            {{ end }}
+                            {{ if eq .Params.rst true }}
+                              <img title="reStructuredText" class="icon" src="/img/rst.svg" />
+                            {{ end }}
+                        </td>
+                    </tr>
+                    <tr class="odd">
+                        <td>Templating</td>
+                        <td>
+                          <a href="{{ .Params.templating.link }}">{{ .Params.templating.name }}</a>
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>Localization (i18n)</td>
+                        <td>
+                          {{ if eq .Params.localization true }}
+                              ✅
+                          {{ else }}
+                              ❌
+                          {{ end }}
+                        </td>
+                    </tr>
+                    <tr class="odd">
+                        <td>Versioning</td>
+                        <td>
+                          {{ if eq .Params.versioning true }}
+                              ✅
+                          {{ else }}
+                              ❌
+                          {{ end }}
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>Theming</td>
+                        <td>
+                          {{ if eq .Params.theming true }}
+                              ✅
+                          {{ else }}
+                              ❌
+                          {{ end }}
+                        </td>
+                    </tr>
+                </tbody>
+              </table>
+
+              {{ .Content }}
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ $id := lower .Params.title }}
+{{ $ssg := index .Site.Data.report $id }}
+
+<script type="text/javascript">
+  var seriesData = [];
+
+  {{ range $key, $value := $ssg.data }}
+    seriesData.push({'name': {{ $key }}, 'data': {{ $value }} })
+  {{ end }}
+
+  var versionInfo = {{ .Params.title }} + ' (latest Alpine release)';
+</script>
+{{ end }}

@@ -1,0 +1,116 @@
+{{ define "main" }}
+
+<section class="bg-primary has-divider text-light">
+    <div class="container pb-2">
+        <div class="row justify-content-center text-center">
+            <div class="col-xl-8 col-lg-9 col-md-10">
+                <h1 class="display-3">Static School 🎓</h1>
+                <div class="mb-4">
+                    <p class="lead">
+                        Discover, explore, and compare static site generators.
+                    </p>
+                </div>
+                <a href="#demos" class="btn btn-lg btn-white mx-1" data-smooth-scroll="">Get Started</a>
+            </div>
+        </div>
+    </div>
+    <div class="divider">
+        <img src="/img/dividers/divider-2.svg" alt="graphical divider" data-inject-svg />
+    </div>
+</section>
+
+<section class="pt-5">
+    <div class="container">
+    <div class="row mb-4">
+        <div class="col-sm-2">
+            <div class="form-group">
+                <select class="form-control form-control-sm">
+                    <option>Any Language</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="form-group">
+                <select class="form-control form-control-sm">
+                    <option>Any Format</option>
+                    <option>AsciiDoc</option>
+                    <option>Markdown</option>
+                    <option>reStructuredText</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="form-group">
+                <select class="form-control form-control-sm">
+                    <option>Any License</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-sm-2 ml-auto">
+            <div class="form-group">
+                <select class="form-control form-control-sm">
+                    <option>Sort</option>
+                    <option>Stars</option>
+                    <option>Followers</option>
+                    <option>Grade</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    {{ with .Site.GetPage "section" "ssg" }}
+    <div class="row" data-isotope-collection data-isotope-id="projects">
+        {{ range .Pages }}
+        {{ $id := lower .Params.title }}
+        {{ $logo := .Resources.GetMatch "logo.png" }}
+        {{ $ssg := index .Site.Data.report $id }}
+        <div class="col-sm-6 col-lg-4 mb-4" data-isotope-item data-category="Branding">
+            <a href="/ssg/{{ $id }}">
+                <div class="card">
+                <div class="card-body justify-content-between">
+                    <div class="icon-round mb-3 mb-md-4 bg-white">
+                        <img src="{{ $logo.RelPermalink }}">
+                    </div>
+                    <h4>{{ .Params.title }}</h4>
+                    <p>{{ .Params.description }}</p>
+                </div>
+                <div class="card-footer">
+                    <div class="row">
+                        <div class="repo-badge col-4">
+                            <span class="repo-badge-img">
+                                <svg width="100%" height="100%" viewBox="0 0 14 16" fill="currentColor" aria-hidden="true" version="1.1" style="display: inline-block; vertical-align: text-top;"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>
+                            </span>
+                            <div>
+                                <strong>{{ lang.NumFmt 0 $ssg.stats.s "- . ," }}</strong>
+                            </div>
+                        </div>
+                        <div class="repo-badge col-4">
+                            <span class="repo-badge-img">
+                                <svg width="100%" height="100%" viewBox="0 0 14 16" fill="currentColor" aria-hidden="true" version="1.1" style="display: inline-block; vertical-align: text-top;"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg>
+                            </span>
+                            <div>
+                                <strong>{{ lang.NumFmt 0 $ssg.stats.i "- . ," }}</strong>
+                            </div>
+                        </div>
+                        <div class="repo-badge col-4">
+                            <span class="repo-badge-img">
+                                <svg class="entypo-svgicon entypo--Twitter css-17fjtz3 e1azrfjp0" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20" style="display: inline-block; height: 1em; width: 1em; fill: currentcolor; user-select: none; vertical-align: text-top;"><path d="M17.316,6.246c0.008,0.162,0.011,0.326,0.011,0.488c0,4.99-3.797,10.742-10.74,10.742c-2.133,0-4.116-0.625-5.787-1.697c0.296,0.035,0.596,0.053,0.9,0.053c1.77,0,3.397-0.604,4.688-1.615c-1.651-0.031-3.046-1.121-3.526-2.621c0.23,0.043,0.467,0.066,0.71,0.066c0.345,0,0.679-0.045,0.995-0.131c-1.727-0.348-3.028-1.873-3.028-3.703c0-0.016,0-0.031,0-0.047c0.509,0.283,1.092,0.453,1.71,0.473c-1.013-0.678-1.68-1.832-1.68-3.143c0-0.691,0.186-1.34,0.512-1.898C3.942,5.498,6.725,7,9.862,7.158C9.798,6.881,9.765,6.594,9.765,6.297c0-2.084,1.689-3.773,3.774-3.773c1.086,0,2.067,0.457,2.756,1.191c0.859-0.17,1.667-0.484,2.397-0.916c-0.282,0.881-0.881,1.621-1.66,2.088c0.764-0.092,1.49-0.293,2.168-0.594C18.694,5.051,18.054,5.715,17.316,6.246z"></path></svg>
+                            </span>
+                            <div>
+                                <strong>{{ lang.NumFmt 0 $ssg.stats.f "- . ," }}</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </a>
+        </div>
+        {{ end }}
+    </div>
+    {{ end }}
+</section>
+
+{{ end }}

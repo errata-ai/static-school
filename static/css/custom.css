@@ -1,0 +1,27 @@
+.logo {
+    height: 2.25rem;
+    width: auto;
+}
+
+.repo-badge-img {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+}
+
+.repo-badge {
+    text-align: center;
+    color: #313d3e;
+}
+
+.inline-link {
+    display: inline-block;
+    white-space: nowrap;
+    margin-right: 18px;
+}
+
+.plot {
+    min-width: 310px;
+    min-height: 400px;
+    margin: 0 auto;
+}
