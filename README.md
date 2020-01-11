@@ -21,6 +21,21 @@ Static School is built with [Hugo](https://gohugo.io/) and deployed daily with [
 
 ## Benchmarking
 
+> **Dependecies**: To run the benchmark suite, you'll need [Python 3.7+](https://www.python.org/downloads/), [Pipenv](https://pipenv.kennethreitz.org/en/latest/), and [Docker](https://www.docker.com/products/docker-desktop) installed. 
+
+Each static site generator is tested against three size increments 10, 100, and 1,000 files. The files are copied from a [corpus](https://github.com/errata-ai/static-school/tree/master/bench/corpus) of approximately-equivalent files for AsciiDoc, Markdown, and reStructuredText.
+
+The following commands will build and run the benchmark suite:
+
+```shell
+$ cd bench
+$ pipenv shell
+$ make build
+$ make bench ssg=<NAME OF SSG TO TEST>
+```
+
+The actual benchmarking is handled by the [hyperfine](https://github.com/sharkdp/hyperfine) command-line tool, which handles warmup runs, statistical outlier detection, and results formatting.
+
 ## Contributing
 
 ## Credits
