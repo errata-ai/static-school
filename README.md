@@ -4,6 +4,21 @@ Static Shool is an open-source project with the goal of making it easier to disc
 
 ## Site Structure
 
+Static School is built with [Hugo](https://gohugo.io/) and deployed daily with [Netlify](https://www.netlify.com/).
+
+```text
+├── LICENSE
+├── README.md
+├── bench <Files related to data collection and benchmarking>
+├── config.toml
+├── content
+│   └── ssg/ <Individual pages for each SSG>
+├── data
+│   └── report.json <An auto-generated, JSON-formatted report of all our data>
+├── layouts
+├── resources
+```
+
 ## Benchmarking
 
 ## Contributing
