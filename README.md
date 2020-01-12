@@ -21,7 +21,7 @@ Static School is built with [Hugo](https://gohugo.io/) and deployed daily with [
 
 ## Benchmarking
 
-> **Dependecies**: To run the benchmark suite, you'll need [Python 3.7+](https://www.python.org/downloads/), [Pipenv](https://pipenv.kennethreitz.org/en/latest/), and [Docker](https://www.docker.com/products/docker-desktop) installed. 
+> **Dependecies**: To run the benchmark suite, you'll need [Python 3.7+](https://www.python.org/downloads/) and [Docker](https://www.docker.com/products/docker-desktop) installed.
 
 Each static site generator is tested against three size increments 10, 100, and 1,000 files. The files are copied from a [corpus](https://github.com/errata-ai/static-school/tree/master/bench/corpus) of approximately-equivalent files for AsciiDoc, Markdown, and reStructuredText.
 
@@ -29,7 +29,6 @@ The following commands will build and run the benchmark suite:
 
 ```shell
 $ cd bench
-$ pipenv shell
 $ make build
 $ make bench ssg=<NAME OF SSG TO TEST>
 ```
@@ -38,6 +37,13 @@ The actual benchmarking is handled by the [hyperfine](https://github.com/sharkdp
 
 ## Contributing
 
+If you'd like to submit a new static generator to our test suite, please follow these steps:
+
+1. Create a new directory in [`/bench/generators/`][1] that includes a `sample_site/`, `Dockerfile`, `and meta.yml`:
+
 ## Credits
 
 This project was inspired by Netlify's MIT-licensed [StaticGen](https://www.staticgen.com/) website. The major difference is that *Static School* is much more than a "leaderboard": we provide in-depth benchmarking, guides, and tutorials.
+
+
+[1]: https://github.com/errata-ai/static-school/tree/master/bench/generators
