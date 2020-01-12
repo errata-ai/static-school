@@ -1,0 +1,35 @@
+name: SSG Stats
+
+on:
+  schedule:
+    - cron: 0 11 * * *
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: '3.x'
+          architecture: 'x64'
+
+      - name: Fetch stats
+        run: |
+          pip install pipenv
+          cd bench
+          pipenv sync
+          python scripts/stats.py
+          cd ..
+
+      - name: Commit report
+        env:
+          PUSH_TOKEN: ${{ secrets.PUSH_TOKEN }}
+        run: |
+          git config --global user.name 'jdkato'
+          git config --global user.email 'jdkato@users.noreply.github.com'
+          git add .
+          git commit -m "[GH Action] Automated report"
+          git push
