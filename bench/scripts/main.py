@@ -7,7 +7,7 @@ import sys
 
 
 def write_report(ssg, results):
-    """
+    """Write the `results` for `ssg` to disk.
     """
     p = "../data/report.json"
 
@@ -21,7 +21,15 @@ def write_report(ssg, results):
 
 
 def cmd_to_markup(cmd):
-    """
+    """Find the type a markup from the given command.
+
+    The idea is that, since our testing directories are named after a format --
+    'md', 'adoc', or 'rst', we can infer the type of markup by looking for
+    those strings in the build command -- e.g.,
+
+    `cd {dir} && gatsby build && cd ..
+
+    where `{dir}` would one of 'md', 'adoc', or 'rst'.
     """
     if "md" in cmd:
         return "Markdown"
@@ -31,7 +39,7 @@ def cmd_to_markup(cmd):
 
 
 def format_results(results):
-    """
+    """Format results into a Highcharts-friendly structure.
     """
     data = {}
     for run in results:

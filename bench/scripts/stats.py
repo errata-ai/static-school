@@ -51,9 +51,10 @@ def update_stats():
         report[ssg]["stats"] = find_stats(ssg, data)
 
         # Is it maintained?
-        resp = requests.get(ISSUES.format(meta["repo"]), headers={
-            "User-Agent": generate_user_agent(),
-        })
+        resp = requests.get(
+            ISSUES.format(meta["repo"]),
+            headers={"User-Agent": generate_user_agent()},
+        )
         soup = bs4.BeautifulSoup(resp.text, features="lxml")
         resu = soup.find("strong", {"class": "text-primary"})
 
@@ -70,7 +71,7 @@ def update_stats():
         report[ssg]["metrics"] = {
             "resolution": resu.text,
             "commit": timeago.format(d1, now),
-            "release": timeago.format(d2, now)
+            "release": timeago.format(d2, now),
         }
 
     # Markup Performance

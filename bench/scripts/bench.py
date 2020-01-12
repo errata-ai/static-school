@@ -23,7 +23,9 @@ if __name__ == "__main__":
 
     for ext in meta["formats"]:
         # Create a site for each format:
-        subprocess.check_output(["cp", "-r", "example_site", ext]).decode("utf-8")
+        subprocess.check_output(["cp", "-r", "example_site", ext]).decode(
+            "utf-8"
+        )
 
         # Populate with benchmark data:
         benchmark = (data / ("test." + ext)).read_text()
@@ -34,10 +36,11 @@ if __name__ == "__main__":
                 if type(layout) != str:
                     layout = meta["layout"][ext]
 
-                f.write(layout.format(
-                    title=meta["filename"].format(i),
-                    content=benchmark
-                ))
+                f.write(
+                    layout.format(
+                        title=meta["filename"].format(i), content=benchmark
+                    )
+                )
 
     args = [
         "hyperfine",
@@ -46,7 +49,7 @@ if __name__ == "__main__":
         "--style",
         "none",
         "--max-runs",
-        "3"
+        "3",
     ]
 
     for ext in meta["formats"]:
