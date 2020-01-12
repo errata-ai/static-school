@@ -39,7 +39,7 @@ Hexo supports Markdown through an [officially-maintained plugin][1] for `markdow
 
 {{% chart id="benchmark-formats" %}}
 
-As you can see, Hexo generally peforms pretty well: it took about 16 seconds to build a 1,000-file site which, while a ways behind other generators, is unlikely to be a major hindrance.
+As you can see, Hexo generally performs pretty well: it took about 16 seconds to build a 1,000-file site which, while a ways behind other generators, is unlikely to be a major hindrance.
 
 {{% chart-formats id="benchmark-ssgs" md="true" adoc="false" rst="false" %}}
 
