@@ -10,6 +10,6 @@ jobs:
     - name: Vale
       uses: errata-ai/vale-action@master
       with:
-        files: docs
+        files: content
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
