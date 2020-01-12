@@ -39,7 +39,7 @@ The actual benchmarking is handled by the [hyperfine](https://github.com/sharkdp
 
 If you'd like to submit a new static generator to our test suite, please follow these steps:
 
-1. Create a new directory in [`/bench/generators/`][1] that includes a `sample_site/`, `Dockerfile`, and `meta.yml`.
+1. Create a new directory in [`/bench/generators/`][1] that includes `sample_site/`, `Dockerfile`, and `meta.yml`.
 
    `example_site/` is a functional example of the given static site generator&mdash;it's the template that will be used for all performance testing. When committed to this repo, though, its content directory should be empty.
    
@@ -88,6 +88,40 @@ If you'd like to submit a new static generator to our test suite, please follow 
    
    # The location, relative to `/example_site`, to copy test markup files:
    content: content
+   ```
+2. Create a new directory in [`/content/ssg`](https://github.com/errata-ai/static-school/tree/master/content/ssg) that includes `logo.png` (project logo), `preview.png` (website screenshot), and `index.md` (project description and metadata).
+
+   `index.md` should define the following front matter variables (the example below is for [Gatsby](https://www.gatsbyjs.org/)):
+   
+   ```yaml
+   title: Gatsby
+   homepage: https://www.gatsbyjs.org/
+
+   description: Build blazing fast, modern apps and websites with React.
+
+   language:
+     name: JavaScript
+     link: https://nodejs.org/en/
+     icon: devicon-javascript-plain colored
+
+   templating:
+     name: React
+     link: https://reactjs.org/
+
+   localization: true
+   versioning: false
+   theming: true
+
+   license:
+     name: MIT
+     slug: mit
+
+   adoc: true
+   md: true
+   rst: false
+
+   twitter: gatsbyjs
+   repo: gatsbyjs/gatsby
    ```
 
 ## Credits
