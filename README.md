@@ -1,6 +1,6 @@
 # Static School [![Netlify Status](https://api.netlify.com/api/v1/badges/ed60bc51-026c-4e4d-b22f-3b16cfc70493/deploy-status)](https://app.netlify.com/sites/festive-wiles-39ebae/deploys) [![code style](https://img.shields.io/badge/code%20style-black-%23000.svg?style=flat&logo=python&logoColor=white)](https://black.readthedocs.io/en/stable/) [![prose style](https://img.shields.io/badge/prose%20style-vale-success?style=flat&logo=markdown&logoColor=white)](https://github.com/errata-ai/vale)
 
-Static Shool is an open-source project with the goal of making it easier to discover, research, and (ultimately) choose a static site generator (SSG) for your next project. We try to provide in-depth analysis for all SSGs we cover, including data (updated daily) on activity, popularity, and performance.
+Static School is an open-source project with the goal of making it easier to discover, research, and (ultimately) choose a static site generator (SSG) for your next project. We try to provide in-depth analysis for all SSGs we cover, including data (updated daily) on activity, popularity, and performance.
 
 ## Site Structure
 
@@ -42,9 +42,9 @@ If you'd like to submit a new static generator to our test suite, please follow 
 1. Create a new directory in [`/bench/generators/`][1] that includes `sample_site/`, `Dockerfile`, and `meta.yml`.
 
    `example_site/` is a functional example of the given static site generator&mdash;it's the template that will be used for all performance testing. When committed to this repo, though, its content directory should be empty.
-   
+
    `Dockerfile` should contain all required steps to build `example_site/` while adhering to the following structure:
-   
+
    ```dockerfile
    # Required:
    FROM jdkato/hyperfine
@@ -62,19 +62,19 @@ If you'd like to submit a new static generator to our test suite, please follow 
    # Required:
    ENTRYPOINT ["python3", "/bench.py"]
    ```
-   
+
    `meta.yml` acts as a means of standardization across multiple static site generators:
-   
+
    ```yaml
    # All supported formats from 'md', 'adoc', and 'rst':
    formats:
     - md
-   
+
    # The CLI commands to (1) build the site and (2) obtain the tool's version:
    commands:
     build: 'cd {dir} && zola build && cd ..'
     version: zola --version
-   
+
    # Any required front matter. This will be added to all test files.
    layout: |
     +++
@@ -82,17 +82,17 @@ If you'd like to submit a new static generator to our test suite, please follow 
     +++
 
     {content}
-   
+
    # The file naming scheme to use for test files:
    filename: test{0}
-   
+
    # The location, relative to `/example_site`, to copy test markup files:
    content: content
    ```
 2. Create a new directory in [`/content/ssg`](https://github.com/errata-ai/static-school/tree/master/content/ssg) that includes `logo.png` (project logo), `preview.png` (website screenshot), and `index.md` (project description and metadata).
 
    `index.md` should define the following front matter variables (the example below is for [Gatsby](https://www.gatsbyjs.org/)):
-   
+
    ```yaml
    title: Gatsby
    homepage: https://www.gatsbyjs.org/
