@@ -3,6 +3,7 @@ asciidoc
 authorable
 callout
 cmark
+eleventy
 hexo
 kramdown
 md
