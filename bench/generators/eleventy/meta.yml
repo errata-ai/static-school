@@ -1,0 +1,20 @@
+formats:
+  - md
+
+commands:
+  build: 'cd {dir} && eleventy && cd ..'
+  version: eleventy --version
+
+layout: |
+  ---
+  title: Bench
+  description: Testing
+  date: 2018-05-01
+  tags:
+    - another-tag
+  layout: layouts/post.njk
+  ---
+
+filename: test{0}
+
+content: posts
