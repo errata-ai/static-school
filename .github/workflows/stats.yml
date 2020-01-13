@@ -2,11 +2,12 @@ name: SSG Stats
 
 on:
   schedule:
-    - cron: 0 11 * * *
+    - cron: 0 12 * * *
 
 jobs:
   report:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v2
 
