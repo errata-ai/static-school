@@ -15,7 +15,7 @@
     <!--end of container-->
 </section>
 
-<section class="space-lg">
+<section class="space-xs pb-0">
     <div class="container">
         <div class="row align-items-center justify-content-around">
             <div class="text-center text-md-left section-intro mt-4">
@@ -107,7 +107,7 @@
             <li class="col-12 col-md-6 col-lg-4 grid-item {{if eq .Params.rst true}}rst{{ end }} {{if eq .Params.md true}}md{{ end }} {{if eq .Params.adoc true}}adoc{{ end }} {{ .Params.language.name }} {{ .Params.license.slug }}">
                 <div class="card">
                     <a href="/ssg/{{ $id }}">
-                        <img class="card-img-top" src="{{ $preview.RelPermalink }}" alt="Card image cap">
+                        <img class="card-img-top lazyload" data-src="{{ $preview.RelPermalink }}" alt="Card image cap">
                     </a>
                     <div class="card-body">
                         <h4 class="card-title">{{ .Params.title }} <i title="{{ .Params.language.name }}" class="{{ .Params.language.icon }}"></i></h4>
@@ -139,4 +139,92 @@
     </div>
     <!--end of container-->
 </section>
+{{ end }}
+
+{{ define "script" }}
+<script type="text/javascript" src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+
+<script type="text/javascript">
+    // init Isotope
+    var $grid = $('.grid').isotope({
+    itemSelector: '.grid-item',
+    layoutMode: 'fitRows',
+    getSortData: {
+        stars: function(item){
+        return parseInt($(item).find(".stars").text());
+        },
+        name: function(item){
+        return $(item).find(".card-title").text();
+        }
+    }
+    });
+
+    // bind filter on select change
+    $('.filter-select').on( 'change', function() {
+    $('#noResultsContainer').addClass('d-none');
+
+    var all = $('.filter-select').map(function() {
+        return $(this).val() || null;
+    }).get();
+
+    var filterValue = "." + all.join(".");
+    if (filterValue === ".") {
+        filterValue = "*";
+    }
+
+    $grid.isotope({ filter: filterValue });
+    if (!$grid.data('isotope').filteredItems.length) {
+        $('#noResultsContainer').removeClass('d-none');
+    }
+    });
+
+    // Sorting
+    $('.sort-select').on( 'change', function() {
+        var sortValue = this.value;
+        var sortAscending = false;
+        if (sortValue === "name") {
+            sortAscending = true;
+        }
+        $grid.isotope({ sortBy: sortValue, sortAscending: sortAscending });
+    });
+
+    equalheight = function(container){
+        var currentTallest = 0,
+        currentRowStart = 0,
+        rowDivs = new Array(),
+        $el,
+        topPosition = 0;
+        $(container).each(function() {
+
+            $el = $(this);
+            $($el).height('auto')
+            topPostion = $el.position().top;
+
+            if (currentRowStart != topPostion) {
+                for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+                    rowDivs[currentDiv].height(currentTallest);
+                }
+            rowDivs.length = 0; // empty the array
+            currentRowStart = topPostion;
+            currentTallest = $el.height();
+            rowDivs.push($el);
+            } else {
+                rowDivs.push($el);
+                currentTallest = (currentTallest < $el.height()) ? ($el.height()) : (currentTallest);
+            }
+            for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+                rowDivs[currentDiv].height(currentTallest);
+            }
+        });
+    }
+
+    $(window).on('resize', function() {
+        equalheight('.card');
+    });
+
+    $(window).on('load', function() {
+        equalheight('.card');
+        $grid.isotope({ sortBy: 'stars', sortAscending: false });
+    });
+</script>
 {{ end }}

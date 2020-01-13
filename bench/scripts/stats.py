@@ -6,15 +6,44 @@ import bs4
 import frontmatter
 import requests
 import timeago
+import yaml
 
+from ruamel.yaml import YAML as ryaml
 from user_agent import generate_user_agent
+
+R_YAML = ryaml()
+R_YAML.preserve_quotes = True
 
 GIST = "https://gist.githubusercontent.com/netlify-bot/{0}/raw/{1}".format(
     "99f2094783ddb2025bd1033f666c34cc", "staticgen-archive.json"
 )
+
 ISSUES = "https://isitmaintained.com/project/{0}"
 COMMIT = "https://api.github.com/repos/{0}/commits/master"
 RELEASE = "https://api.github.com/repos/{0}/releases"
+REPO = "https://api.github.com/repos/{0}"
+
+
+def fetch_github_stats(data_file):
+    """Fetch GitHub-related stats for the given data file.
+    """
+    with open(data_file, "r") as f:
+        data = R_YAML.load(f)
+
+    options = []
+    for entry in data["options"]:
+        repo = entry.get("repo")
+        if repo:
+            info = requests.get(REPO.format(repo)).json()
+            entry["metrics"] = {
+                'stars': info["stargazers_count"],
+                'issues': info["open_issues"]
+            }
+        options.append(entry)
+
+    data["options"] = options
+    with open(data_file, "w+") as f:
+        R_YAML.dump(data, f)
 
 
 def find_stats(_id, stats):
@@ -102,3 +131,8 @@ def update_stats():
 
 if __name__ == "__main__":
     update_stats()
+
+    data = pathlib.Path("../data/tools").resolve()
+    for p in data.glob("*.yml"):
+        print("Fetching stats for {0}".format(p.name))
+        fetch_github_stats(str(p))

@@ -57,24 +57,4 @@ This is even more apparent when comparing Hugo to the other generators in our te
 While Hugo is indeed *ultra-fast* at building Markdown, it falls behind other generators
 when it comes to both AsciiDoc and reStructuredText.
 
-## Templating
-
-Coming soon.
-
-## Localization (i18n)
-
-Coming soon.
-
-## Versioning
-
-Coming soon.
-
-## Theming
-
-Coming soon.
-
-## Language
-
-Coming soon.
-
 [1]: https://gohugo.io/content-management/formats/#list-of-content-formats

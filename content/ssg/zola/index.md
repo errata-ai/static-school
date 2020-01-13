@@ -44,24 +44,4 @@ As you can see, Zola is capable of building a 1,000-file site **in around 1 seco
 
 Compared to other generators, only Hugo is able to match Zola's performance and both were neck-and-neck at every size increment.
 
-## Templating
-
-Coming soon.
-
-## Localization (i18n)
-
-Coming soon.
-
-## Versioning
-
-Coming soon.
-
-## Theming
-
-Coming soon.
-
-## Language
-
-Coming soon.
-
 [1]: https://github.com/raphlinus/pulldown-cmark

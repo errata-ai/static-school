@@ -1,0 +1,183 @@
+{{ define "main" }}
+
+{{ $id := lower .Params.slug }}
+{{ $data := index .Site.Data.tools $id}}
+
+<section class="space-xs text-center bg-gradient text-light">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                💫
+                <span class="mr-2">
+                 Static School is 100% open source&mdash;check out the <a href="https://github.com/errata-ai/static-school" class="text-white">GitHub repository</a> to learn more!
+                </span>
+            </div>
+            <!--end of col-->
+        </div>
+        <!--end of row-->
+    </div>
+    <!--end of container-->
+</section>
+
+<section class="space-xs pb-0">
+    <div class="container">
+        <div class="row align-items-center justify-content-around">
+            <div class="text-center text-md-left section-intro mt-4">
+                <h1 class="display-3">{{ .Params.Title }}</h1>
+                <span class="lead">{{ .Content }}</span>
+            </div>
+        </div>
+        <!--end of row-->
+    </div>
+    <!--end of container-->
+</section>
+
+<section class="bg-white">
+    <div class="container">
+        <div id="options-list" class="row">
+            <div class="col-12 col-md-auto mb-5">
+                <form class="mb-4">
+                    <input class="search form-control" placeholder="Search" type="text" name="search-table" />
+                </form>
+                {{ if isset $data "categories" }}
+                    <nav class="nav flex-md-column">
+                        <a href="#" class="nav-link option-filter active">All</a>
+                        {{ range $data.categories }}
+                            <a href="#" class="nav-link option-filter">{{ . }}</a>
+                        {{ end }}
+                    </nav>
+                {{ end }}
+            </div>
+            <!--end of col-->
+            <div class="col">
+                <div class="card card-sm">
+                    <div class="card-header d-flex bg-secondary justify-content-between align-items-center">
+                        <div>
+                            <h6>{{ $data.name }}</h6>
+                        </div>
+                        {{ if isset $data "sort" }}
+                            <form class="d-flex align-items-center">
+                                <span class="mr-2 text-muted text-small text-nowrap">Sort by:</span>
+                                <select class="custom-select">
+                                    {{ range $data.sort }}
+                                        <option value="{{ . }}">{{ . | title }}</option>
+                                    {{ end }}
+                                </select>
+                            </form>
+                        {{ end }}
+                    </div>
+                    <div id="options-list">
+                        <ul class="list-group list-group-flush list">
+                            {{ range $data.options }}
+                            <li class="list-group-item">
+                                <div class="media align-items-center">
+                                    {{ if not (eq $id "markup") }}
+                                        <a href="{{ .homepage }}" class="mr-4">
+                                            <img alt="Image" src="/img/tools/{{ $id }}/{{ .name | lower }}.png" class="rounded avatar avatar" />
+                                        </a>
+                                    {{ end }}
+                                    <div class="media-body">
+                                        <span class="d-none option-type">{{ .type }}</span>
+                                        <div class="d-flex justify-content-between mb-2">
+                                            <div>
+                                                <a href="{{ .homepage }}" class="mb-1">
+                                                    <h4 class="name">{{ .name }}</h4>
+                                                </a>
+                                                <span class="bio">{{ .description }}</span>
+                                            </div>
+                                        </div>
+                                        {{ range .tags }}
+                                            <span class="badge badge-secondary badge-pill mb-2" href="#">{{ . }}</span>
+                                        {{ end }}
+
+                                        {{ if isset . "metrics" }}
+                                        <div class="text-small">
+                                            <ul class="list-inline">
+                                                {{ if isset .metrics "stars" }}
+                                                <li class="list-inline-item"><i class="icon-star"></i>
+                                                    <span class="stars d-none">{{ .metrics.stars }}</span>
+                                                    {{ lang.NumFmt 0 .metrics.stars "- . ," }}
+                                                </li>
+                                                {{ end }}
+                                                {{ if isset .metrics "platforms" }}
+                                                <li class="list-inline-item"><i class="icon-star"></i>
+                                                    <span class="stars d-none">{{ .metrics.stars }}</span>
+                                                    {{ lang.NumFmt 0 .metrics.stars "- . ," }}
+                                                </li>
+                                                {{ end }}
+                                            </ul>
+                                        </div>
+                                        {{ end }}
+                                    </div>
+                                </div>
+                            </li>
+                            {{ end }}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--
+            <div class="col-lg-3">
+                <div>
+                    <div class="card card-borderless bg-secondary">
+                        <a class="card-body" href="#">
+                            <div class="d-flex justify-content-between mb-3">
+                                <img alt="Image" src="/img/logo-w-gradient.svg" />
+                                <span class="title-decorative">Sponsor</span>
+                            </div>
+                            <span class="h6">A robust suite of styled elements and pages</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            -->
+        </div>
+        <!--end of row-->
+    </div>
+    <!--end of container-->
+</section>
+
+{{ end }}
+
+
+{{ define "script" }}
+<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+
+<script type="text/javascript">
+    var options = {
+        valueNames: ['name', 'bio', 'option-type', 'stars']
+    };
+
+    var optionsList = new List('options-list', options);
+
+    optionsList.sort('name', { order: 'asc' });
+    $('.option-filter').click(function(e) {
+        e.preventDefault();
+
+        $('.option-filter').removeClass('active');
+        $(this).addClass('active');
+
+        var text = $(this).text();
+        optionsList.filter(function(item) {
+            var t = item.values()['option-type'];
+            if (text === 'All' || t === 'All') {
+                return true;
+            } else if (t === text) {
+                return true;
+            } else {
+                return false;
+            }
+        });
+    });
+
+    $('.custom-select').change(function(e) {
+        e.preventDefault();
+        var val = $(this).val().toLowerCase();
+        if (val === "name") {
+            optionsList.sort(val, { order: 'asc' });
+        } else {
+            optionsList.sort(val, { order: 'desc' });
+        }
+    });
+</script>
+{{ end }}

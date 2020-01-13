@@ -47,26 +47,6 @@ From a performance standard point, reStructuredText is best markup language for 
 
 While Pelican lags behind other generators at building Markdown and AsciiDoc, it's currently the fastest at building reStructuredText&mdash;recording a time more than twice as fast as Hugo.
 
-## Templating
-
-Coming soon.
-
-## Localization (i18n)
-
-Coming soon.
-
-## Versioning
-
-Coming soon.
-
-## Theming
-
-Coming soon.
-
-## Language
-
-Coming soon.
-
 [1]: https://github.com/Python-Markdown
 [2]: https://github.com/Python-Markdown/markdown/issues/338
 [3]: https://github.com/getpelican/pelican-plugins/tree/master/asciidoc_reader

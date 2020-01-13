@@ -57,30 +57,6 @@ but the most extreme difference (1,000 files) was only about 7 seconds.
 
 Compared to other Markdown-based generators, Jekyll's performance is pretty average across the board. However, notably, Jekyll was consistently the **fastest** generator at building AsciiDoc in our test suite.
 
-## Templating
-
-Coming soon.
-
-## Localization (i18n)
-
-Coming soon.
-
-## Versioning
-
-Coming soon.
-
-## Theming
-
-Coming soon.
-
-## Language
-
-Coming soon.
-
-## Conclusion
-
-Coming soon.
-
 [1]: https://jekyllrb.com/docs/configuration/markdown/#custom-markdown-processors
 [2]: https://github.com/asciidoctor/jekyll-asciidoc
 [3]: https://github.com/github/jekyll-commonmark-ghpages

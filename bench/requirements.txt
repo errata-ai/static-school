@@ -1,0 +1,16 @@
+beautifulsoup4==4.8.2
+bs4==0.0.1
+certifi==2019.11.28
+chardet==3.0.4
+idna==2.8
+lxml==4.4.2
+python-frontmatter==0.5.0
+PyYAML==5.3
+requests==2.22.0
+ruamel.yaml==0.16.5
+ruamel.yaml.clib==0.2.0
+six==1.13.0
+soupsieve==1.9.5
+timeago==1.0.13
+urllib3==1.25.7
+user-agent==0.1.9

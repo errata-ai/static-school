@@ -48,6 +48,8 @@ if __name__ == "__main__":
         "bench.json",
         "--style",
         "none",
+        "--warmup",
+        "1",
         "--max-runs",
         "3",
     ]

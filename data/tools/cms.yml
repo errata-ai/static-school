@@ -1,0 +1,175 @@
+categories:
+- Open Source
+- Closed Source
+
+sort:
+- name
+- stars
+
+name: Services
+
+options:
+- name: Cockpit
+  homepage: https://getcockpit.com/
+  description: |
+    A self-hosted, headless and API-driven CMS.
+  type: Open Source
+  tags:
+  - 'type: API'
+  - 'db: MongoDB'
+  metrics:
+    stars: 4289
+    forks: 428
+    issues: 160
+- name: Directus
+  homepage: https://directus.io/
+  description: |
+    Directus is an open-source suite of software that provides an instant API
+    wrapper for SQL databases and an intuitive Admin App for non-technical
+    users to manage that content.
+  type: Open Source
+  tags:
+  - 'type: API'
+  - 'db: MySQL'
+  metrics:
+    stars: 5578
+    forks: 553
+    issues: 10
+- name: dotCMS
+  homepage: https://www.dotcms.com/
+  description: |
+    The freedom of a headless CMS with the full functionality of a
+    traditional CMS.
+  type: Open Source
+  tags:
+  - 'type: API'
+  - 'db: MySQL|PostgreSQL'
+  metrics:
+    stars: 531
+    forks: 355
+    issues: 262
+- name: Ghost
+  homepage: https://ghost.org/
+  description: |
+    Ghost is the platform your team has been asking for — it’s the platform
+    editors need, built with technology developers prefer, and it works with
+    all your other tools.
+  type: Open Source
+  tags:
+  - 'type: API'
+  - 'db: MySQL'
+  metrics:
+    stars: 32344
+    forks: 6995
+    issues: 76
+- name: Keystone 5
+  homepage: https://v5.keystonejs.com/
+  description: |
+    A scalable platform and CMS to build Node.js applications.
+  type: Open Source
+  tags:
+  - 'type: API'
+  - 'db: MongoDB|PostgreSQL'
+  metrics:
+    stars: 1382
+    forks: 154
+    issues: 293
+- name: Netlify CMS
+  homepage: https://www.netlifycms.org/
+  description: |
+    Open source content management for your Git workflow.
+  type: Open Source
+  tags:
+  - 'type: Git'
+  metrics:
+    stars: 10487
+    forks: 1440
+    issues: 430
+- name: Ponzu
+  homepage: https://ponzu-cms.org/
+  description: |
+    Ponzu is a powerful and efficient open-source HTTP server framework and
+    CMS.
+  type: Open Source
+  tags:
+  - 'type: API'
+  - 'db: BoltDB'
+  metrics:
+    stars: 4754
+    forks: 314
+    issues: 15
+- name: Prose
+  homepage: http://prose.io/
+  description: |
+    Prose is a content editor for GitHub designed for managing websites.
+  type: Open Source
+  tags:
+  - 'type: Git'
+  metrics:
+    stars: 4280
+    forks: 740
+    issues: 176
+- name: Publii
+  homepage: https://getpublii.com/
+  description: |
+    Publii is a static-website-building tool for every skill level, from
+    beginner to developer.
+  type: Open Source
+  tags:
+  - 'type: Git'
+  metrics:
+    stars: 2128
+    forks: 131
+    issues: 155
+- name: Sanity
+  homepage: https://www.sanity.io/
+  description: |
+    Sanity is the fastest, most flexible platform for delivering content to
+    digital devices and products.
+  type: Open Source
+  tags:
+  - 'type: API'
+  - 'db: managed'
+  metrics:
+    stars: 1435
+    forks: 124
+    issues: 216
+- name: Squidex
+  homepage: https://squidex.io/
+  description: |
+    Squidex is an open source headless CMS and content management hub. In
+    contrast to a traditional CMS Squidex provides a rich API with OData
+    filter and Swagger definitions.
+  type: Open Source
+  tags:
+  - 'type: API'
+  - 'db: MongoDB'
+  metrics:
+    stars: 911
+    forks: 197
+    issues: 21
+- name: Strapi
+  homepage: https://strapi.io/
+  description: |
+    The most advanced open-source headless CMS to build powerful APIs with no
+    effort.
+  type: Open Source
+  tags:
+  - 'type: API'
+  - 'db: PostgreSQL|MongoDB|MySQL|MariaDB'
+  metrics:
+    stars: 21014
+    forks: 2472
+    issues: 169
+- name: TinaCMS
+  homepage: https://tinacms.org/
+  description: |
+    Tina is an open-source site editing toolkit for React-based frameworks
+    Gatsby & Next.js.
+  type: Open Source
+  tags:
+  - 'type: Git'
+  metrics:
+    stars: 3529
+    forks: 134
+    issues: 47

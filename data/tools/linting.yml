@@ -1,0 +1,47 @@
+name: Tools
+
+sort:
+- name
+- stars
+
+options:
+- name: Vale
+  repo: errata-ai/vale
+  homepage: https://github.com/errata-ai/vale
+  description: |
+    A syntax-aware linter for prose built with speed and extensibility in
+    mind.
+  type: Open Source
+  tags:
+  - Go
+  - 'md, adoc, rst, html, xml, dita'
+
+  metrics:
+    stars: 518
+    issues: 5
+- name: textlint
+  repo: textlint/textlint
+  homepage: https://github.com/textlint/textlint
+  description: |
+    The pluggable natural language linter for text and markdown.
+  type: Open Source
+  tags:
+  - JavaScript
+  - 'md, adoc, rst, html, re'
+
+  metrics:
+    stars: 1532
+    issues: 58
+- name: RedPen
+  repo: redpen-cc/redpen
+  homepage: https://github.com/redpen-cc/redpen
+  description: |
+    An open source proofreading tool to check if your technical documents
+    meet the writing standard.
+  type: Open Source
+  tags:
+  - Java
+  - 'md, adoc, rst, html, re, tex'
+  metrics:
+    stars: 420
+    issues: 63

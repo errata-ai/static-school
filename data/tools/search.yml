@@ -1,0 +1,49 @@
+name: Providers
+
+categories:
+- Commercial
+- Open Source
+
+options:
+- name: Lunr.js
+  homepage: https://lunrjs.com/
+  description: Search made simple.
+  type: Open Source
+  tags:
+  - OSS (MIT)
+
+- name: Para
+  homepage: https://paraio.com/
+  description: |
+    Para is a flexible and cost-effective backend service that stores,
+    indexes and caches your objects.
+  type: Commercial
+  tags:
+  - Commercial
+
+- name: Algolia
+  homepage: https://www.algolia.com/
+  description: |
+    Algolia’s search-as-a-service and full suite of APIs allow teams to
+    easily develop tailored, fast search and discovery experiences that
+    delight and convert.
+  type: Commercial
+  tags:
+  - Commercial
+
+- name: Bonsai
+  homepage: https://bonsai.io/
+  description: |
+    Integrate powerful search functionality into your applications, without
+    ever having to set up or manage servers.
+  type: Commercial
+  tags:
+  - Commercial
+
+- name: FlexSearch.js
+  homepage: https://github.com/nextapps-de/flexsearch
+  description: |
+    Next-Generation full text search library for Browser and Node.js.
+  type: Open Source
+  tags:
+  - OSS (Apache 2.0)

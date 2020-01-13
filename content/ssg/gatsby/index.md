@@ -60,26 +60,6 @@ benchmarking of Markdown build speeds at every size.
 Of course, a static site generator can be "fast" in more ways than one and
 Gatsby still offers a number of appealing features (which we'll discuss below).
 
-## Templating
-
-Coming soon.
-
-## Localization (i18n)
-
-Coming soon.
-
-## Versioning
-
-Coming soon.
-
-## Theming
-
-Coming soon.
-
-## Language
-
-Coming soon.
-
 [1]: https://www.gatsbyjs.org/packages/gatsby-transformer-remark/
 [2]: https://www.gatsbyjs.org/packages/gatsby-transformer-asciidoc/
 [3]: http://remark.js.org/

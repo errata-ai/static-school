@@ -50,24 +50,4 @@ Hexo supports Markdown through an [officially-maintained plugin][1] for
 Compared to other SSGs, Hexo's performance is pretty average across the board
 with Jekyll being its most similar counterpart.
 
-## Templating
-
-Coming soon.
-
-## Localization (i18n)
-
-Coming soon.
-
-## Versioning
-
-Coming soon.
-
-## Theming
-
-Coming soon.
-
-## Language
-
-Coming soon.
-
 [1]: https://github.com/hexojs/hexo-renderer-markdown-it

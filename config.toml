@@ -42,7 +42,7 @@ enableMissingTranslationPlaceholders = true
     languageName ="English"
     # Weight used for sorting.
     weight = 1
-    description = ""
+    description = "Discover, explore, and compare static site generators."
 
 # Be explicit about the output formats. We only want an RSS feed for the home page.
 [outputs]

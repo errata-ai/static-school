@@ -1,0 +1,116 @@
+name: Tools
+
+categories:
+- Markup
+- Links
+
+sort:
+- name
+- stars
+
+options:
+- name: Markdown lint tool
+  repo: markdownlint/markdownlint
+  homepage: https://github.com/markdownlint/markdownlint
+  description: |
+    A tool to check markdown files and flag style issues.
+  type: Markup
+  tags:
+  - Ruby
+  - Markdown
+
+  metrics:
+    stars: 808
+    issues: 88
+- name: markdownlint
+  repo: DavidAnson/markdownlint
+  homepage: https://github.com/DavidAnson/markdownlint
+  description: |
+    A Node.js style checker and lint tool for Markdown/CommonMark files.
+  type: Markup
+  tags:
+  - JavaScript
+  - Markdown
+
+  metrics:
+    stars: 1764
+    issues: 29
+- name: remark-lint
+  repo: remarkjs/remark-lint
+  homepage: https://github.com/remarkjs/remark-lint
+  description: |
+    Markdown code style linter.
+  type: Markup
+  tags:
+  - JavaScript
+  - Markdown
+
+  metrics:
+    stars: 582
+    issues: 5
+- name: restructuredtext-lint
+  repo: twolfson/restructuredtext-lint
+  homepage: https://github.com/twolfson/restructuredtext-lint
+  description: |
+    reStructuredText linter.
+  type: Markup
+  tags:
+  - Python
+  - reStructuredText
+
+  metrics:
+    stars: 123
+    issues: 5
+- name: markdown-link-check
+  repo: tcort/markdown-link-check
+  homepage: https://github.com/tcort/markdown-link-check
+  description: |
+    Extracts links from markdown texts and checks whether each link is alive
+    (200 OK) or dead.
+  type: Links
+  tags:
+  - JavaScript
+  - Markdown
+
+  metrics:
+    stars: 91
+    issues: 29
+- name: liche
+  repo: raviqqe/liche
+  homepage: https://github.com/raviqqe/liche
+  description: |
+    Fast Link Checker for Markdown and HTML in Go.
+  type: Links
+  tags:
+  - Go
+  - Markdown
+
+  metrics:
+    stars: 86
+    issues: 15
+- name: remark-validate-links
+  repo: remarkjs/remark-validate-links
+  homepage: https://github.com/remarkjs/remark-validate-links
+  description: |
+    plugin to check that Markdown links and images reference existing files
+    and headings.
+  type: Links
+  tags:
+  - JavaScript
+  - Markdown
+
+  metrics:
+    stars: 51
+    issues: 2
+- name: awesome_bot
+  repo: dkhamsing/awesome_bot
+  homepage: https://github.com/dkhamsing/awesome_bot
+  description: |
+    Validate links in awesome projects.
+  type: Links
+  tags:
+  - Ruby
+  - Markdown
+  metrics:
+    stars: 630
+    issues: 11

@@ -2,8 +2,11 @@
 """
 import json
 import os
+import re
 import subprocess
 import sys
+
+VERSION_RE = re.compile(r"v?\d+\.\d+\.\d+")
 
 
 def write_report(ssg, results):
@@ -66,7 +69,11 @@ if __name__ == "__main__":
         output = json.loads(entry)
 
         results.append(output["results"])
-        version = output["version"]
+
+        version = VERSION_RE.search(output["version"])
+        version = version.group(0)
+        if not version.startswith("v"):
+            version = "v" + version
 
     results = format_results(results)
 

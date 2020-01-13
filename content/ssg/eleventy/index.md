@@ -47,25 +47,5 @@ As you can see, Eleventy compares well to other SSGs: for Markdown, it's among
 the fastest in our test suite. Notably, it's also the fastest JavaScript-based
 SSG by decent margin.
 
-## Templating
-
-Coming soon.
-
-## Localization (i18n)
-
-Coming soon.
-
-## Versioning
-
-Coming soon.
-
-## Theming
-
-Coming soon.
-
-## Language
-
-Coming soon.
-
 [1]: https://github.com/markdown-it/markdown-it
 [2]: https://github.com/11ty/eleventy/issues/117

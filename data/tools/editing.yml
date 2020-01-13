@@ -1,0 +1,85 @@
+name: Apps
+
+categories:
+- Markdown
+- AsciiDoc
+- reStructuredText
+
+options:
+- name: typora
+  homepage: https://typora.io/
+  description: |
+    Typora gives you a seamless experience as both a reader and a writer.
+  type: Markdown
+  tags:
+  - Free
+  - macOS
+  - Windows
+  - Linux
+
+- name: iA Writer
+  homepage: https://ia.net/writer
+  description: |
+    Typora gives you a seamless experience as both a reader and a writer.
+  type: Markdown
+  tags:
+  - macOS
+  - Windows
+  - iOS
+  - Android
+
+- name: Ulysses
+  homepage: https://ulysses.app/
+  description: |
+    A pleasant, focused writing experience combined with effective document
+    management, fast syncing and flexible export options make Ulysses the
+    first choice for writers of all kinds.
+  type: Markdown
+  tags:
+  - macOS
+  - iOS
+
+- name: AsciidocFX
+  homepage: https://github.com/asciidocfx/asciidocfx
+  description: |
+    Asciidoc FX is a book / document editor to build PDF, Epub, Mobi and HTML
+    books, documents and slides.
+  type: AsciiDoc
+  tags:
+  - Free
+  - macOS
+  - Windows
+  - Linux
+
+- name: vscode-restructuredtext
+  homepage: https://marketplace.visualstudio.com/items?itemName=lextudio.restructuredtext
+  description: |
+    This extension provides rich reStructuredText language support for Visual
+    Studio Code.
+  type: reStructuredText
+  tags:
+  - Free
+  - macOS
+  - Windows
+  - Linux
+
+- name: asciidoctor-vscode
+  homepage: https://github.com/asciidoctor/asciidoctor-vscode
+  description: |
+    An extension that provides live preview, syntax highlighting and snippets
+    for the AsciiDoc format using Asciidoctor flavor.
+  type: AsciiDoc
+  tags:
+  - Free
+  - macOS
+  - Windows
+  - Linux
+
+- name: MacDown
+  homepage: https://macdown.uranusjr.com/
+  description: |
+    The open source Markdown editor for macOS.
+  type: Markdown
+  tags:
+  - Free
+  - macOS

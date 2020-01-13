@@ -12,6 +12,7 @@ user-agent = "*"
 lxml = "*"
 timeago = "*"
 python-frontmatter = "*"
+ruamel-yaml = "*"
 
 [requires]
 python_version = "3.7"

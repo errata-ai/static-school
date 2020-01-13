@@ -9,18 +9,23 @@
       <meta name="description" content="{{ .Site.Params.description }}">
     {{ end }}
 
-    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,400i,500" rel="stylesheet">
-    <link href="{{ "/css/socicon.css" | relURL }}" rel="stylesheet" type="text/css" media="all" />
-    <link href="{{ "/css/entypo.css" | relURL }}" rel="stylesheet" type="text/css" media="all" />
+    {{ if .Params.needsFA }}
+      <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    {{ end }}
 
-    <link rel="stylesheet" href="{{ "/css/theme.min.css" | relURL }}">
-    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+    {{ $theme := resources.Get "css/theme.css" }}
+    {{ $custom := resources.Get "css/custom.css" }}
+
+    {{ $css := slice $theme $custom | resources.Concat "css/bundle.css" | minify }}
+    <style>{{ $css.Content | safeCSS }}</style>
+
+    <!-- TODO: Remove these? -->
+    <link rel="preload" as="style" onload="this.rel='stylesheet'" href="{{ "/css/socicon.min.css" | relURL }}">
+    <link rel="preload" as="style" onload="this.rel='stylesheet'" href="{{ "/css/entypo.min.css" | relURL }}">
 
     {{- range .Params.css }}
       <link rel="stylesheet" href="/css/{{ . }}">
     {{- end }}
-
-    <link rel="stylesheet" href="{{ "/css/custom.css" | relURL }}">
 
     <script data-ad-client="ca-pub-2876317644479184" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>

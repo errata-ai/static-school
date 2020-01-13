@@ -1,0 +1,46 @@
+name: Services
+
+categories:
+- Free
+- Paid
+
+options:
+- name: Netlify
+  homepage: https://www.netlify.com/
+  description: |
+    Netlify is everything you need to build fast, modern websites:
+    continuous deployment, serverless functions, and so much more.
+  type: All
+  tags:
+  - Deploy Previews
+
+- name: GitHub Pages
+  homepage: https://pages.github.com/
+  description: |
+    Hosted directly from your GitHub repository. Just edit, push, and your
+    changes are live.
+  type: Free
+
+- name: Amazon S3
+  homepage: https://aws.amazon.com/s3/
+  description: |
+    Amazon Simple Storage Service (Amazon S3) is an object storage service
+    that offers industry-leading scalability, data availability, security,
+    and performance.
+  type: Paid
+
+- name: Firebase
+  homepage: https://firebase.google.com/docs/hosting
+  description: |
+    Firebase Hosting provides fast and secure hosting for your web app,
+    static and dynamic content, and microservices.
+  type: All
+  tags:
+  - Authentication
+
+- name: ZEIT
+  homepage: https://zeit.co/
+  description: |
+    All-in-one solution for static & JAMstack deployment for
+    performance-obsessed teams.
+  type: All
