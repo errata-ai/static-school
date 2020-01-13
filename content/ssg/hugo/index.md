@@ -4,6 +4,11 @@ homepage: https://gohugo.io/
 
 description: The world’s fastest framework for building websites.
 
+intro: |
+    Hugo is a fast ("less than 1 ms per page"), self-contained static site
+    generator. Its native binary includes most of its features out-of-the-box,
+    allowing you to avoid having install plugins and dependencies.
+
 language:
   name: Go
   link: https://golang.org/
@@ -49,7 +54,7 @@ This is even more apparent when comparing Hugo to the other generators in our te
 
 {{% chart-formats id="benchmark-ssgs" md="true" adoc="true" rst="true" %}}
 
-While Hugo is ultra-fast at building Markdown, it falls behind other generators
+While Hugo is indeed *ultra-fast* at building Markdown, it falls behind other generators
 when it comes to both AsciiDoc and reStructuredText.
 
 ## Templating

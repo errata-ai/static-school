@@ -4,6 +4,12 @@ homepage: https://blog.getpelican.com/
 
 description: Pelican is a static site generator that requires no database or server-side logic.
 
+intro: |
+    Pelican is a static site generator that "requires no database or
+    server-side logic." It features a modular plugin system and an
+    officially-maintained
+    [plugin repository](https://github.com/getpelican/pelican-plugins).
+
 language:
   name: Python
   link: https://www.python.org/

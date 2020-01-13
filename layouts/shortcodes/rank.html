@@ -1,0 +1,4 @@
+{{ $id := .Get "id" }}
+{{ $ssg := index .Site.Data.report $id }}
+
+<span class="d-inline ssg-rank">{{ $ssg.performace.Markdown }}</span>

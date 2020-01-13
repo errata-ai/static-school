@@ -4,6 +4,14 @@ homepage: https://jekyllrb.com
 
 description: A simple, blog-aware static site generator.
 
+intro: |
+    Jekyll is a "simple, blog-aware, static site generator perfect for personal,
+    project, or organization sites." Its first release dates back to 2009,
+    making it one of the most mature static site generators available. It has
+    built-in support for [GitHub Pages](https://bit.ly/30cxGPN) and one of the
+    largest collections of community-maintained
+    [themes](https://jekyllrb.com/docs/themes/) available.
+
 language:
   name: Ruby
   link: https://www.ruby-lang.org/en/

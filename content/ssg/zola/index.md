@@ -4,6 +4,12 @@ homepage: https://www.getzola.org/
 
 description: A fast static site generator in a single binary with everything built-in.
 
+intro: |
+    Zola is a static site generator that installs as a single executable with
+    with "everything built-in" (e.g., Sass compilation, syntax highlighting,
+    and TOC generation). It's also one of the fastest static site generators
+    available, building most sites in less than a second.
+
 language:
   name: Rust
   link: https://www.rust-lang.org/
@@ -31,8 +37,6 @@ repo: getzola/zola
 ## Markup
 
 Zola supports Markdown through the CommonMark-compliant [pulldown-cmark][1] library. Zola makes up for *only* supporting Markdown by being of the fastest generators in our test suite.
-
-{{% chart id="benchmark-formats" %}}
 
 As you can see, Zola is capable of building a 1,000-file site **in around 1 second**.
 

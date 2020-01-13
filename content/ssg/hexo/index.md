@@ -4,6 +4,11 @@ homepage: https://hexo.io/
 
 description: A fast, simple & powerful blog framework.
 
+intro: |
+    Hexo is a "fast, simple, and powerful blog framework." It's designed to be
+    extensible, including APIs for incorporating third-party template engines
+    as wel as NPM packages (Babel, PostCSS, Less/Sass, etc).
+
 language:
   name: JavaScript
   link: https://nodejs.org/en/
@@ -32,18 +37,18 @@ repo: hexojs/hexo
 ## Markup
 
 {{% callout class="info" %}}
-**Note**: Hexo *does* have third-party plugins for AsciiDoc and reStructuredText, but neither appear to be maintained&mdash;so they've been omitted from this analysis.
+**Note**: Hexo *does* have third-party plugins for AsciiDoc and
+reStructuredText, but neither appear to be maintained&mdash;so they've been
+omitted from this analysis.
 {{% /callout %}}
 
-Hexo supports Markdown through an [officially-maintained plugin][1] for `markdown-it`, a CommonMark-compliant parser.
-
-{{% chart id="benchmark-formats" %}}
-
-As you can see, Hexo generally performs pretty well: it took about 16 seconds to build a 1,000-file site which, while a ways behind other generators, is unlikely to be a major hindrance.
+Hexo supports Markdown through an [officially-maintained plugin][1] for
+`markdown-it`, a CommonMark-compliant parser.
 
 {{% chart-formats id="benchmark-ssgs" md="true" adoc="false" rst="false" %}}
 
-Compared to other SSGs, Hexo's performance is pretty average across the board with Jekyll being its most similar counterpart.
+Compared to other SSGs, Hexo's performance is pretty average across the board
+with Jekyll being its most similar counterpart.
 
 ## Templating
 
