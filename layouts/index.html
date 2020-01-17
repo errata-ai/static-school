@@ -107,7 +107,7 @@
             <li class="col-12 col-md-6 col-lg-4 grid-item {{if eq .Params.rst true}}rst{{ end }} {{if eq .Params.md true}}md{{ end }} {{if eq .Params.adoc true}}adoc{{ end }} {{ .Params.language.name }} {{ .Params.license.slug }}">
                 <div class="card">
                     <a href="/ssg/{{ $id }}">
-                        <img class="card-img-top lazyload" data-src="{{ $preview.RelPermalink }}" alt="Card image cap">
+                        <img class="card-img-top" src="{{ $preview.RelPermalink }}" alt="Card image cap">
                     </a>
                     <div class="card-body">
                         <h4 class="card-title">{{ .Params.title }} <i title="{{ .Params.language.name }}" class="{{ .Params.language.icon }}"></i></h4>
