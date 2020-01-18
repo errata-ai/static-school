@@ -7,11 +7,11 @@
     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#format" role="tab" aria-controls="format" aria-selected="true">By Format</a>
   </li>
   <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-flip="false">By Generator</a>
+    <button class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-flip="false">By Generator</b>
     <div class="dropdown-menu">
       <a class="dropdown-item {{ if eq $md false }}d-none{{ end }}" id="md-tab" data-toggle="tab" href="#md" role="tab" aria-controls="md" aria-selected="true">Markdown</a>
       <a class="dropdown-item {{ if eq $adoc false }}d-none{{ end }}" id="adoc-tab" data-toggle="tab" href="#adoc" role="tab" aria-controls="adoc" aria-selected="true">AsciiDoc</a>
-      <a class="dropdown-item {{ if eq $rst false }}d-none{{ end }}" id="adoc-tab" data-toggle="tab" href="#rst" role="tab" aria-controls="rst" aria-selected="true">reStructuredText</a>
+      <a class="dropdown-item {{ if eq $rst false }}d-none{{ end }}" id="rst-tab" data-toggle="tab" href="#rst" role="tab" aria-controls="rst" aria-selected="true">reStructuredText</a>
     </div>
   </li>
 </ul>

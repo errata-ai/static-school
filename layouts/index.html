@@ -36,7 +36,8 @@
         {{ with .Site.GetPage "section" "ssg" }}
             <div class="col-sm-2">
                 <div class="form-group">
-                    <select class="form-control form-control-sm filter-select">
+                    <label for="select-lang" class="d-none">Select a language</label>
+                    <select id="select-lang" class="form-control form-control-sm filter-select">
                         <option value="">Any Language</option>
                         {{ $seen := slice "" }}
                         {{ range .Pages }}
@@ -51,7 +52,8 @@
             </div>
             <div class="col-sm-2">
                 <div class="form-group">
-                    <select class="form-control form-control-sm filter-select">
+                    <label for="format-select" class="d-none">Select a format</label>
+                    <select id="format-select" class="form-control form-control-sm filter-select">
                         <option value="">Any Format</option>
                         <option value="adoc">AsciiDoc</option>
                         <option value="md">Markdown</option>
@@ -61,7 +63,8 @@
             </div>
             <div class="col-sm-2">
                 <div class="form-group">
-                    <select class="form-control form-control-sm filter-select">
+                    <label for="format-license" class="d-none">Select a license</label>
+                    <select id="format-license" class="form-control form-control-sm filter-select">
                         <option value="">Any License</option>
                         {{ $seen := slice "" }}
                         {{ range .Pages }}
@@ -76,7 +79,8 @@
             </div>
             <div class="col-sm-2 ml-auto">
                 <div class="form-group">
-                    <select class="form-control form-control-sm sort-select">
+                    <label for="ssg-sort" class="d-none">Sort by</label>
+                    <select id="ssg-sort" class="form-control form-control-sm sort-select">
                         <option value="stars">Stars</option>
                         <option value="name">Name</option>
                     </select>
@@ -93,7 +97,7 @@
                         <i class="icon-cog display-4 opacity-20"></i>
                         <h1 class="h5">No results found.</h1>
                         <p>Try changing your filtering criteria.</p>
-                        <a href="#" class="btn btn-lg btn-primary">Learn more</a>
+                        <a href="https://github.com/errata-ai/static-school" class="btn btn-lg btn-primary">Learn more</a>
                     </div>
                 </div>
             </div>
@@ -107,7 +111,7 @@
             <li class="col-12 col-md-6 col-lg-4 grid-item {{if eq .Params.rst true}}rst{{ end }} {{if eq .Params.md true}}md{{ end }} {{if eq .Params.adoc true}}adoc{{ end }} {{ .Params.language.name }} {{ .Params.license.slug }}">
                 <div class="card">
                     <a href="/ssg/{{ $id }}">
-                        <img class="card-img-top" src="{{ $preview.RelPermalink }}" alt="Card image cap">
+                        <img class="card-img-top" src="{{ $preview.RelPermalink }}" alt="Webiste privew for {{ $id }}">
                     </a>
                     <div class="card-body">
                         <h4 class="card-title">{{ .Params.title }} <i title="{{ .Params.language.name }}" class="{{ .Params.language.icon }}"></i></h4>
@@ -120,10 +124,10 @@
                             </ul>
                         </div>
                         <div class="dropup">
-                            <button class="btn btn-sm btn-outline-primary dropdown-toggle dropdown-toggle-no-arrow" type="button" id="SidekickButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <button class="btn btn-sm btn-outline-primary dropdown-toggle dropdown-toggle-no-arrow" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="External links" title="External links">
                                 <i class="icon-dots-three-horizontal"></i>
                             </button>
-                            <div class="dropdown-menu dropdown-menu-sm" aria-labelledby="SidekickButton">
+                            <div class="dropdown-menu dropdown-menu-sm">
                                 <a class="dropdown-item" href="{{ .Params.homepage }}"><i class="icon-home"></i> Website</a>
                                 <a class="dropdown-item" href="https://github.com/{{ .Params.repo }}"><i class="socicon-github"></i> Repository</a>
                             </div>

@@ -41,9 +41,9 @@
                 </form>
                 {{ if isset $data "categories" }}
                     <nav class="nav flex-md-column">
-                        <a href="#" class="nav-link option-filter active">All</a>
+                        <a class="nav-link option-filter active">All</a>
                         {{ range $data.categories }}
-                            <a href="#" class="nav-link option-filter">{{ . }}</a>
+                            <a class="nav-link option-filter">{{ . }}</a>
                         {{ end }}
                     </nav>
                 {{ end }}
@@ -73,7 +73,7 @@
                                 <div class="media align-items-center">
                                     {{ if not (eq $id "markup") }}
                                         <a href="{{ .homepage }}" class="mr-4">
-                                            <img alt="Image" src="/img/tools/{{ $id }}/{{ .name | lower }}.png" class="rounded avatar avatar" />
+                                            <img alt="Logo for {{ $id }}" src="/img/tools/{{ $id }}/{{ .name | lower }}.png" class="rounded avatar avatar" />
                                         </a>
                                     {{ end }}
                                     <div class="media-body">
