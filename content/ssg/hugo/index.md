@@ -38,10 +38,6 @@ repo: gohugoio/hugo
 
 {{% callout class="info" %}}
 **Key Takeaway**: If you're using AsciiDoc or reStructuredText, Hugo probably isn't the best choice.
-
-Related discussion:
-- [Asciidoc + Hugo performance](https://discourse.gohugo.io/t/asciidoc-hugo-performance/10637)
-- [Shimgo Hugo](https://tychoish.com/post/shimgo-hugo/) (an attempt at improving reStructuredText + Hugo performance)
 {{% /callout %}}
 
 Hugo has native support for Markdown (standards-compliant), and supports AsciiDoc and reStructuredText through [external libraries][1]. While relying on plugins or external libraries isn't unusual, it has a dramatic impact on Hugo's most popular selling point&mdash;performance:
