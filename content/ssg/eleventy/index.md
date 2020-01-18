@@ -41,11 +41,7 @@ Eleventy has native support for Markdown through the (CommonMark-compliant)
 [`markdown-it`][1] library. It currently doesn't support any other format, but
 there is discussion about adding [Custom File Extension Handlers][2].
 
-{{% chart-formats id="benchmark-ssgs" md="true" adoc="false" rst="false" %}}
-
-As you can see, Eleventy compares well to other SSGs: for Markdown, it's among
-the fastest in our test suite. Notably, it's also the fastest JavaScript-based
-SSG by decent margin.
+{{% chart-tabs %}}
 
 [1]: https://github.com/markdown-it/markdown-it
 [2]: https://github.com/11ty/eleventy/issues/117

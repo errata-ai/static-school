@@ -23,9 +23,7 @@
     <link rel="preload" as="style" onload="this.rel='stylesheet'" href="{{ "/css/socicon.min.css" | relURL }}">
     <link rel="preload" as="style" onload="this.rel='stylesheet'" href="{{ "/css/entypo.min.css" | relURL }}">
 
-    {{- range .Params.css }}
-      <link rel="stylesheet" href="/css/{{ . }}">
-    {{- end }}
+    {{ block "styles" . }}{{ end }}
 
     <script data-ad-client="ca-pub-2876317644479184" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>

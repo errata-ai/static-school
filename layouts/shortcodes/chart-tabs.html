@@ -1,0 +1,24 @@
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#format" role="tab" aria-controls="format" aria-selected="true">By Format</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#ssg" role="tab" aria-controls="ssg" aria-selected="false">By Generator</a>
+  </li>
+</ul>
+
+{{ $md := .Get "md" }}
+{{ $adoc := .Get "adoc" }}
+{{ $rst := .Get "rst" }}
+
+<div class="tab-content" id="myTabContent">
+
+  <div class="tab-pane fade show active" id="format" role="tabpanel" aria-labelledby="format-tab">
+    <div id="benchmark-formats" class="plot"></div>
+  </div>
+
+  <div class="tab-pane fade" id="ssg" role="tabpanel" aria-labelledby="ssg-tab">
+    <div id="benchmark-ssgs" class="plot"></div>
+  </div>
+
+</div>

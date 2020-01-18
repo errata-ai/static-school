@@ -39,13 +39,7 @@ repo: getpelican/pelican
 
 Pelican has native support for [Python-Markdown][1] (a [non-standard][2] Markdown implementation) and reStructuredText. AsciiDoc is supported through a [third-party plugin][3].
 
-{{% chart id="benchmark-formats" %}}
-
-From a performance standard point, reStructuredText is best markup language for Pelican: it was consistently the fastest at every size, often being almost twice as fast as Markdown and AsciiDoc.
-
-{{% chart-formats id="benchmark-ssgs" md="true" adoc="true" rst="true" %}}
-
-While Pelican lags behind other generators at building Markdown and AsciiDoc, it's currently the fastest at building reStructuredText&mdash;recording a time more than twice as fast as Hugo.
+{{% chart-tabs %}}
 
 [1]: https://github.com/Python-Markdown
 [2]: https://github.com/Python-Markdown/markdown/issues/338

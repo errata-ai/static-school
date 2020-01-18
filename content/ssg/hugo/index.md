@@ -46,15 +46,6 @@ Related discussion:
 
 Hugo has native support for Markdown (standards-compliant), and supports AsciiDoc and reStructuredText through [external libraries][1]. While relying on plugins or external libraries isn't unusual, it has a dramatic impact on Hugo's most popular selling point&mdash;performance:
 
-{{% chart id="benchmark-formats" %}}
-
-As you can see, the overhead of calling out to external libraries all but eliminates Hugo's claim to being "the world’s fastest": At a size of 1,000 files, AsciiDoc is **about 35.8 times slower** and reStructuredText is **about 70.6 times slower** than Markdown.
-
-This is even more apparent when comparing Hugo to the other generators in our test suite:
-
-{{% chart-formats id="benchmark-ssgs" md="true" adoc="true" rst="true" %}}
-
-While Hugo is indeed *ultra-fast* at building Markdown, it falls behind other generators
-when it comes to both AsciiDoc and reStructuredText.
+{{% chart-tabs %}}
 
 [1]: https://gohugo.io/content-management/formats/#list-of-content-formats

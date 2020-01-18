@@ -1,5 +1,8 @@
 if ($("#benchmark-formats").length) {
     Highcharts.chart('benchmark-formats', {
+        exporting: {
+            buttons: null,
+        },
         credits: false,
         chart: {
             type: 'column'
@@ -42,6 +45,32 @@ if ($("#benchmark-formats").length) {
     });
 }
 
+var formatOptions = [];
+if (hasMd) {
+    formatOptions.push({
+        text: 'Markdown',
+        onclick: function () {
+            rebuildChart('Markdown')
+        }
+    });
+}
+if (hasAdoc) {
+    formatOptions.push({
+        text: 'AsciiDoc',
+        onclick: function () {
+            rebuildChart('AsciiDoc')
+        }
+    });
+}
+if (hasRst) {
+    formatOptions.push({
+        text: 'reStructuredText',
+        onclick: function () {
+            rebuildChart('reStructuredText')
+        }
+    });
+}
+
 var options = {
     credits: false,
     title: {
@@ -73,14 +102,22 @@ var options = {
         verticalAlign: 'middle'
     },
 
+     exporting: {
+         buttons: {
+             contextButton: {
+                 enabled: false
+             },
+             toggle: {
+                 text: 'Format',
+                 menuItems: formatOptions
+             }
+         }
+     },
+
     series: md
 };
-var formatsChart = Highcharts.chart('benchmark-ssgs', options);
 
-$('.format-item').click(function (e) {
-    e.preventDefault();
-
-    format = $(this).text();
+function rebuildChart(format) {
     console.log(format);
 
     formatsChart.destroy();
@@ -89,4 +126,10 @@ $('.format-item').click(function (e) {
     options.series = formatData[format];
 
     formatsChart = new Highcharts.chart('benchmark-ssgs', options);
-})
+}
+
+var formatsChart = Highcharts.chart('benchmark-ssgs', options);
+$('a[data-toggle="tab"]').on('shown.bs.tab', function(e) {
+  formatsChart.destroy();
+  formatsChart = new Highcharts.chart('benchmark-ssgs', options);
+});

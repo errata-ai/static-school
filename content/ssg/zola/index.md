@@ -36,12 +36,8 @@ repo: getzola/zola
 
 ## Markup
 
-Zola supports Markdown through the CommonMark-compliant [pulldown-cmark][1] library. Zola makes up for *only* supporting Markdown by being of the fastest generators in our test suite.
+Zola supports Markdown through the CommonMark-compliant [pulldown-cmark][1] library.
 
-As you can see, Zola is capable of building a 1,000-file site **in around 1 second**.
-
-{{% chart-formats id="benchmark-ssgs" md="true" adoc="false" rst="false" %}}
-
-Compared to other generators, only Hugo is able to match Zola's performance and both were neck-and-neck at every size increment.
+{{% chart-tabs %}}
 
 [1]: https://github.com/raphlinus/pulldown-cmark

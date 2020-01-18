@@ -50,15 +50,7 @@ which is a [non-standard][4] processor).
 Gatsby also includes support for [MDX][5], an "authorable format that lets you
 seamlessly write JSX in your Markdown documents."
 
-{{% chart id="benchmark-formats" %}}
-
-Despite Gatsby's claim of being "blazing fast," it finished last in our
-benchmarking of Markdown build speeds at every size.
-
-{{% chart-formats id="benchmark-ssgs" md="true" adoc="false" rst="false" %}}
-
-Of course, a static site generator can be "fast" in more ways than one and
-Gatsby still offers a number of appealing features (which we'll discuss below).
+{{% chart-tabs %}}
 
 [1]: https://www.gatsbyjs.org/packages/gatsby-transformer-remark/
 [2]: https://www.gatsbyjs.org/packages/gatsby-transformer-asciidoc/

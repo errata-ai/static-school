@@ -1,6 +1,8 @@
-{{ define "main" }}
+{{ define "styles" }}
+  <link rel="stylesheet" href="{{ "/css/vendor/highslide.min.css" | relURL }}">
+{{ end }}
 
-<link rel="stylesheet" href="{{ "/css/vendor/highslide.min.css" | relURL }}">
+{{ define "main" }}
 
 {{ $logo := .Resources.GetMatch "logo.png" }}
 {{ $id := lower .Params.title }}
@@ -196,9 +198,9 @@
 {{ $id := lower .Params.title }}
 {{ $ssg := index .Site.Data.report $id }}
 
-<script type="text/javascript" src="/js/vendor/highcharts/highcharts.min.js"></script>
-<script type="text/javascript" src="/js/vendor/highcharts/highcharts-more.min.js"></script>
-<script type="text/javascript" src="/js/vendor/highcharts/data.min.js"></script>
+<script type="text/javascript" src="https://code.highcharts.com/highcharts.src.js"></script>
+<script type="text/javascript" src="https://code.highcharts.com/modules/data.js"></script>
+<script type="text/javascript" src="https://code.highcharts.com/modules/exporting.js"></script>
 
 <script type="text/javascript">
   var seriesData1 = [];
@@ -235,6 +237,9 @@
   }
 
   var versionInfo = {{ $ssg.version }};
+  var hasMd = {{ .Params.md }};
+  var hasRst = {{ .Params.rst }};
+  var hasAdoc = {{ .Params.adoc }};
 </script>
 
 <script type="text/javascript" src="/js/features/bench.js"></script>
