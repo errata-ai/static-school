@@ -106,8 +106,8 @@ def update_stats():
                 headers={"User-Agent": generate_user_agent()},
             )
             soup = bs4.BeautifulSoup(resp.text, features="lxml")
-            resu = soup.find("time", {})
-            r_date = resu.text
+            time = soup.find("time", {})
+            r_date = time.text
         else:
             resp = requests.get(RELEASE.format(meta["repo"]))
             date = resp.json()[0]["published_at"]
