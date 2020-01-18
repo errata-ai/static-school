@@ -23,6 +23,13 @@ COMMIT = "https://api.github.com/repos/{0}/commits/master"
 RELEASE = "https://api.github.com/repos/{0}/releases"
 REPO = "https://api.github.com/repos/{0}"
 
+# Get latest version from NPM instead of GitHub:
+#
+# This is required for repos that don't pubished GitHub releases.
+NPM = [
+    "gatsby"
+]
+
 
 def fetch_github_stats(data_file):
     """Fetch GitHub-related stats for the given data file.
@@ -93,14 +100,24 @@ def update_stats():
         date = resp.json()["commit"]["author"]["date"]
         d1 = datetime.datetime.strptime(date.split("T")[0], "%Y-%m-%d")
 
-        resp = requests.get(RELEASE.format(meta["repo"]))
-        date = resp.json()[0]["published_at"]
-        d2 = datetime.datetime.strptime(date.split("T")[0], "%Y-%m-%d")
+        if ssg in NPM:
+            resp = requests.get(
+                "https://www.npmjs.com/package/" + ssg,
+                headers={"User-Agent": generate_user_agent()},
+            )
+            soup = bs4.BeautifulSoup(resp.text, features="lxml")
+            resu = soup.find("time", {})
+            r_date = resu.text
+        else:
+            resp = requests.get(RELEASE.format(meta["repo"]))
+            date = resp.json()[0]["published_at"]
+            d2 = datetime.datetime.strptime(date.split("T")[0], "%Y-%m-%d")
+            r_date = timeago.format(d2, now)
 
         report[ssg]["metrics"] = {
             "resolution": resu.text,
             "commit": timeago.format(d1, now),
-            "release": timeago.format(d2, now),
+            "release": r_date,
         }
 
     # Markup Performance
