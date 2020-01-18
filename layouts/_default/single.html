@@ -58,9 +58,9 @@
                       <div class="progress-bar bg-danger opacity-70" role="progressbar" style="width: 25%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
                     {{ end }}
 
-                    {{ if or (in $ssg.metrics.release "day") (in $ssg.metrics.commit "hour") (in $ssg.metrics.release "week")}}
+                    {{ if or (in $ssg.metrics.release "day") (in $ssg.metrics.commit "hour") }}
                       <div class="progress-bar bg-success opacity-70" role="progressbar" style="width: 25%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-                    {{ else if in $ssg.metrics.release "month" }}
+                    {{ else if in $ssg.metrics.release "week" }}
                       <div class="progress-bar bg-warning opacity-70" role="progressbar" style="width: 25%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
                     {{ else }}
                       <div class="progress-bar bg-danger opacity-70" role="progressbar" style="width: 25%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
