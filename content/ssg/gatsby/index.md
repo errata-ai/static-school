@@ -9,7 +9,7 @@ intro: |
     JavaScript and CSS) to help developers build "blazing fast websites and
     apps." It features a GraphQL-based data plugin ecosystem that allows data
     to be included from arbitrary sources (headless CMSes, APIs, databases,
-    etc.)
+    etc).
 
 language:
   name: JavaScript
