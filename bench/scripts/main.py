@@ -17,7 +17,8 @@ def write_report(ssg, results):
     with open(p, "r") as f:
         report = json.load(f)
 
-    report[ssg] = results
+    report[ssg]["data"] = results["data"]
+    report[ssg]["version"] = results["version"]
 
     with open(p, "w+") as f:
         json.dump(report, f, indent=4)

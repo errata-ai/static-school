@@ -1,5 +1,6 @@
 formats:
   - md
+  - adoc
 
 commands:
   build: 'cd {dir} && hexo generate && cd ..'
