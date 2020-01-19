@@ -45,7 +45,7 @@
                 <caption>Click a ✔️ to learn more about a feature.</caption>
                 <thead>
                     <tr>
-                    <th>Feature</th>
+                    <th></th>
                     {{ range .Pages }}
                         {{ $id := lower .Params.title }}
                         <th><a href="/ssg/{{ $id }}">{{ .Params.title }}</a></th>
