@@ -150,36 +150,6 @@
                           <a href="{{ .Params.templating.link }}">{{ .Params.templating.name }}</a>
                         </td>
                     </tr>
-                    <tr class="even">
-                        <td>Localization (i18n)</td>
-                        <td>
-                          {{ if eq .Params.localization true }}
-                              <i class="icon-check text-green"></i>
-                          {{ else }}
-                              <i class="icon-circle-with-cross text-red"></i>
-                          {{ end }}
-                        </td>
-                    </tr>
-                    <tr class="odd">
-                        <td>Versioning</td>
-                        <td>
-                          {{ if eq .Params.versioning true }}
-                              <i class="icon-check text-green"></i>
-                          {{ else }}
-                              <i class="icon-circle-with-cross text-red"></i>
-                          {{ end }}
-                        </td>
-                    </tr>
-                    <tr class="even">
-                        <td>Theming</td>
-                        <td>
-                          {{ if eq .Params.theming true }}
-                              <i class="icon-check text-green"></i>
-                          {{ else }}
-                              <i class="icon-circle-with-cross text-red"></i>
-                          {{ end }}
-                        </td>
-                    </tr>
                 </tbody>
               </table>
 
