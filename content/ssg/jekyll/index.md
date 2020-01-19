@@ -25,6 +25,23 @@ license:
   name: MIT
   slug: mit
 
+features:
+  localization:
+    type: plugin
+    link: https://github.com/kurtsson/jekyll-multiple-languages-plugin
+  versioning: false
+  custom_output: false
+  asset_pipelines:
+    type: plugin
+    link: https://github.com/envygeeks/jekyll-assets
+  data_files:
+    link: https://jekyllrb.com/docs/datafiles/
+  image_processing:
+    type: plugin
+    link: https://github.com/envygeeks/jekyll-assets
+  extensible:
+    link: https://jekyllrb.com/docs/plugins/
+
 localization: false
 versioning: false
 theming: true

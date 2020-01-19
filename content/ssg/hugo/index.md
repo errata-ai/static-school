@@ -18,9 +18,24 @@ templating:
   name: Go
   link: https://gohugo.io/templates/introduction/
 
-localization: true
-versioning: false
-theming: true
+features:
+  localization:
+    type: native
+    link: https://gohugo.io/content-management/multilingual/
+  versioning: false
+  # NOTE:
+  #
+  # https://discourse.gohugo.io/t/documentation-site-versioning/5898/9
+  # https://github.com/dgraph-io/dgraph/tree/master/wiki
+  custom_output:
+    link: https://gohugo.io/templates/output-formats/
+  asset_pipelines:
+    link: https://gohugo.io/hugo-pipes/introduction/
+  data_files:
+    link: https://gohugo.io/templates/data-templates/
+  image_processing:
+    link: https://gohugo.io/content-management/image-processing/
+  extensible: false
 
 license:
   name: Apache 2.0

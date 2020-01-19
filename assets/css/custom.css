@@ -8,6 +8,10 @@ body {
     /* Margin bottom by footer height */
 }
 
+caption {
+    caption-side: top;
+}
+
 .footer {
     position: absolute;
     bottom: 0;

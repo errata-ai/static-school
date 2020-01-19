@@ -20,6 +20,24 @@ templating:
   name: React
   link: https://reactjs.org/
 
+features:
+  localization:
+    type: plugin
+    link: https://www.gatsbyjs.org/docs/localization-i18n/
+  versioning: false
+  custom_output:
+    type: plugin
+    link: https://github.com/dominicfallows/gatsby-plugin-json-output
+  asset_pipelines:
+    type: plugin
+    link: https://www.gatsbyjs.org/packages/gatsby-plugin-minify/
+  data_files:
+    link: https://www.gatsbyjs.org/docs/recipes/sourcing-data
+  image_processing:
+    link: https://www.gatsbyjs.org/docs/gatsby-image/
+  extensible:
+    link: https://www.gatsbyjs.org/docs/creating-plugins/
+
 localization: true
 versioning: false
 theming: true

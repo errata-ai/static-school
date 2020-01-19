@@ -14,11 +14,21 @@
                         <li class="nav-item">
                             <a href="/" class="nav-link">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a href="/knowledge" class="nav-link">Knowledge Base</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown">Explore</a>
+                            <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                                <a class="dropdown-item" href="/leaderboard">
+                                    <span class="h6 mb-0">Leaderboard</span>
+                                    <p class="text-small text-muted">Compare generators by build time</p>
+                                </a>
+                                <a class="dropdown-item" href="/matrix">
+                                    <span class="h6 mb-0">Feature Matrix</span>
+                                    <p class="text-small text-muted">Compare generators by features</p>
+                                </a>
+                            </div>
                         </li>
                         <li class="nav-item">
-                            <a href="/leaderboard" class="nav-link">Leaderboard</a>
+                            <a href="/knowledge" class="nav-link">Knowledge Base</a>
                         </li>
                         <!--
                         <li class="nav-item">

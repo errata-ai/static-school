@@ -18,6 +18,22 @@ templating:
   name: Swig
   link: https://github.com/node-swig/swig-templates
 
+features:
+  localization:
+    link: https://hexo.io/docs/internationalization.html
+  versioning: false
+  custom_output: false
+  asset_pipelines:
+    type: plugin
+    link: https://github.com/chenzhutian/hexo-all-minifier#readme
+  data_files:
+    link: https://hexo.io/docs/data-files
+  image_processing:
+    type: plugin
+    link: https://github.com/ottobonn/hexo-image-sizes
+  extensible:
+    link: https://hexo.io/docs/plugins
+
 localization: true
 versioning: false
 theming: true

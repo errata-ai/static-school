@@ -19,6 +19,21 @@ templating:
   name: Nunjucks
   link: https://mozilla.github.io/nunjucks/templating.html
 
+features:
+  localization: false
+  versioning: false
+  custom_output: false
+  asset_pipelines:
+    type: plugin
+    link: https://github.com/philhawksworth/eleventyone
+  data_files:
+    link: https://www.11ty.dev/docs/data/
+  image_processing:
+    type: plugin
+    link: https://github.com/eeeps/eleventy-respimg#readme
+  extensible:
+    link: https://www.11ty.dev/docs/plugins/
+
 localization: false
 versioning: false
 theming: true

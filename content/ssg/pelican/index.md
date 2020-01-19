@@ -23,6 +23,22 @@ license:
   name: AGPL-3.0
   slug: aglp-3
 
+features:
+  localization:
+    type: plugin
+    link: https://github.com/getpelican/pelican-plugins/tree/master/i18n_subsites
+  versioning: false
+  custom_output: false
+  asset_pipelines:
+    type: plugin
+    link: https://github.com/getpelican/pelican-plugins/tree/master/assets
+  data_files: false
+  image_processing:
+    type: plugin
+    link: https://github.com/whiskyechobravo/image_process
+  extensible:
+    link: https://docs.getpelican.com/en/stable/plugins.html
+
 localization: true
 versioning: false
 theming: true

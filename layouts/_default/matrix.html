@@ -1,0 +1,179 @@
+{{ define "main" }}
+
+<section class="space-xs text-center bg-gradient text-light">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                💫
+                <span class="mr-2">
+                 Static School is 100% open source&mdash;check out the <a href="https://github.com/errata-ai/static-school" class="text-white">GitHub repository</a> to learn more!
+                </span>
+            </div>
+            <!--end of col-->
+        </div>
+        <!--end of row-->
+    </div>
+    <!--end of container-->
+</section>
+
+<section class="space-xs pb-0">
+    <div class="container">
+        <div class="row align-items-center justify-content-around">
+            <div class="text-center text-md-left section-intro mt-4">
+                <h1 class="display-3">Feature Matrix</h1>
+            </div>
+        </div>
+        <!--end of row-->
+    </div>
+    <!--end of container-->
+</section>
+
+<!--end of section-->
+<section class="flush-with-above">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p>{{ .Content }}</p>
+            </div>
+            <!--end of col-->
+        </div>
+        <!--end of row-->
+        <div id="ssg-list" class="row">
+            <div class="col">
+                {{ with .Site.GetPage "section" "ssg" }}
+                <table class="table table-responsive-sm table-hover text-center table-bordered">
+                <caption>Click a ✔️ to learn more about a feature.</caption>
+                <thead>
+                    <tr>
+                    <th>Feature</th>
+                    {{ range .Pages }}
+                        {{ $id := lower .Params.title }}
+                        <th><a href="/ssg/{{ $id }}">{{ .Params.title }}</a></th>
+                    {{ end }}
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>i18n</th>
+                        {{ range .Pages }}
+                            {{ if .Params.features.localization }}
+                                <td class="table-{{if eq .Params.features.localization.type "plugin"}}warning{{ else }}success{{ end }}">
+                                    <a href="{{ .Params.features.localization.link }}">
+                                        <i class="icon-check text-green"></i>
+                                    </a>
+                                </td>
+                            {{ else }}
+                                <td class="table-danger">
+                                    <i class="icon-circle-with-cross text-red"></i>
+                                </td>
+                            {{ end }}
+                        {{ end }}
+                    </tr>
+                    <tr>
+                        <th>Versioning</th>
+                        {{ range .Pages }}
+                            {{ if .Params.features.versioning }}
+                                <td class="table-{{if eq .Params.features.versioning.type "plugin"}}warning{{ else }}success{{ end }}">
+                                    <a href="{{ .Params.features.versioning.link }}">
+                                        <i class="icon-check text-green"></i>
+                                    </a>
+                                </td>
+                            {{ else }}
+                                <td class="table-danger">
+                                    <i class="icon-circle-with-cross text-red"></i>
+                                </td>
+                            {{ end }}
+                        {{ end }}
+                    </tr>
+                    <tr>
+                        <th>Multiple outputs</th>
+                        {{ range .Pages }}
+                            {{ if .Params.features.custom_output }}
+                                <td class="table-{{if eq .Params.features.custom_output.type "plugin"}}warning{{ else }}success{{ end }}">
+                                    <a href="{{ .Params.features.custom_output.link }}">
+                                        <i class="icon-check text-green"></i>
+                                    </a>
+                                </td>
+                            {{ else }}
+                                <td class="table-danger">
+                                    <i class="icon-circle-with-cross text-red"></i>
+                                </td>
+                            {{ end }}
+                        {{ end }}
+                    </tr>
+                    <tr>
+                        <th>Asset Pipelines</th>
+                        {{ range .Pages }}
+                            {{ if .Params.features.asset_pipelines }}
+                                <td class="table-{{if eq .Params.features.asset_pipelines.type "plugin"}}warning{{ else }}success{{ end }}">
+                                    <a href="{{ .Params.features.asset_pipelines.link }}">
+                                        <i class="icon-check text-green"></i>
+                                    </a>
+                                </td>
+                            {{ else }}
+                                <td class="table-danger">
+                                    <i class="icon-circle-with-cross text-red"></i>
+                                </td>
+                            {{ end }}
+                        {{ end }}
+                    </tr>
+                    <tr>
+                        <th>Data Files</th>
+                        {{ range .Pages }}
+                            {{ if .Params.features.data_files }}
+                                <td class="table-{{if eq .Params.features.data_files.type "plugin"}}warning{{ else }}success{{ end }}">
+                                    <a href="{{ .Params.features.data_files.link }}">
+                                        <i class="icon-check text-green"></i>
+                                    </a>
+                                </td>
+                            {{ else }}
+                                <td class="table-danger">
+                                    <i class="icon-circle-with-cross text-red"></i>
+                                </td>
+                            {{ end }}
+                        {{ end }}
+                    </tr>
+                    <tr>
+                        <th>Image Processing</th>
+                        {{ range .Pages }}
+                            {{ if .Params.features.image_processing }}
+                                <td class="table-{{if eq .Params.features.image_processing.type "plugin"}}warning{{ else }}success{{ end }}">
+                                    <a href="{{ .Params.features.image_processing.link }}">
+                                        <i class="icon-check text-green"></i>
+                                    </a>
+                                </td>
+                            {{ else }}
+                                <td class="table-danger">
+                                    <i class="icon-circle-with-cross text-red"></i>
+                                </td>
+                            {{ end }}
+                        {{ end }}
+                    </tr>
+                    <tr>
+                        <th>Plugins</th>
+                        {{ range .Pages }}
+                            {{ if .Params.features.extensible }}
+                                <td class="table-{{if eq .Params.features.extensible.type "plugin"}}warning{{ else }}success{{ end }}">
+                                    <a href="{{ .Params.features.extensible.link }}">
+                                        <i class="icon-check text-green"></i>
+                                    </a>
+                                </td>
+                            {{ else }}
+                                <td class="table-danger">
+                                    <i class="icon-circle-with-cross text-red"></i>
+                                </td>
+                            {{ end }}
+                        {{ end }}
+                    </tr>
+                </tbody>
+                </table>
+                {{ end }}
+            </div>
+            <!--end of col-->
+        </div>
+        <!--end of row-->
+    </div>
+    <!--end of container-->
+</section>
+
+{{ end }}

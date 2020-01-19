@@ -18,6 +18,20 @@ templating:
   name: Tera
   link: https://tera.netlify.com/
 
+features:
+  localization:
+    link: https://www.getzola.org/documentation/content/multilingual/
+  live_reload:
+    link: https://www.getzola.org/documentation/getting-started/cli-usage/#serve
+  versioning: false
+  custom_output: false
+  asset_pipelines:
+    link: https://www.getzola.org/documentation/content/sass/
+  data_files: false
+  image_processing:
+    link: https://www.getzola.org/documentation/content/image-processing/
+  extensible: false
+
 localization: false
 versioning: false
 theming: true
