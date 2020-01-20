@@ -11,7 +11,7 @@ var ssgOptions = {
         text: 'Build Time by Format (3-run average)'
     },
     subtitle: {
-        text: versionInfo
+        text: ssgName + ' (' + versionInfo + ')'
     },
     xAxis: {
         categories: [
