@@ -51,7 +51,7 @@ repo: gohugoio/hugo
 
 ## Markup
 
-Hugo has native support for Markdown (standards-compliant), and supports AsciiDoc and reStructuredText through [external libraries][1]. While relying on plugins or external libraries isn't unusual, it has a dramatic impact on Hugo's most popular selling point&mdash;performance:
+Hugo has native support for Markdown (standards-compliant), and supports AsciiDoc and reStructuredText through [external libraries][1].
 
 {{% chart-tabs %}}
 
