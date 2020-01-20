@@ -11,8 +11,6 @@ options:
     Netlify is everything you need to build fast, modern websites:
     continuous deployment, serverless functions, and so much more.
   type: All
-  tags:
-  - Deploy Previews
 
 - name: GitHub Pages
   homepage: https://pages.github.com/
@@ -35,8 +33,6 @@ options:
     Firebase Hosting provides fast and secure hosting for your web app,
     static and dynamic content, and microservices.
   type: All
-  tags:
-  - Authentication
 
 - name: ZEIT
   homepage: https://zeit.co/
