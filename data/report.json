@@ -2,14 +2,14 @@
     "pelican": {
         "metrics": {
             "resolution": "22 day(s)",
-            "commit": "3 weeks ago",
+            "commit": "12 hours ago",
             "release": "3 months ago"
         },
         "stats": {
             "id": "pelican",
-            "f": 1643,
-            "s": 9369,
-            "fk": 1618,
+            "f": 1646,
+            "s": 9371,
+            "fk": 1619,
             "i": 105
         },
         "performace": {
@@ -39,14 +39,14 @@
     "eleventy": {
         "metrics": {
             "resolution": "28 day(s)",
-            "commit": "2 days ago",
+            "commit": "3 days ago",
             "release": "1 week ago"
         },
         "stats": {
             "id": "eleventy",
-            "f": 3109,
-            "s": 4067,
-            "fk": 126,
+            "f": 3121,
+            "s": 4079,
+            "fk": 127,
             "i": 153
         },
         "performace": {
@@ -77,14 +77,14 @@
         },
         "stats": {
             "id": "hexo",
-            "f": 2230,
-            "s": 29317,
-            "fk": 3819,
-            "i": 231
+            "f": 2229,
+            "s": 29323,
+            "fk": 3818,
+            "i": 230
         },
         "metrics": {
             "resolution": "23 day(s)",
-            "commit": "3 days ago",
+            "commit": "4 days ago",
             "release": "4 weeks ago"
         },
         "performace": {
@@ -95,7 +95,7 @@
     "zola": {
         "metrics": {
             "resolution": "7 day(s)",
-            "commit": "1 day ago",
+            "commit": "2 days ago",
             "release": "3 months ago"
         },
         "data": {
@@ -147,10 +147,10 @@
         "version": "v0.62.2",
         "stats": {
             "id": "hugo",
-            "f": 9024,
-            "s": 40990,
-            "fk": 4627,
-            "i": 453
+            "f": 9032,
+            "s": 41018,
+            "fk": 4633,
+            "i": 452
         }
     },
     "jekyll": {
@@ -162,8 +162,8 @@
         "stats": {
             "id": "jekyll",
             "f": 7032,
-            "s": 39540,
-            "fk": 8636,
+            "s": 39546,
+            "fk": 8635,
             "i": 156
         },
         "performace": {
@@ -187,15 +187,15 @@
     "gatsby": {
         "metrics": {
             "resolution": "9 day(s)",
-            "commit": "2 days ago",
-            "release": "2 days ago"
+            "commit": "12 hours ago",
+            "release": "3 days ago"
         },
         "stats": {
             "id": "gatsby",
-            "f": 45072,
-            "s": 41543,
-            "fk": 7045,
-            "i": 596
+            "f": 45135,
+            "s": 41574,
+            "fk": 7049,
+            "i": 604
         },
         "performace": {
             "Markdown": 7
