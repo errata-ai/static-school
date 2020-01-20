@@ -1,8 +1,22 @@
 ---
-title: matrix
-layout: matrix
+title: Feature Matrix
+
+layout: table
+partial: feature-matrix
 
 needsFa: true
+css: [
+    "https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css",
+    "https://cdn.datatables.net/buttons/1.6.1/css/buttons.dataTables.min.css"
+]
+js: [
+    "https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js",
+    "https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js",
+    "https://cdn.datatables.net/buttons/1.6.1/js/dataTables.buttons.min.js",
+    "https://cdn.datatables.net/buttons/1.6.1/js/buttons.colVis.min.js",
+
+    "/js/features/matrix.js"
+]
 ---
 
 {{% callout class="info" %}}

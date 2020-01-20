@@ -1,0 +1,163 @@
+{{ with .Site.GetPage "section" "ssg" }}
+<table id="matrix" class="table text-center table-bordered" style="width:100%">
+    <thead>
+        <tr>
+        <th class="noVis"></th>
+        {{ range .Pages }}
+            {{ $id := lower .Params.title }}
+            <th><a href="/ssg/{{ $id }}">{{ .Params.title }}</a></th>
+        {{ end }}
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>i18n <i
+                data-toggle="tooltip"
+                data-placement="right"
+                title="The ability to build a site in more than one language."
+                class="fa fa-question-circle"
+                aria-hidden="true">
+            </i></td>
+            {{ range .Pages }}
+                {{ if .Params.features.localization }}
+                    <td class="table-{{if eq .Params.features.localization.type "plugin"}}warning{{ else }}success{{ end }}">
+                        <a href="{{ .Params.features.localization.link }}">
+                            <i class="icon-check text-green"></i>
+                        </a>
+                    </td>
+                {{ else }}
+                    <td class="table-danger">
+                        <i class="icon-circle-with-cross text-red"></i>
+                    </td>
+                {{ end }}
+            {{ end }}
+        </tr>
+        <tr>
+            <td>Versioning <i data-toggle="tooltip" data-placement="right" title="The ability to produce and preserve multiple versions of a site." class="fa fa-question-circle" aria-hidden="true"></i></td>
+            {{ range .Pages }}
+                {{ if .Params.features.versioning }}
+                    <td class="table-{{if eq .Params.features.versioning.type "plugin"}}warning{{ else }}success{{ end }}">
+                        <a href="{{ .Params.features.versioning.link }}">
+                            <i class="icon-check text-green"></i>
+                        </a>
+                    </td>
+                {{ else }}
+                    <td class="table-danger">
+                        <i class="icon-circle-with-cross text-red"></i>
+                    </td>
+                {{ end }}
+            {{ end }}
+        </tr>
+        <tr>
+            <td>Multiple Outputs <i
+                data-toggle="tooltip"
+                data-placement="right"
+                title="The ability to output content in formats other than HTML."
+                class="fa fa-question-circle"
+                aria-hidden="true">
+            </i></td>
+            {{ range .Pages }}
+                {{ if .Params.features.custom_output }}
+                    <td class="table-{{if eq .Params.features.custom_output.type "plugin"}}warning{{ else }}success{{ end }}">
+                        <a href="{{ .Params.features.custom_output.link }}">
+                            <i class="icon-check text-green"></i>
+                        </a>
+                    </td>
+                {{ else }}
+                    <td class="table-danger">
+                        <i class="icon-circle-with-cross text-red"></i>
+                    </td>
+                {{ end }}
+            {{ end }}
+        </tr>
+        <tr>
+            <td>Asset Pipelines <i
+                data-toggle="tooltip"
+                data-placement="right"
+                title="The ability to preprocess, concatenate, and minify JavaScript and CSS assets."
+                class="fa fa-question-circle"
+                aria-hidden="true">
+            </i></td>
+            {{ range .Pages }}
+                {{ if .Params.features.asset_pipelines }}
+                    <td class="table-{{if eq .Params.features.asset_pipelines.type "plugin"}}warning{{ else }}success{{ end }}">
+                        <a href="{{ .Params.features.asset_pipelines.link }}">
+                            <i class="icon-check text-green"></i>
+                        </a>
+                    </td>
+                {{ else }}
+                    <td class="table-danger">
+                        <i class="icon-circle-with-cross text-red"></i>
+                    </td>
+                {{ end }}
+            {{ end }}
+        </tr>
+        <tr>
+            <td>Data Files <i
+                data-toggle="tooltip"
+                data-placement="right"
+                title="The ability to provide template-level access to static data files (typically JSON or YAML)."
+                class="fa fa-question-circle"
+                aria-hidden="true">
+            </i></td>
+            {{ range .Pages }}
+                {{ if .Params.features.data_files }}
+                    <td class="table-{{if eq .Params.features.data_files.type "plugin"}}warning{{ else }}success{{ end }}">
+                        <a href="{{ .Params.features.data_files.link }}">
+                            <i class="icon-check text-green"></i>
+                        </a>
+                    </td>
+                {{ else }}
+                    <td class="table-danger">
+                        <i class="icon-circle-with-cross text-red"></i>
+                    </td>
+                {{ end }}
+            {{ end }}
+        </tr>
+        <tr>
+            <td>Image Processing <i
+                data-toggle="tooltip"
+                data-placement="right"
+                title="The ability to optimize, resize, or otherwise edit images."
+                class="fa fa-question-circle"
+                aria-hidden="true">
+            </i></td>
+            {{ range .Pages }}
+                {{ if .Params.features.image_processing }}
+                    <td class="table-{{if eq .Params.features.image_processing.type "plugin"}}warning{{ else }}success{{ end }}">
+                        <a href="{{ .Params.features.image_processing.link }}">
+                            <i class="icon-check text-green"></i>
+                        </a>
+                    </td>
+                {{ else }}
+                    <td class="table-danger">
+                        <i class="icon-circle-with-cross text-red"></i>
+                    </td>
+                {{ end }}
+            {{ end }}
+        </tr>
+        <tr>
+            <td>Plugins <i
+                data-toggle="tooltip"
+                data-placement="right"
+                title="The ability to extend functionality through external plugins."
+                class="fa fa-question-circle"
+                aria-hidden="true">
+            </i></td>
+            {{ range .Pages }}
+                {{ if .Params.features.extensible }}
+                    <td class="table-{{if eq .Params.features.extensible.type "plugin"}}warning{{ else }}success{{ end }}">
+                        <a href="{{ .Params.features.extensible.link }}">
+                            <i class="icon-check text-green"></i>
+                        </a>
+                    </td>
+                {{ else }}
+                    <td class="table-danger">
+                        <i class="icon-circle-with-cross text-red"></i>
+                    </td>
+                {{ end }}
+            {{ end }}
+        </tr>
+    </tbody>
+</table>
+{{ end }}

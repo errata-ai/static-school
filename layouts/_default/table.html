@@ -1,0 +1,36 @@
+{{ define "main" }}
+
+<section class="space-xs pb-0">
+    <div class="container">
+        <div class="row align-items-center justify-content-around">
+            <div class="text-center text-md-left section-intro mt-4">
+                <h1 class="display-3">{{ .Params.title }}</h1>
+            </div>
+        </div>
+        <!--end of row-->
+    </div>
+    <!--end of container-->
+</section>
+
+<!--end of section-->
+<section class="flush-with-above">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p>{{ .Content }}</p>
+            </div>
+            <!--end of col-->
+        </div>
+        <!--end of row-->
+        <div id="ssg-list" class="row">
+            <div class="col">
+                {{ partial .Params.partial . }}
+            </div>
+            <!--end of col-->
+        </div>
+        <!--end of row-->
+    </div>
+    <!--end of container-->
+</section>
+
+{{ end }}

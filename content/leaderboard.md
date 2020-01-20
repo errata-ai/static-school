@@ -1,6 +1,15 @@
 ---
 title: Leaderboard
-layout: leaderboard
+
+layout: table
+partial: leaderboard
+
+needsFa: true
+js: [
+    "//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js",
+
+    "/js/features/leaderboard.js"
+]
 ---
 
 The following table ranks static site generators by the time it takes them to build a 1,000-file site. The time shown for each static site generator is the mean of 3 separate builds (following 1 "warm up" build).

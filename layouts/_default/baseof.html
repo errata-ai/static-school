@@ -21,7 +21,12 @@
     {{ $css := slice $theme $custom | resources.Concat "css/bundle.css" | minify }}
     <style>{{ $css.Content | safeCSS }}</style>
 
+    {{- range .Params.css }}
+      <link rel="stylesheet" href="{{ . }}">
+    {{- end }}
+
     {{ block "styles" . }}{{ end }}
+
     <!-- TODO: Remove these? -->
     <link rel="preload" as="style" onload="this.rel='stylesheet'" href="{{ "/css/socicon.min.css" | relURL }}">
     <link rel="preload" as="style" onload="this.rel='stylesheet'" href="{{ "/css/entypo.min.css" | relURL }}">
@@ -32,6 +37,8 @@
     {{ partial "header" . }}
 
     <div class="main-container">
+      {{ partial "banner" . }}
+
       {{ block "main" . }}{{ end }}
 
       {{ partial "footer" . }}
@@ -156,7 +163,7 @@
     </script>
 
     {{- range .Params.js }}
-      <script src="/js/{{ . }}"></script>
+      <script src="{{ . }}"></script>
     {{- end }}
 
     {{ block "script" . }}{{ end }}
