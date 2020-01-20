@@ -120,7 +120,8 @@
                     <div class="card-footer card-footer-borderless d-flex justify-content-between">
                         <div class="text-small">
                             <ul class="list-inline">
-                                <li class="list-inline-item"><i class="icon-star"></i> <span data-value="{{ $ssg.stats.s }}" class="stars">{{ lang.NumFmt 0 $ssg.stats.s "- . ," }}</span></li>
+                                <span class="stars d-none">{{ $ssg.stats.s }}</span>
+                                <li class="list-inline-item"><i class="icon-star"></i> {{ lang.NumFmt 0 $ssg.stats.s "- . ," }}</li>
                             </ul>
                         </div>
                         <div class="dropup">
