@@ -1,3 +1,8 @@
+{{ define "styles" }}
+    <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/buttons/1.6.1/css/buttons.dataTables.min.css" rel="stylesheet">
+{{ end }}
+
 {{ define "main" }}
 
 <section class="space-xs text-center bg-gradient text-light">
@@ -41,11 +46,10 @@
         <div id="ssg-list" class="row">
             <div class="col">
                 {{ with .Site.GetPage "section" "ssg" }}
-                <table class="table table-responsive-sm table-hover text-center table-bordered">
-                <caption>Click a ✔️ to learn more about a feature.</caption>
+                <table id="example" class="table text-center table-bordered" style="width:100%">
                 <thead>
                     <tr>
-                    <th></th>
+                    <th class="noVis"></th>
                     {{ range .Pages }}
                         {{ $id := lower .Params.title }}
                         <th><a href="/ssg/{{ $id }}">{{ .Params.title }}</a></th>
@@ -54,7 +58,13 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <th>i18n</th>
+                        <td>i18n <i
+                            data-toggle="tooltip"
+                            data-placement="right"
+                            title="The ability to build a site in more than one language."
+                            class="fa fa-question-circle"
+                            aria-hidden="true">
+                        </i></td>
                         {{ range .Pages }}
                             {{ if .Params.features.localization }}
                                 <td class="table-{{if eq .Params.features.localization.type "plugin"}}warning{{ else }}success{{ end }}">
@@ -70,7 +80,7 @@
                         {{ end }}
                     </tr>
                     <tr>
-                        <th>Versioning</th>
+                        <td>Versioning <i data-toggle="tooltip" data-placement="right" title="The ability to produce and preserve multiple versions of a site." class="fa fa-question-circle" aria-hidden="true"></i></td>
                         {{ range .Pages }}
                             {{ if .Params.features.versioning }}
                                 <td class="table-{{if eq .Params.features.versioning.type "plugin"}}warning{{ else }}success{{ end }}">
@@ -86,7 +96,13 @@
                         {{ end }}
                     </tr>
                     <tr>
-                        <th>Multiple outputs</th>
+                        <td>Multiple outputs <i
+                            data-toggle="tooltip"
+                            data-placement="right"
+                            title="The ability to output content in formats other than HTML."
+                            class="fa fa-question-circle"
+                            aria-hidden="true">
+                        </i></td>
                         {{ range .Pages }}
                             {{ if .Params.features.custom_output }}
                                 <td class="table-{{if eq .Params.features.custom_output.type "plugin"}}warning{{ else }}success{{ end }}">
@@ -102,7 +118,13 @@
                         {{ end }}
                     </tr>
                     <tr>
-                        <th>Asset Pipelines</th>
+                        <td>Asset Pipelines <i
+                            data-toggle="tooltip"
+                            data-placement="right"
+                            title="The ability to preprocess, concatenate, and minify JavaScript and CSS assets."
+                            class="fa fa-question-circle"
+                            aria-hidden="true">
+                        </i></td>
                         {{ range .Pages }}
                             {{ if .Params.features.asset_pipelines }}
                                 <td class="table-{{if eq .Params.features.asset_pipelines.type "plugin"}}warning{{ else }}success{{ end }}">
@@ -118,7 +140,13 @@
                         {{ end }}
                     </tr>
                     <tr>
-                        <th>Data Files</th>
+                        <td>Data Files <i
+                            data-toggle="tooltip"
+                            data-placement="right"
+                            title="The ability to provide template-level access to static data files (typically JSON or YAML)."
+                            class="fa fa-question-circle"
+                            aria-hidden="true">
+                        </i></td>
                         {{ range .Pages }}
                             {{ if .Params.features.data_files }}
                                 <td class="table-{{if eq .Params.features.data_files.type "plugin"}}warning{{ else }}success{{ end }}">
@@ -134,7 +162,13 @@
                         {{ end }}
                     </tr>
                     <tr>
-                        <th>Image Processing</th>
+                        <td>Image Processing <i
+                            data-toggle="tooltip"
+                            data-placement="right"
+                            title="The ability to optimize, resize, or otherwise edit images."
+                            class="fa fa-question-circle"
+                            aria-hidden="true">
+                        </i></td>
                         {{ range .Pages }}
                             {{ if .Params.features.image_processing }}
                                 <td class="table-{{if eq .Params.features.image_processing.type "plugin"}}warning{{ else }}success{{ end }}">
@@ -150,7 +184,13 @@
                         {{ end }}
                     </tr>
                     <tr>
-                        <th>Plugins</th>
+                        <td>Plugins <i
+                            data-toggle="tooltip"
+                            data-placement="right"
+                            title="The ability to extend functionality through external plugins."
+                            class="fa fa-question-circle"
+                            aria-hidden="true">
+                        </i></td>
                         {{ range .Pages }}
                             {{ if .Params.features.extensible }}
                                 <td class="table-{{if eq .Params.features.extensible.type "plugin"}}warning{{ else }}success{{ end }}">
@@ -176,4 +216,32 @@
     <!--end of container-->
 </section>
 
+{{ end }}
+
+
+{{ define "script" }}
+<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.6.1/js/dataTables.buttons.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.6.1/js/buttons.colVis.min.js"></script>
+
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#example').DataTable({
+        paging:   false,
+        ordering: false,
+        info:     false,
+        searching: false,
+        scrollX: true,
+        dom: 'Bfrtip',
+        buttons: [
+                {
+                    extend: 'colvis',
+                    columns: ':not(.noVis)'
+                }
+            ]
+        });
+    });
+</script>
 {{ end }}

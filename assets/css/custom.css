@@ -34,3 +34,7 @@ caption {
     margin-top: 15px;
     margin-bottom: 15px;
 }
+
+.dataTables_wrapper .dt-buttons {
+    float: right;
+}

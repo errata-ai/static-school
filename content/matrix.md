@@ -1,6 +1,8 @@
 ---
 title: matrix
 layout: matrix
+
+needsFa: true
 ---
 
 {{% callout class="info" %}}
@@ -13,6 +15,6 @@ to focus on features *could* be implemented for any generator rather than
 features that are tied to a certain tech stack (such as "available
 as a single binary" or "has a rich component ecosystem").
 
-Orangish cells indicate that a certain feature is implemented through a
+Orange cells indicate that a certain feature is implemented through a
 *third-party* plugin. Officially-maintained plugins are considered to be a
 native feature (green cells).
