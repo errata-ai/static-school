@@ -1,18 +1,18 @@
-{{ $url := printf "%s" .Permalink | absLangURL | safeURL }}
+{{ $url := .Permalink | absLangURL }}
 
 <ul class="list-inline">
     <li class="list-inline-item">
-        <a href="https://twitter.com/share?url={{ $url }}&amp;text={{ .Params.summary }}" target="_blank">
+        <a href="https://twitter.com/share?url={{ $url | safeURL }}&amp;text={{ .Params.summary }}" target="_blank">
             <img alt="Image" src="/img/social-share-twitter.svg" />
         </a>
     </li>
     <li class="list-inline-item">
-        <a href="https://www.facebook.com/sharer.php?u={{ $url }}&amp;t={{ .Params.summary }}">
+        <a href="https://www.facebook.com/sharer.php?u={{ $url | safeURL }}&amp;t={{ .Params.summary }}">
             <img alt="Image" src="/img/social-share-facebook.svg" />
         </a>
     </li>
     <li class="list-inline-item">
-        <a href="https://www.linkedin.com/shareArticle?url={{ $url }}&amp;title={{ .Params.summary }}">
+        <a href="https://www.linkedin.com/shareArticle?url={{ $url | safeURL}}&amp;title={{ .Params.summary }}">
             <img alt="Image" src="/img/social-share-linkedin.svg" />
         </a>
     </li>

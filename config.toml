@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://staticschool.com/"
 languageCode= "en-us"
 
 pygmentsCodefences = false
