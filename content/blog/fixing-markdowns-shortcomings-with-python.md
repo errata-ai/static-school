@@ -272,7 +272,7 @@ All of the examples so far have been pretty straightforward: we use Python as a 
 
 But, as you can probably imagine, the ability to write arbitrary Python means that we can do much more than text-based substitutions. Here are some ideas:
 
-- C reate tables by making calls to APIs or databases at build time.
+- Create tables by making calls to APIs or databases at build time.
 
 - Use plots that update at build time using one of Python’s plotting libraries (e.g., Seaborn).
 
