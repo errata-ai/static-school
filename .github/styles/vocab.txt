@@ -17,6 +17,7 @@ preprocessor
 pulldown
 rst
 runtime
+seaborn
 shimgo
 ssg
 ssgs
