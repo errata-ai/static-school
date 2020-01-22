@@ -75,7 +75,7 @@ $ markdata --help
 ...
 ```
 
-Markdata’s functionality is driven by directives, which are Markdown snippets that call Python functions. Instead of introducing new syntax, directives overload the existing containers for raw strings: code spans and code blocks.
+Markdata’s functionality is driven by "directives," which are Markdown snippets that call Python functions. Instead of introducing new syntax, directives overload the existing containers for raw strings: code spans and code blocks.
 
 The basic idea is that you specify the name of a Python function and its expected arguments within your markup:
 
