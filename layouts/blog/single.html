@@ -1,0 +1,47 @@
+{{ define "main" }}
+
+<section class="pb-4">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-10">
+                <h1 class="display-4">{{ .Title }}</h1>
+                <span class="lead">{{ .Params.summary }}</span>
+                <div class="media blog-post-author">
+                    <img alt="Image" src="/img/avatars/{{ .Params.avatar }}.png" class="avatar avatar-sm mr-3" />
+                    <div class="media-body">
+                        <span class="h6">{{ .Params.author }}</span>
+                        <span class="text-small">{{ .Date.Format "Jan 2, 2006" }} &bull; {{ .ReadingTime }} min read</span>
+                    </div>
+                </div>
+            </div>
+            <!--end of col-->
+        </div>
+        <!--end of row-->
+    </div>
+    <!--end of container-->
+</section>
+
+<section class="space-sm">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-10">
+                <article>
+                    {{ .Content }}
+                </article>
+                <hr>
+                <div class="row justify-content-center mb-5">
+                    <div class="col-auto text-center">
+                        <span class="title-decorative">Share Article</span>
+                        {{ partial "social" . }}
+                    </div>
+                    <!--end of col-->
+                </div>
+            </div>
+            <!--end of col-->
+        </div>
+        <!--end of row-->
+    </div>
+    <!--end of container-->
+</section>
+
+{{ end }}

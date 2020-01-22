@@ -16,16 +16,14 @@
     {{ end }}
 
     {{ $theme := resources.Get "css/theme.css" }}
-    {{ $custom := resources.Get "css/custom.css" }}
-
-    {{ $css := slice $theme $custom | resources.Concat "css/bundle.css" | minify }}
+    {{ $css := slice $theme | resources.Concat "css/bundle.css" | minify }}
     <style>{{ $css.Content | safeCSS }}</style>
 
     {{- range .Params.css }}
       <link rel="stylesheet" href="{{ . }}">
     {{- end }}
 
-    {{ block "styles" . }}{{ end }}
+    <link rel="stylesheet" href="{{ "/css/custom.css" | relURL }}">
 
     <!-- TODO: Remove these? -->
     <link rel="preload" as="style" onload="this.rel='stylesheet'" href="{{ "/css/socicon.min.css" | relURL }}">
@@ -50,7 +48,6 @@
     <script type="text/javascript" src="/js/flickity.pkgd.min.js"></script>
     <script type="text/javascript" src="/js/scrollMonitor.js"></script>
     <script type="text/javascript" src="/js/smooth-scroll.polyfills.js"></script>
-    <script type="text/javascript" src="/js/prism.js"></script>
     <script type="text/javascript" src="/js/zoom.min.js"></script>
     <script type="text/javascript" src="/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/js/theme.min.js"></script>

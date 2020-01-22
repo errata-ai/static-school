@@ -1,0 +1,52 @@
+{{ define "main" }}
+
+<section class="space-lg pb-0">
+    <div class="container">
+        <div class="row mb-4 justify-content-center text-center">
+            <div class="col-12 col-md-10 col-lg-9">
+                <h1 class="display-4">Static School 🎓</h1>
+                <span class="lead">
+                    News, guides, and case studies from the world of static site generators.
+                </span>
+            </div>
+            <!--end of col-->
+        </div>
+        <!--end of row-->
+    </div>
+    <!--end of container-->
+</section>
+<!--end of section-->
+
+<section class="flush-with-above">
+    <div class="container">
+        <ul class="row mb-3 feature-list feature-list-sm">
+            {{ with .Site.GetPage "section" "blog" }}
+                {{ range $index, $page := .Pages }}
+                <li class="col-12 col-md-6 col-lg-4">
+                    {{ $header := resources.Get (printf "img/headers/%d.svg" $index) }}
+                    <div class="card card-lg">
+                        <div class="exploregrid-item-header" style="background-image: url({{ $header.Permalink }});"></div>
+                        <div class="card-body">
+                            <a href="{{ .Permalink }}">
+                                <h4 class="card-title mb-3">{{ $page.Title }}</h4>
+                            </a>
+                            <p class="card-text">{{ $page.Params.summary }}</p>
+                        </div>
+                        <div class="card-footer card-footer-borderless">
+                            <div class="media blog-post-author">
+                                <img alt="Image" src="/img/avatars/{{ $page.Params.avatar }}.png" class="avatar avatar-xs" />
+                                <div class="media-body">
+                                    <small>{{ $page.Params.author }} | {{ $page.Params.category }}</small>
+                                    <small>{{ $page.Date.Format "Jan 2, 2006" }} &bull; {{ $page.ReadingTime }} min read</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                {{ end }}
+            {{ end }}
+        </ul>
+    </div>
+</section>
+
+{{ end }}
