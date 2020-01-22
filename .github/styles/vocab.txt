@@ -3,11 +3,14 @@ asciidoc
 authorable
 callout
 cmark
+codegen
 eleventy
 hexo
 kramdown
 md
 orangish
+petstore
+pre
 pulldown
 rst
 runtime
