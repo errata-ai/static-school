@@ -36,7 +36,7 @@
     <!--end of container-->
 </section>
 
-<section class="space-sm">
+<section class="space-sm pb-0">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-10">
@@ -44,13 +44,13 @@
                     {{ .Content }}
                 </article>
                 <hr>
+                <!--
                 <div class="row justify-content-center mb-5">
                     <div class="col-auto text-center">
                         <span class="title-decorative">Share Article</span>
                         {{ partial "social" . }}
                     </div>
-                    <!--end of col-->
-                </div>
+                </div>-->
             </div>
             <!--end of col-->
         </div>
@@ -59,4 +59,12 @@
     <!--end of container-->
 </section>
 
+<script src="https://utteranc.es/client.js"
+        repo="errata-ai/static-school"
+        issue-term="title"
+        label="discussion"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
 {{ end }}
