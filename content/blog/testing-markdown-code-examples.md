@@ -40,7 +40,7 @@ are as follows:
   languages have robust testing libraries already available and we don't want
   to "reinvent the wheel" or limit our testers to using a particular one.
 
-- **Use [standards-compliant][5] Markdown**. Whenever you starting
+- **Use [standards-compliant][5] Markdown**. Whenever you start
   talking about "enhancing" the abilities of Markdown, you can quickly find
   yourself moving *away* from actually writing Markdown: there are countless
   "flavors" and "implementations" that add features at the cost of
@@ -116,7 +116,7 @@ which will both use their own language-specific testing framework.
 
 
   def test_yaml():
-      """An example of testing a Python code example.
+      """An example of testing a Python code snippet.
       """
       # Snippet start
       from ruamel.yaml import YAML
