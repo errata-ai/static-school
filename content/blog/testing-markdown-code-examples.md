@@ -41,7 +41,7 @@ are as follows:
   to "reinvent the wheel" or limit our testers to using a particular one.
 
 - **Use [standards-compliant][5] Markdown**. Whenever you starting
-  talking about "enhancing" the abilties of Markdown, you can quickly find
+  talking about "enhancing" the abilities of Markdown, you can quickly find
   yourself moving *away* from actually writing Markdown: there are countless
   "flavors" and "implementations" that add features at the cost of
   standardization.
@@ -169,7 +169,7 @@ which will both use their own language-specific testing framework.
   });
   ```
 
-Both files contain quite a bit of test-releted "boilerplate" that we *don't*
+Both files contain quite a bit of test-related "boilerplate" that we *don't*
 want to show in our rendered documentation (our actual snippets are denoted by
 the start/end comments). This illustrates one of the key features of
 Markdata&mdash;it allows us to specify a line number range to extract

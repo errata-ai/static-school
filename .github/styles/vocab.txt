@@ -15,6 +15,7 @@ petstore
 pre
 preprocessor
 pulldown
+pytest
 rst
 runtime
 seaborn
