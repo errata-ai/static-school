@@ -17,6 +17,9 @@ def write_report(ssg, results):
     with open(p, "r") as f:
         report = json.load(f)
 
+    if ssg not in report:
+        report[ssg] = {}
+
     report[ssg]["data"] = results["data"]
     report[ssg]["version"] = results["version"]
 

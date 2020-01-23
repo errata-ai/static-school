@@ -1,0 +1,20 @@
+formats:
+  - md
+
+commands:
+  build: 'cd {dir}/website && yarn run build && cd ..'
+  # FIXME:
+  version: echo 1.14.4
+
+layout: |
+  ---
+  id: {title}
+  title: document number 2
+  ---
+
+  {content}
+
+
+filename: doc{0}
+
+content: docs
