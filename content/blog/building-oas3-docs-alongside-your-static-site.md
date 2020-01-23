@@ -366,7 +366,6 @@ responses:
               type: string
               enum:
                 - "missing 'alert'"
-
 operationId: FindSuggestions
 ---
 
