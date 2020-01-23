@@ -212,7 +212,7 @@ specification file itself: you should write your prose in individual Markdown
 files, lint those files, and then generate your specification from the
 already-linted content.
 
-[You can find a Gist explaining how I implemented such a workflow here][8].
+[The previous post discussed this technique in detail][8].
 
 ### Option 3b: Lint Your Source Code
 
@@ -241,4 +241,4 @@ at the [Vale repository][7].
 [5]: https://swagger.io/tools/swagger-codegen/
 [6]: https://github.com/Swagger2Markup/swagger2markup
 [7]: https://github.com/errata-ai/vale/issues/new
-[8]: https://gist.github.com/jdkato/156944741f134dca3d0a18dafcfa9803
+[8]: /blog/building-oas3-docs-alongside-your-static-site/
