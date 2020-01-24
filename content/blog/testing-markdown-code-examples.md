@@ -276,6 +276,15 @@ default content directory). This is something that you'll want to do regardless
 of what static site generator you're using, as it allows the generator to
 publish HTML containing the actual code examples.
 
+## Other Options &amp; Related Work
+
+- [`rustdoc`](https://doc.rust-lang.org/rustdoc/what-is-rustdoc.html) (Rust)
+- [`Godoc`](https://blog.golang.org/examples) (Golang)
+- [`markdown-doctest`](https://github.com/Widdershin/markdown-doctest) (JavaScript)
+- [`sphinx.ext.doctest`](https://www.sphinx-doc.org/en/master/usage/extensions/doctest.html) (Python)
+- [`embedme`](https://github.com/zakhenry/embedme) (Multiple)
+- [MDX](https://mdxjs.com/) + [`raw.macro`](https://github.com/pveyes/raw.macro) (Multiple)
+
 [1]: /blog/fixing-markdowns-shortcomings-with-python/
 [2]: https://pypi.org/project/markdata/
 [3]: https://github.com/Widdershin/markdown-doctest
