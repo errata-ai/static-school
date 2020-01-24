@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{{ if ne .Title .Site.Title }}{{ .Title }} - {{ end }} {{ .Site.Title }}</title>
 
     {{ if .IsHome }}
+      <title>Static School | Compare Static Site Generators</title>
       <meta name="description" content="{{ .Site.Params.description }}">
+    {{ else }}
+      <title>{{ if ne .Title .Site.Title }}{{ .Title }} | {{ end }} {{ .Site.Title }}</title>
     {{ end }}
 
     {{ if .Params.needsFA }}
