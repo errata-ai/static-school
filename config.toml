@@ -40,7 +40,7 @@ enableMissingTranslationPlaceholders = true
     languageName ="English"
     # Weight used for sorting.
     weight = 1
-    description = "Discover, explore, and compare static site generators."
+    description = "Discover, explore, and compare static site generators and related JAMstack software."
 
 # Be explicit about the output formats. We only want an RSS feed for the home page.
 [outputs]
