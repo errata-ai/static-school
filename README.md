@@ -12,9 +12,9 @@ Static School is built with [Hugo](https://gohugo.io/) and deployed daily with [
 ├── bench <Files related to data collection and benchmarking>
 ├── config.toml
 ├── content
-│   └── ssg/ <Individual pages for each SSG>
+│  └── ssg/ <Individual pages for each SSG>
 ├── data
-│   └── report.json <An auto-generated, JSON-formatted report of all our data>
+│  └── report.json <An auto-generated, JSON-formatted report of all our data>
 ├── layouts
 ├── resources
 ```
@@ -141,6 +141,5 @@ If you'd like to submit a new static generator to our test suite, please follow 
 ## Credits
 
 This project was inspired by Netlify's MIT-licensed [StaticGen](https://www.staticgen.com/) website. The major difference is that *Static School* is much more than a "leaderboard": we provide in-depth benchmarking, guides, and tutorials.
-
 
 [1]: https://github.com/errata-ai/static-school/tree/master/bench/generators

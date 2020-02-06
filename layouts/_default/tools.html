@@ -19,7 +19,7 @@
 <section class="bg-white">
     <div class="container">
         <div id="options-list" class="row">
-            <div class="col-12 col-md-auto mb-5">
+            <div class="col-12 col-md-3 mb-5">
                 <form class="mb-4">
                     <input class="search form-control" placeholder="Search" type="text" name="search-table" />
                 </form>
@@ -33,7 +33,7 @@
                 {{ end }}
             </div>
             <!--end of col-->
-            <div class="col">
+            <div class="col-12 col-md-6">
                 <div class="card card-sm">
                     <div class="card-header d-flex bg-secondary justify-content-between align-items-center">
                         <div>
@@ -100,9 +100,7 @@
                     </div>
                 </div>
             </div>
-            <!--
             <div class="col-3 d-none d-md-block">
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                 <ins class="adsbygoogle"
                     style="display:block"
                     data-ad-client="ca-pub-2876317644479184"
@@ -112,7 +110,7 @@
                 <script>
                     (adsbygoogle = window.adsbygoogle || []).push({});
                 </script>
-            </div>-->
+            </div>
         </div>
         <!--end of row-->
     </div>
@@ -161,5 +159,6 @@
             optionsList.sort(val, { order: 'desc' });
         }
     });
+
 </script>
 {{ end }}
