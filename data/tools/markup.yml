@@ -73,7 +73,7 @@ options:
   - Markdown
 
   metrics:
-    stars: 94
+    stars: 93
     issues: 29
 - name: liche
   repo: raviqqe/liche
