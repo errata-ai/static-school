@@ -20,7 +20,7 @@ options:
   - Markdown
 
   metrics:
-    stars: 817
+    stars: 818
     issues: 89
 - name: markdownlint
   repo: DavidAnson/markdownlint
@@ -33,7 +33,7 @@ options:
   - Markdown
 
   metrics:
-    stars: 1798
+    stars: 1803
     issues: 28
 - name: remark-lint
   repo: remarkjs/remark-lint
@@ -59,7 +59,7 @@ options:
   - reStructuredText
 
   metrics:
-    stars: 126
+    stars: 127
     issues: 5
 - name: markdown-link-check
   repo: tcort/markdown-link-check
