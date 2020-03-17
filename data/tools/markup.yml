@@ -34,7 +34,7 @@ options:
 
   metrics:
     stars: 1857
-    issues: 34
+    issues: 35
 - name: remark-lint
   repo: remarkjs/remark-lint
   homepage: https://github.com/remarkjs/remark-lint
@@ -87,7 +87,7 @@ options:
 
   metrics:
     stars: 92
-    issues: 16
+    issues: 17
 - name: remark-validate-links
   repo: remarkjs/remark-validate-links
   homepage: https://github.com/remarkjs/remark-validate-links
