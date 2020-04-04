@@ -33,7 +33,7 @@ options:
   - Markdown
 
   metrics:
-    stars: 1884
+    stars: 1885
     issues: 38
 - name: remark-lint
   repo: remarkjs/remark-lint
@@ -101,7 +101,7 @@ options:
 
   metrics:
     stars: 51
-    issues: 0
+    issues: 1
 - name: awesome_bot
   repo: dkhamsing/awesome_bot
   homepage: https://github.com/dkhamsing/awesome_bot
