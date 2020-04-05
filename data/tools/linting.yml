@@ -31,7 +31,7 @@ options:
 
   metrics:
     stars: 1573
-    issues: 62
+    issues: 63
 - name: RedPen
   repo: redpen-cc/redpen
   homepage: https://github.com/redpen-cc/redpen
@@ -43,5 +43,5 @@ options:
   - Java
   - 'md, adoc, rst, html, re, tex'
   metrics:
-    stars: 431
+    stars: 432
     issues: 63
