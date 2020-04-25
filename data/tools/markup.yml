@@ -20,7 +20,7 @@ options:
   - Markdown
 
   metrics:
-    stars: 867
+    stars: 866
     issues: 89
 - name: markdownlint
   repo: DavidAnson/markdownlint
