@@ -100,7 +100,7 @@ options:
   - Markdown
 
   metrics:
-    stars: 53
+    stars: 54
     issues: 0
 - name: awesome_bot
   repo: dkhamsing/awesome_bot
