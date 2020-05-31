@@ -46,8 +46,8 @@ options:
   - Markdown
 
   metrics:
-    stars: 630
-    issues: 6
+    stars: 631
+    issues: 7
 - name: restructuredtext-lint
   repo: twolfson/restructuredtext-lint
   homepage: https://github.com/twolfson/restructuredtext-lint
