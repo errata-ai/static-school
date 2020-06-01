@@ -33,7 +33,7 @@ options:
   - Markdown
 
   metrics:
-    stars: 1971
+    stars: 1973
     issues: 36
 - name: remark-lint
   repo: remarkjs/remark-lint
@@ -47,7 +47,7 @@ options:
 
   metrics:
     stars: 631
-    issues: 7
+    issues: 6
 - name: restructuredtext-lint
   repo: twolfson/restructuredtext-lint
   homepage: https://github.com/twolfson/restructuredtext-lint
