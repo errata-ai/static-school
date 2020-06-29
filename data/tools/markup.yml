@@ -20,7 +20,7 @@ options:
   - Markdown
 
   metrics:
-    stars: 903
+    stars: 904
     issues: 94
 - name: markdownlint
   repo: DavidAnson/markdownlint
@@ -33,7 +33,7 @@ options:
   - Markdown
 
   metrics:
-    stars: 2028
+    stars: 2029
     issues: 37
 - name: remark-lint
   repo: remarkjs/remark-lint
@@ -100,7 +100,7 @@ options:
   - Markdown
 
   metrics:
-    stars: 56
+    stars: 57
     issues: 0
 - name: awesome_bot
   repo: dkhamsing/awesome_bot
