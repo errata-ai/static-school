@@ -30,7 +30,7 @@ options:
   - 'md, adoc, rst, html, re'
 
   metrics:
-    stars: 1690
+    stars: 1691
     issues: 59
 - name: RedPen
   repo: redpen-cc/redpen
