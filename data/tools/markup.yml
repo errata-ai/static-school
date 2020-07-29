@@ -20,8 +20,8 @@ options:
   - Markdown
 
   metrics:
-    stars: 907
-    issues: 95
+    stars: 913
+    issues: 97
 - name: markdownlint
   repo: DavidAnson/markdownlint
   homepage: https://github.com/DavidAnson/markdownlint
@@ -33,7 +33,7 @@ options:
   - Markdown
 
   metrics:
-    stars: 2044
+    stars: 2075
     issues: 39
 - name: remark-lint
   repo: remarkjs/remark-lint
@@ -46,8 +46,8 @@ options:
   - Markdown
 
   metrics:
-    stars: 636
-    issues: 7
+    stars: 641
+    issues: 8
 - name: restructuredtext-lint
   repo: twolfson/restructuredtext-lint
   homepage: https://github.com/twolfson/restructuredtext-lint
@@ -59,7 +59,7 @@ options:
   - reStructuredText
 
   metrics:
-    stars: 133
+    stars: 135
     issues: 5
 - name: markdown-link-check
   repo: tcort/markdown-link-check
@@ -73,8 +73,8 @@ options:
   - Markdown
 
   metrics:
-    stars: 126
-    issues: 34
+    stars: 132
+    issues: 36
 - name: liche
   repo: raviqqe/liche
   homepage: https://github.com/raviqqe/liche
@@ -100,7 +100,7 @@ options:
   - Markdown
 
   metrics:
-    stars: 58
+    stars: 60
     issues: 0
 - name: awesome_bot
   repo: dkhamsing/awesome_bot
@@ -112,5 +112,5 @@ options:
   - Ruby
   - Markdown
   metrics:
-    stars: 662
+    stars: 663
     issues: 11
