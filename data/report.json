@@ -2,15 +2,15 @@
     "docusaurus": {
         "metrics": {
             "resolution": "2 day(s)",
-            "commit": "2 days ago",
-            "release": "4 days ago"
+            "commit": "12 hours ago",
+            "release": "1 day ago"
         },
         "stats": {
             "id": "docusaurus",
-            "f": 1796,
-            "s": 18332,
-            "fk": 2037,
-            "i": 169
+            "f": 1803,
+            "s": 18351,
+            "fk": 2043,
+            "i": 162
         },
         "performace": {
             "Markdown": 8
@@ -27,13 +27,13 @@
     "pelican": {
         "metrics": {
             "resolution": "22 day(s)",
-            "commit": "3 days ago",
+            "commit": "4 days ago",
             "release": "9 months ago"
         },
         "stats": {
             "id": "pelican",
-            "f": 1746,
-            "s": 9794,
+            "f": 1748,
+            "s": 9796,
             "fk": 1654,
             "i": 49
         },
@@ -64,15 +64,15 @@
     "eleventy": {
         "metrics": {
             "resolution": "28 day(s)",
-            "commit": "3 days ago",
+            "commit": "4 days ago",
             "release": "2 months ago"
         },
         "stats": {
             "id": "eleventy",
-            "f": 5834,
-            "s": 6544,
+            "f": 5852,
+            "s": 6558,
             "fk": 208,
-            "i": 342
+            "i": 345
         },
         "performace": {
             "Markdown": 3
@@ -89,7 +89,7 @@
     "hexo": {
         "metrics": {
             "resolution": "23 day(s)",
-            "commit": "3 days ago",
+            "commit": "4 days ago",
             "release": "2 months ago"
         },
         "data": {
@@ -111,16 +111,16 @@
         "version": "v3.1.0",
         "stats": {
             "id": "hexo",
-            "f": 2304,
-            "s": 30963,
+            "f": 2306,
+            "s": 30974,
             "fk": 3960,
-            "i": 107
+            "i": 109
         }
     },
     "zola": {
         "metrics": {
             "resolution": "7 day(s)",
-            "commit": "6 days ago",
+            "commit": "1 week ago",
             "release": "2 months ago"
         },
         "data": {
@@ -136,7 +136,7 @@
         "version": "v0.9.0",
         "stats": {
             "id": "zola",
-            "s": 3853,
+            "s": 3870,
             "fk": 345,
             "i": 105
         }
@@ -144,8 +144,8 @@
     "hugo": {
         "metrics": {
             "resolution": "8 hour(s)",
-            "commit": "2 days ago",
-            "release": "1 week ago"
+            "commit": "1 day ago",
+            "release": "2 weeks ago"
         },
         "data": {
             "Markdown": [
@@ -172,24 +172,24 @@
         "version": "v0.62.2",
         "stats": {
             "id": "hugo",
-            "f": 10704,
-            "s": 45854,
-            "fk": 5218,
-            "i": 530
+            "f": 10714,
+            "s": 45877,
+            "fk": 5221,
+            "i": 532
         }
     },
     "jekyll": {
         "metrics": {
             "resolution": "1 day(s)",
-            "commit": "2 days ago",
-            "release": "1 month ago"
+            "commit": "1 day ago",
+            "release": "1 day ago"
         },
         "stats": {
             "id": "jekyll",
-            "f": 7159,
-            "s": 40962,
+            "f": 7161,
+            "s": 40966,
             "fk": 8958,
-            "i": 156
+            "i": 154
         },
         "performace": {
             "Markdown": 4,
@@ -213,14 +213,14 @@
         "metrics": {
             "resolution": "9 day(s)",
             "commit": "12 hours ago",
-            "release": "19 hours ago"
+            "release": "4 hours ago"
         },
         "stats": {
             "id": "gatsby",
-            "f": 58733,
-            "s": 46196,
-            "fk": 8564,
-            "i": 797
+            "f": 58813,
+            "s": 46215,
+            "fk": 8565,
+            "i": 809
         },
         "performace": {
             "Markdown": 7
