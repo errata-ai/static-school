@@ -18,7 +18,7 @@ options:
 
   metrics:
     stars: 670
-    issues: 11
+    issues: 10
 - name: textlint
   repo: textlint/textlint
   homepage: https://github.com/textlint/textlint
@@ -30,7 +30,7 @@ options:
   - 'md, adoc, rst, html, re'
 
   metrics:
-    stars: 1728
+    stars: 1729
     issues: 64
 - name: RedPen
   repo: redpen-cc/redpen
