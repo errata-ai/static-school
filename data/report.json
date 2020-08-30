@@ -2,15 +2,15 @@
     "docusaurus": {
         "metrics": {
             "resolution": "2 day(s)",
-            "commit": "1 day ago",
-            "release": "1 day ago"
+            "commit": "2 days ago",
+            "release": "2 days ago"
         },
         "stats": {
             "id": "docusaurus",
-            "f": 1839,
-            "s": 18806,
-            "fk": 2124,
-            "i": 165
+            "f": 1840,
+            "s": 18817,
+            "fk": 2125,
+            "i": 167
         },
         "performace": {
             "Markdown": 8
@@ -27,14 +27,14 @@
     "pelican": {
         "metrics": {
             "resolution": "22 day(s)",
-            "commit": "12 hours ago",
+            "commit": "1 day ago",
             "release": "1 week ago"
         },
         "stats": {
             "id": "pelican",
-            "f": 1747,
+            "f": 1748,
             "s": 9843,
-            "fk": 1663,
+            "fk": 1662,
             "i": 46
         },
         "performace": {
@@ -64,14 +64,14 @@
     "eleventy": {
         "metrics": {
             "resolution": "28 day(s)",
-            "commit": "1 day ago",
+            "commit": "2 days ago",
             "release": "3 months ago"
         },
         "stats": {
             "id": "eleventy",
-            "f": 6356,
-            "s": 6831,
-            "fk": 208,
+            "f": 6362,
+            "s": 6867,
+            "fk": 209,
             "i": 357
         },
         "performace": {
@@ -90,7 +90,7 @@
         "metrics": {
             "resolution": "23 day(s)",
             "commit": "12 hours ago",
-            "release": "6 days ago"
+            "release": "1 week ago"
         },
         "data": {
             "Markdown": [
@@ -112,9 +112,9 @@
         "stats": {
             "id": "hexo",
             "f": 2312,
-            "s": 31120,
+            "s": 31124,
             "fk": 3976,
-            "i": 102
+            "i": 103
         }
     },
     "zola": {
@@ -136,7 +136,7 @@
         "version": "v0.9.0",
         "stats": {
             "id": "zola",
-            "s": 4050,
+            "s": 4054,
             "fk": 350,
             "i": 110
         }
@@ -144,7 +144,7 @@
     "hugo": {
         "metrics": {
             "resolution": "8 hour(s)",
-            "commit": "1 day ago",
+            "commit": "2 days ago",
             "release": "1 month ago"
         },
         "data": {
@@ -172,24 +172,24 @@
         "version": "v0.62.2",
         "stats": {
             "id": "hugo",
-            "f": 10839,
-            "s": 46280,
+            "f": 10848,
+            "s": 46290,
             "fk": 5268,
-            "i": 548
+            "i": 549
         }
     },
     "jekyll": {
         "metrics": {
             "resolution": "1 day(s)",
-            "commit": "2 days ago",
+            "commit": "3 days ago",
             "release": "3 weeks ago"
         },
         "stats": {
             "id": "jekyll",
             "f": 7184,
-            "s": 41131,
-            "fk": 9002,
-            "i": 165
+            "s": 41136,
+            "fk": 9005,
+            "i": 166
         },
         "performace": {
             "Markdown": 4,
@@ -212,15 +212,15 @@
     "gatsby": {
         "metrics": {
             "resolution": "9 day(s)",
-            "commit": "1 day ago",
-            "release": "a day ago"
+            "commit": "2 days ago",
+            "release": "2 days ago"
         },
         "stats": {
             "id": "gatsby",
-            "f": 59740,
-            "s": 46606,
-            "fk": 8682,
-            "i": 800
+            "f": 59770,
+            "s": 46614,
+            "fk": 8691,
+            "i": 808
         },
         "performace": {
             "Markdown": 7
