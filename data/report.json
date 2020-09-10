@@ -2,8 +2,8 @@
     "docusaurus": {
         "metrics": {
             "resolution": "2 day(s)",
-            "commit": "1 day ago",
-            "release": "6 days ago"
+            "commit": "12 hours ago",
+            "release": "1 week ago"
         },
         "stats": {
             "id": "docusaurus",
@@ -28,7 +28,7 @@
         "metrics": {
             "resolution": "22 day(s)",
             "commit": "1 week ago",
-            "release": "2 weeks ago"
+            "release": "3 weeks ago"
         },
         "stats": {
             "id": "pelican",
@@ -64,8 +64,8 @@
     "eleventy": {
         "metrics": {
             "resolution": "28 day(s)",
-            "commit": "1 day ago",
-            "release": "3 months ago"
+            "commit": "2 days ago",
+            "release": "4 months ago"
         },
         "stats": {
             "id": "eleventy",
@@ -89,7 +89,7 @@
     "hexo": {
         "metrics": {
             "resolution": "23 day(s)",
-            "commit": "2 days ago",
+            "commit": "12 hours ago",
             "release": "2 weeks ago"
         },
         "data": {
@@ -120,8 +120,8 @@
     "zola": {
         "metrics": {
             "resolution": "7 day(s)",
-            "commit": "3 days ago",
-            "release": "5 days ago"
+            "commit": "4 days ago",
+            "release": "6 days ago"
         },
         "data": {
             "Markdown": [
@@ -181,7 +181,7 @@
     "jekyll": {
         "metrics": {
             "resolution": "1 day(s)",
-            "commit": "12 hours ago",
+            "commit": "1 day ago",
             "release": "1 month ago"
         },
         "stats": {
@@ -213,7 +213,7 @@
         "metrics": {
             "resolution": "9 day(s)",
             "commit": "12 hours ago",
-            "release": "20 hours ago"
+            "release": "an hour ago"
         },
         "stats": {
             "id": "gatsby",
