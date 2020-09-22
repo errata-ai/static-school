@@ -87,7 +87,7 @@ options:
 
   metrics:
     stars: 110
-    issues: 20
+    issues: 17
 - name: remark-validate-links
   repo: remarkjs/remark-validate-links
   homepage: https://github.com/remarkjs/remark-validate-links
