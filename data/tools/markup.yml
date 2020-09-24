@@ -46,7 +46,7 @@ options:
   - Markdown
 
   metrics:
-    stars: 669
+    stars: 671
     issues: 6
 - name: restructuredtext-lint
   repo: twolfson/restructuredtext-lint
@@ -74,7 +74,7 @@ options:
 
   metrics:
     stars: 151
-    issues: 36
+    issues: 37
 - name: liche
   repo: raviqqe/liche
   homepage: https://github.com/raviqqe/liche
