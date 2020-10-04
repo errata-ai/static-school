@@ -3,7 +3,7 @@
         "metrics": {
             "resolution": "2 day(s)",
             "commit": "1 day ago",
-            "release": "1 day ago"
+            "release": "2 days ago"
         },
         "stats": {
             "id": "docusaurus",
@@ -120,8 +120,8 @@
     "zola": {
         "metrics": {
             "resolution": "7 day(s)",
-            "commit": "5 days ago",
-            "release": "5 days ago"
+            "commit": "1 day ago",
+            "release": "6 days ago"
         },
         "data": {
             "Markdown": [
@@ -144,7 +144,7 @@
     "hugo": {
         "metrics": {
             "resolution": "8 hour(s)",
-            "commit": "1 day ago",
+            "commit": "2 days ago",
             "release": "2 weeks ago"
         },
         "data": {
@@ -181,7 +181,7 @@
     "jekyll": {
         "metrics": {
             "resolution": "1 day(s)",
-            "commit": "2 days ago",
+            "commit": "12 hours ago",
             "release": "1 month ago"
         },
         "stats": {
@@ -212,8 +212,8 @@
     "gatsby": {
         "metrics": {
             "resolution": "9 day(s)",
-            "commit": "1 day ago",
-            "release": "2 days ago"
+            "commit": "2 days ago",
+            "release": "3 days ago"
         },
         "stats": {
             "id": "gatsby",
