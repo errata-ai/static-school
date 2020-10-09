@@ -3,7 +3,7 @@
         "metrics": {
             "resolution": "2 day(s)",
             "commit": "12 hours ago",
-            "release": "6 days ago"
+            "release": "1 week ago"
         },
         "stats": {
             "id": "docusaurus",
@@ -120,7 +120,7 @@
     "zola": {
         "metrics": {
             "resolution": "7 day(s)",
-            "commit": "5 days ago",
+            "commit": "6 days ago",
             "release": "1 week ago"
         },
         "data": {
@@ -213,7 +213,7 @@
         "metrics": {
             "resolution": "9 day(s)",
             "commit": "12 hours ago",
-            "release": "3 hours ago"
+            "release": "21 hours ago"
         },
         "stats": {
             "id": "gatsby",
