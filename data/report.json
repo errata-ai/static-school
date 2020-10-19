@@ -2,7 +2,7 @@
     "docusaurus": {
         "metrics": {
             "resolution": "2 day(s)",
-            "commit": "2 days ago",
+            "commit": "12 hours ago",
             "release": "2 weeks ago"
         },
         "stats": {
@@ -64,7 +64,7 @@
     "eleventy": {
         "metrics": {
             "resolution": "28 day(s)",
-            "commit": "2 days ago",
+            "commit": "3 days ago",
             "release": "5 months ago"
         },
         "stats": {
@@ -121,7 +121,7 @@
         "metrics": {
             "resolution": "7 day(s)",
             "commit": "2 weeks ago",
-            "release": "2 weeks ago"
+            "release": "3 weeks ago"
         },
         "data": {
             "Markdown": [
@@ -144,8 +144,8 @@
     "hugo": {
         "metrics": {
             "resolution": "8 hour(s)",
-            "commit": "2 days ago",
-            "release": "4 days ago"
+            "commit": "3 days ago",
+            "release": "5 days ago"
         },
         "data": {
             "Markdown": [
@@ -181,7 +181,7 @@
     "jekyll": {
         "metrics": {
             "resolution": "1 day(s)",
-            "commit": "2 days ago",
+            "commit": "3 days ago",
             "release": "2 months ago"
         },
         "stats": {
@@ -212,8 +212,8 @@
     "gatsby": {
         "metrics": {
             "resolution": "9 day(s)",
-            "commit": "2 days ago",
-            "release": "2 days ago"
+            "commit": "12 hours ago",
+            "release": "3 days ago"
         },
         "stats": {
             "id": "gatsby",
