@@ -43,5 +43,5 @@ options:
   - Java
   - 'md, adoc, rst, html, re, tex'
   metrics:
-    stars: 444
-    issues: 64
+    stars: 450
+    issues: 65
