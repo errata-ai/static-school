@@ -17,7 +17,7 @@ options:
   - 'md, adoc, rst, html, xml, dita'
 
   metrics:
-    stars: 734
+    stars: 736
     issues: 15
 - name: textlint
   repo: textlint/textlint
@@ -43,5 +43,5 @@ options:
   - Java
   - 'md, adoc, rst, html, re, tex'
   metrics:
-    stars: 456
+    stars: 457
     issues: 64
