@@ -20,7 +20,7 @@ options:
   - Markdown
 
   metrics:
-    stars: 974
+    stars: 975
     issues: 108
 - name: markdownlint
   repo: DavidAnson/markdownlint
@@ -46,7 +46,7 @@ options:
   - Markdown
 
   metrics:
-    stars: 693
+    stars: 695
     issues: 5
 - name: restructuredtext-lint
   repo: twolfson/restructuredtext-lint
@@ -73,8 +73,8 @@ options:
   - Markdown
 
   metrics:
-    stars: 164
-    issues: 21
+    stars: 165
+    issues: 22
 - name: liche
   repo: raviqqe/liche
   homepage: https://github.com/raviqqe/liche
@@ -112,5 +112,5 @@ options:
   - Ruby
   - Markdown
   metrics:
-    stars: 684
+    stars: 685
     issues: 11
