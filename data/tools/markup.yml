@@ -33,7 +33,7 @@ options:
   - Markdown
 
   metrics:
-    stars: 2233
+    stars: 2234
     issues: 50
 - name: remark-lint
   repo: remarkjs/remark-lint
@@ -73,8 +73,8 @@ options:
   - Markdown
 
   metrics:
-    stars: 165
-    issues: 19
+    stars: 167
+    issues: 21
 - name: liche
   repo: raviqqe/liche
   homepage: https://github.com/raviqqe/liche
@@ -86,7 +86,7 @@ options:
   - Markdown
 
   metrics:
-    stars: 117
+    stars: 118
     issues: 22
 - name: remark-validate-links
   repo: remarkjs/remark-validate-links
