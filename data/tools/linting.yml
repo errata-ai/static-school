@@ -30,8 +30,8 @@ options:
   - 'md, adoc, rst, html, re'
 
   metrics:
-    stars: 1805
-    issues: 63
+    stars: 1807
+    issues: 64
 - name: RedPen
   repo: redpen-cc/redpen
   homepage: https://github.com/redpen-cc/redpen
@@ -43,5 +43,5 @@ options:
   - Java
   - 'md, adoc, rst, html, re, tex'
   metrics:
-    stars: 456
+    stars: 457
     issues: 65
