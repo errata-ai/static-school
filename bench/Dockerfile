@@ -1,4 +1,4 @@
-FROM alpine:3.10
+FROM alpine:3.12
 
 # Usage:
 #
@@ -9,10 +9,10 @@ FROM alpine:3.10
 # Install hyperfine:
 #
 # https://github.com/sharkdp/hyperfine
-ARG repo="@testing http://dl-3.alpinelinux.org/alpine/edge/testing"
+ARG repo="@testing http://dl-3.alpinelinux.org/alpine/edge/community"
 
 RUN echo $repo >> /etc/apk/repositories && \
-    apk add --no-cache --update hyperfine@testing python3 && \
+    apk add --no-cache --update hyperfine@testing py3-pip && \
     pip3 install pyyaml
 
 COPY corpus /corpus

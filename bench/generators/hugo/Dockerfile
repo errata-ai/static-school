@@ -5,6 +5,8 @@ FROM jdkato/hyperfine
 # $ docker build -f Dockerfile -t hyperfine-hugo:latest .
 # $ docker run --rm hyperfine-hugo 25
 
+ARG repo="@testing http://dl-3.alpinelinux.org/alpine/edge/community"
+
 # Install Hugo and its dependencies
 RUN apk add --no-cache --update \
     hugo \

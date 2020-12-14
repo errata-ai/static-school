@@ -7,7 +7,7 @@ description: The world’s fastest framework for building websites.
 intro: |
     Hugo is a fast ("less than 1 ms per page"), self-contained static site
     generator. Its native binary includes most of its features out-of-the-box,
-    allowing you to avoid having install plugins and dependencies.
+    allowing you to avoid having to install plugins and dependencies.
 
 language:
   name: Go
