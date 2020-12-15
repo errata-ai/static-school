@@ -3,7 +3,7 @@
         "metrics": {
             "resolution": "2 day(s)",
             "commit": "1 day ago",
-            "release": "2 weeks ago"
+            "release": "3 weeks ago"
         },
         "data": {
             "Markdown": [
@@ -27,8 +27,8 @@
     "pelican": {
         "metrics": {
             "resolution": "22 day(s)",
-            "commit": "1 week ago",
-            "release": "1 week ago"
+            "commit": "2 weeks ago",
+            "release": "2 weeks ago"
         },
         "data": {
             "Markdown": [
@@ -89,7 +89,7 @@
     "hexo": {
         "metrics": {
             "resolution": "23 day(s)",
-            "commit": "2 days ago",
+            "commit": "3 days ago",
             "release": "2 months ago"
         },
         "stats": {
@@ -120,7 +120,7 @@
     "zola": {
         "metrics": {
             "resolution": "7 day(s)",
-            "commit": "6 days ago",
+            "commit": "1 week ago",
             "release": "2 months ago"
         },
         "stats": {
@@ -144,7 +144,7 @@
     "hugo": {
         "metrics": {
             "resolution": "8 hour(s)",
-            "commit": "5 days ago",
+            "commit": "6 days ago",
             "release": "2 weeks ago"
         },
         "stats": {
@@ -181,8 +181,8 @@
     "jekyll": {
         "metrics": {
             "resolution": "1 day(s)",
-            "commit": "3 days ago",
-            "release": "4 months ago"
+            "commit": "1 day ago",
+            "release": "1 day ago"
         },
         "data": {
             "Markdown": [
@@ -212,8 +212,8 @@
     "gatsby": {
         "metrics": {
             "resolution": "9 day(s)",
-            "commit": "3 days ago",
-            "release": "4 days ago"
+            "commit": "12 hours ago",
+            "release": "5 days ago"
         },
         "data": {
             "Markdown": [
