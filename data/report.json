@@ -3,7 +3,7 @@
         "metrics": {
             "resolution": "2 day(s)",
             "commit": "1 day ago",
-            "release": "1 day ago"
+            "release": "2 days ago"
         },
         "data": {
             "Markdown": [
@@ -89,8 +89,8 @@
     "hexo": {
         "metrics": {
             "resolution": "23 day(s)",
-            "commit": "1 day ago",
-            "release": "1 day ago"
+            "commit": "2 days ago",
+            "release": "2 days ago"
         },
         "stats": {
             "id": "hexo",
@@ -181,8 +181,8 @@
     "jekyll": {
         "metrics": {
             "resolution": "1 day(s)",
-            "commit": "2 days ago",
-            "release": "4 days ago"
+            "commit": "3 days ago",
+            "release": "5 days ago"
         },
         "data": {
             "Markdown": [
@@ -212,8 +212,8 @@
     "gatsby": {
         "metrics": {
             "resolution": "9 day(s)",
-            "commit": "12 hours ago",
-            "release": "2 days ago"
+            "commit": "1 day ago",
+            "release": "3 days ago"
         },
         "data": {
             "Markdown": [
