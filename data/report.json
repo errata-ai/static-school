@@ -3,7 +3,7 @@
         "metrics": {
             "resolution": "2 day(s)",
             "commit": "1 day ago",
-            "release": "5 days ago"
+            "release": "6 days ago"
         },
         "data": {
             "Markdown": [
@@ -89,8 +89,8 @@
     "hexo": {
         "metrics": {
             "resolution": "23 day(s)",
-            "commit": "5 days ago",
-            "release": "5 days ago"
+            "commit": "12 hours ago",
+            "release": "6 days ago"
         },
         "stats": {
             "id": "hexo",
@@ -144,8 +144,8 @@
     "hugo": {
         "metrics": {
             "resolution": "8 hour(s)",
-            "commit": "12 hours ago",
-            "release": "3 days ago"
+            "commit": "1 day ago",
+            "release": "4 days ago"
         },
         "stats": {
             "id": "hugo",
@@ -181,7 +181,7 @@
     "jekyll": {
         "metrics": {
             "resolution": "1 day(s)",
-            "commit": "6 days ago",
+            "commit": "1 week ago",
             "release": "1 week ago"
         },
         "data": {
@@ -213,7 +213,7 @@
         "metrics": {
             "resolution": "9 day(s)",
             "commit": "12 hours ago",
-            "release": "6 days ago"
+            "release": "7 days ago"
         },
         "data": {
             "Markdown": [
