@@ -18,7 +18,7 @@ options:
 
   metrics:
     stars: 869
-    issues: 15
+    issues: 14
 - name: textlint
   repo: textlint/textlint
   homepage: https://github.com/textlint/textlint
