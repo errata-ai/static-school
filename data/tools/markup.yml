@@ -33,7 +33,7 @@ options:
   - Markdown
 
   metrics:
-    stars: 2339
+    stars: 2342
     issues: 50
 - name: remark-lint
   repo: remarkjs/remark-lint
@@ -86,7 +86,7 @@ options:
   - Markdown
 
   metrics:
-    stars: 123
+    stars: 122
     issues: 24
 - name: remark-validate-links
   repo: remarkjs/remark-validate-links
