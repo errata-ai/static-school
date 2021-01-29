@@ -20,7 +20,7 @@ options:
   - Markdown
 
   metrics:
-    stars: 1017
+    stars: 1019
     issues: 108
 - name: markdownlint
   repo: DavidAnson/markdownlint
@@ -33,7 +33,7 @@ options:
   - Markdown
 
   metrics:
-    stars: 2342
+    stars: 2341
     issues: 50
 - name: remark-lint
   repo: remarkjs/remark-lint
@@ -73,7 +73,7 @@ options:
   - Markdown
 
   metrics:
-    stars: 183
+    stars: 184
     issues: 24
 - name: liche
   repo: raviqqe/liche
