@@ -89,7 +89,7 @@
     "hexo": {
         "metrics": {
             "resolution": "23 day(s)",
-            "commit": "12 hours ago",
+            "commit": "1 day ago",
             "release": "1 month ago"
         },
         "stats": {
@@ -121,7 +121,7 @@
         "metrics": {
             "resolution": "7 day(s)",
             "commit": "1 week ago",
-            "release": "2 weeks ago"
+            "release": "3 weeks ago"
         },
         "stats": {
             "id": "zola",
@@ -144,8 +144,8 @@
     "hugo": {
         "metrics": {
             "resolution": "8 hour(s)",
-            "commit": "1 day ago",
-            "release": "4 weeks ago"
+            "commit": "2 days ago",
+            "release": "1 month ago"
         },
         "stats": {
             "id": "hugo",
@@ -212,8 +212,8 @@
     "gatsby": {
         "metrics": {
             "resolution": "9 day(s)",
-            "commit": "12 hours ago",
-            "release": "8 days ago"
+            "commit": "1 day ago",
+            "release": "9 days ago"
         },
         "data": {
             "Markdown": [
