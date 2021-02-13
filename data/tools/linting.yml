@@ -31,7 +31,7 @@ options:
 
   metrics:
     stars: 1882
-    issues: 67
+    issues: 66
 - name: RedPen
   repo: redpen-cc/redpen
   homepage: https://github.com/redpen-cc/redpen
