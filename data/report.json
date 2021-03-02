@@ -2,7 +2,7 @@
     "docusaurus": {
         "metrics": {
             "resolution": "2 day(s)",
-            "commit": "3 days ago",
+            "commit": "12 hours ago",
             "release": "2 months ago"
         },
         "data": {
@@ -144,7 +144,7 @@
     "hugo": {
         "metrics": {
             "resolution": "8 hour(s)",
-            "commit": "1 day ago",
+            "commit": "2 days ago",
             "release": "1 week ago"
         },
         "stats": {
@@ -213,7 +213,7 @@
         "metrics": {
             "resolution": "9 day(s)",
             "commit": "12 hours ago",
-            "release": "4 days ago"
+            "release": "an hour ago"
         },
         "data": {
             "Markdown": [
