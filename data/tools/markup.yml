@@ -74,7 +74,7 @@ options:
 
   metrics:
     stars: 196
-    issues: 27
+    issues: 26
 - name: liche
   repo: raviqqe/liche
   homepage: https://github.com/raviqqe/liche
@@ -100,7 +100,7 @@ options:
   - Markdown
 
   metrics:
-    stars: 67
+    stars: 68
     issues: 3
 - name: awesome_bot
   repo: dkhamsing/awesome_bot
