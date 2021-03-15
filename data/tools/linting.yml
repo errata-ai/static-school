@@ -17,7 +17,7 @@ options:
   - 'md, adoc, rst, html, xml, dita'
 
   metrics:
-    stars: 967
+    stars: 968
     issues: 15
 - name: textlint
   repo: textlint/textlint
@@ -30,7 +30,7 @@ options:
   - 'md, adoc, rst, html, re'
 
   metrics:
-    stars: 1914
+    stars: 1915
     issues: 68
 - name: RedPen
   repo: redpen-cc/redpen
@@ -44,4 +44,4 @@ options:
   - 'md, adoc, rst, html, re, tex'
   metrics:
     stars: 466
-    issues: 73
+    issues: 72
