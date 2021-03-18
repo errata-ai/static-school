@@ -101,7 +101,7 @@ options:
 
   metrics:
     stars: 68
-    issues: 3
+    issues: 4
 - name: awesome_bot
   repo: dkhamsing/awesome_bot
   homepage: https://github.com/dkhamsing/awesome_bot
