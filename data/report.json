@@ -64,7 +64,7 @@
     "eleventy": {
         "metrics": {
             "resolution": "28 day(s)",
-            "commit": "2 days ago",
+            "commit": "3 days ago",
             "release": "2 weeks ago"
         },
         "data": {
@@ -144,7 +144,7 @@
     "hugo": {
         "metrics": {
             "resolution": "8 hour(s)",
-            "commit": "5 days ago",
+            "commit": "1 day ago",
             "release": "2 weeks ago"
         },
         "stats": {
@@ -213,7 +213,7 @@
         "metrics": {
             "resolution": "9 day(s)",
             "commit": "12 hours ago",
-            "release": "5 days ago"
+            "release": "6 days ago"
         },
         "data": {
             "Markdown": [
