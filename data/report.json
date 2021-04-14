@@ -64,7 +64,7 @@
     "eleventy": {
         "metrics": {
             "resolution": "28 day(s)",
-            "commit": "1 day ago",
+            "commit": "2 days ago",
             "release": "3 weeks ago"
         },
         "data": {
@@ -120,7 +120,7 @@
     "zola": {
         "metrics": {
             "resolution": "7 day(s)",
-            "commit": "6 days ago",
+            "commit": "1 week ago",
             "release": "3 months ago"
         },
         "stats": {
@@ -181,8 +181,8 @@
     "jekyll": {
         "metrics": {
             "resolution": "1 day(s)",
-            "commit": "5 days ago",
-            "release": "5 days ago"
+            "commit": "6 days ago",
+            "release": "6 days ago"
         },
         "data": {
             "Markdown": [
@@ -213,7 +213,7 @@
         "metrics": {
             "resolution": "9 day(s)",
             "commit": "12 hours ago",
-            "release": "12 days ago"
+            "release": "17 hours ago"
         },
         "data": {
             "Markdown": [
