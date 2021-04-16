@@ -2,8 +2,8 @@
     "docusaurus": {
         "metrics": {
             "resolution": "2 day(s)",
-            "commit": "1 day ago",
-            "release": "1 month ago"
+            "commit": "12 hours ago",
+            "release": "12 hours ago"
         },
         "data": {
             "Markdown": [
@@ -64,8 +64,8 @@
     "eleventy": {
         "metrics": {
             "resolution": "28 day(s)",
-            "commit": "3 days ago",
-            "release": "3 weeks ago"
+            "commit": "1 day ago",
+            "release": "4 weeks ago"
         },
         "data": {
             "Markdown": [
@@ -144,7 +144,7 @@
     "hugo": {
         "metrics": {
             "resolution": "8 hour(s)",
-            "commit": "3 days ago",
+            "commit": "1 day ago",
             "release": "3 weeks ago"
         },
         "stats": {
@@ -213,7 +213,7 @@
         "metrics": {
             "resolution": "9 day(s)",
             "commit": "12 hours ago",
-            "release": "2 days ago"
+            "release": "3 days ago"
         },
         "data": {
             "Markdown": [
