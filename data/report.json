@@ -3,7 +3,7 @@
         "metrics": {
             "resolution": "2 day(s)",
             "commit": "1 day ago",
-            "release": "4 days ago"
+            "release": "5 days ago"
         },
         "data": {
             "Markdown": [
@@ -27,7 +27,7 @@
     "pelican": {
         "metrics": {
             "resolution": "22 day(s)",
-            "commit": "1 week ago",
+            "commit": "2 weeks ago",
             "release": "1 month ago"
         },
         "data": {
@@ -89,7 +89,7 @@
     "hexo": {
         "metrics": {
             "resolution": "23 day(s)",
-            "commit": "5 days ago",
+            "commit": "6 days ago",
             "release": "2 months ago"
         },
         "stats": {
@@ -120,7 +120,7 @@
     "zola": {
         "metrics": {
             "resolution": "7 day(s)",
-            "commit": "12 hours ago",
+            "commit": "1 day ago",
             "release": "3 months ago"
         },
         "stats": {
@@ -145,7 +145,7 @@
         "metrics": {
             "resolution": "8 hour(s)",
             "commit": "1 day ago",
-            "release": "2 days ago"
+            "release": "3 days ago"
         },
         "stats": {
             "id": "hugo",
@@ -213,7 +213,7 @@
         "metrics": {
             "resolution": "9 day(s)",
             "commit": "12 hours ago",
-            "release": "7 days ago"
+            "release": "19 hours ago"
         },
         "data": {
             "Markdown": [
