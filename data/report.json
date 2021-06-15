@@ -27,7 +27,7 @@
     "pelican": {
         "metrics": {
             "resolution": "22 day(s)",
-            "commit": "2 days ago",
+            "commit": "3 days ago",
             "release": "2 months ago"
         },
         "data": {
@@ -120,7 +120,7 @@
     "zola": {
         "metrics": {
             "resolution": "7 day(s)",
-            "commit": "12 hours ago",
+            "commit": "1 day ago",
             "release": "5 months ago"
         },
         "stats": {
@@ -144,7 +144,7 @@
     "hugo": {
         "metrics": {
             "resolution": "8 hour(s)",
-            "commit": "1 day ago",
+            "commit": "6 days ago",
             "release": "1 month ago"
         },
         "stats": {
@@ -181,7 +181,7 @@
     "jekyll": {
         "metrics": {
             "resolution": "1 day(s)",
-            "commit": "3 weeks ago",
+            "commit": "4 weeks ago",
             "release": "2 months ago"
         },
         "data": {
@@ -212,8 +212,8 @@
     "gatsby": {
         "metrics": {
             "resolution": "9 day(s)",
-            "commit": "12 hours ago",
-            "release": "4 days ago"
+            "commit": "1 day ago",
+            "release": "5 days ago"
         },
         "data": {
             "Markdown": [
