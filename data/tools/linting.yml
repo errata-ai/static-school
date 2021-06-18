@@ -17,7 +17,7 @@ options:
   - 'md, adoc, rst, html, xml, dita'
 
   metrics:
-    stars: 1155
+    stars: 1160
     issues: 16
 - name: textlint
   repo: textlint/textlint
