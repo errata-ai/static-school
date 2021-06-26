@@ -20,7 +20,7 @@ options:
   - Markdown
 
   metrics:
-    stars: 1092
+    stars: 1093
     issues: 111
 - name: markdownlint
   repo: DavidAnson/markdownlint
@@ -112,5 +112,5 @@ options:
   - Ruby
   - Markdown
   metrics:
-    stars: 707
+    stars: 710
     issues: 12
