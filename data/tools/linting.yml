@@ -18,7 +18,7 @@ options:
 
   metrics:
     stars: 1164
-    issues: 15
+    issues: 16
 - name: textlint
   repo: textlint/textlint
   homepage: https://github.com/textlint/textlint
@@ -43,5 +43,5 @@ options:
   - Java
   - 'md, adoc, rst, html, re, tex'
   metrics:
-    stars: 480
+    stars: 481
     issues: 75
