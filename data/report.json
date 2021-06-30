@@ -3,7 +3,7 @@
         "metrics": {
             "resolution": "2 day(s)",
             "commit": "12 hours ago",
-            "release": "5 days ago"
+            "release": "6 days ago"
         },
         "data": {
             "Markdown": [
@@ -27,7 +27,7 @@
     "pelican": {
         "metrics": {
             "resolution": "22 day(s)",
-            "commit": "2 weeks ago",
+            "commit": "12 hours ago",
             "release": "3 months ago"
         },
         "data": {
@@ -64,7 +64,7 @@
     "eleventy": {
         "metrics": {
             "resolution": "28 day(s)",
-            "commit": "3 days ago",
+            "commit": "4 days ago",
             "release": "3 months ago"
         },
         "data": {
@@ -213,7 +213,7 @@
         "metrics": {
             "resolution": "9 day(s)",
             "commit": "12 hours ago",
-            "release": "4 hours ago"
+            "release": "a day ago"
         },
         "data": {
             "Markdown": [
