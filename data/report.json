@@ -2,7 +2,7 @@
     "docusaurus": {
         "metrics": {
             "resolution": "2 day(s)",
-            "commit": "12 hours ago",
+            "commit": "1 day ago",
             "release": "3 weeks ago"
         },
         "data": {
@@ -120,8 +120,8 @@
     "zola": {
         "metrics": {
             "resolution": "7 day(s)",
-            "commit": "1 day ago",
-            "release": "4 days ago"
+            "commit": "2 days ago",
+            "release": "5 days ago"
         },
         "stats": {
             "id": "zola",
@@ -144,8 +144,8 @@
     "hugo": {
         "metrics": {
             "resolution": "8 hour(s)",
-            "commit": "2 days ago",
-            "release": "2 days ago"
+            "commit": "3 days ago",
+            "release": "3 days ago"
         },
         "stats": {
             "id": "hugo",
@@ -212,8 +212,8 @@
     "gatsby": {
         "metrics": {
             "resolution": "9 day(s)",
-            "commit": "12 hours ago",
-            "release": "2 days ago"
+            "commit": "1 day ago",
+            "release": "3 days ago"
         },
         "data": {
             "Markdown": [
