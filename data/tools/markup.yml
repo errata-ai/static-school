@@ -33,7 +33,7 @@ options:
   - Markdown
 
   metrics:
-    stars: 2631
+    stars: 2633
     issues: 61
 - name: remark-lint
   repo: remarkjs/remark-lint
